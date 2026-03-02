@@ -52,15 +52,20 @@
 
 ### 🔴 我需要快速解决问题
 
-打开对应的**Phase**文件夹，查看该阶段的INDEX.md找到具体任务：
+打开对应的**Phase**文件夹，查看该阶段的README.md找到具体任务：
 
 **常见问题快速跳转：**
 - 需求不清楚？ → **[01-Phase-Planning](01-Phase-Planning/)** → 01-requirement-clarification
-- 不知道怎么写？ → **[02-Phase-Development](02-Phase-Development/)** → 02-feature-implementation
+- 不知道怎么写代码？ → **[02-Phase-Development](02-Phase-Development/)** → 02-feature-implementation
 - 代码有Bug？ → **[03-Phase-Quality](03-Phase-Quality/)** → 04-bug-diagnosis
 - 代码质量差？ → **[03-Phase-Quality](03-Phase-Quality/)** → 03-code-review
-- 缺少测试？ → **[03-Phase-Quality](03-Phase-Quality/)** → 01-unit-testing & 02-integration-testing
-- 性能瓶颈？ → **[04-Phase-Optimization](04-Phase-Optimization/)** → 01-query-optimization & 02-performance-optimization
+- 缺少测试？ → **[03-Phase-Quality](03-Phase-Quality/)** → 01-unit-testing + 02-integration-testing
+- 性能瓶颈？ → **[04-Phase-Optimization](04-Phase-Optimization/)** → 01-query-optimization + 02-performance-optimization
+- 需要设计API？ → **[02-Phase-Development](02-Phase-Development/)** → 01-api-design
+- 需要重构代码？ → **[02-Phase-Development](02-Phase-Development/)** → 03-refactoring-safely
+- 代码过时混乱？ → **[04-Phase-Optimization](04-Phase-Optimization/)** → 04-legacy-code
+- 安全隐患？ → **[04-Phase-Optimization](04-Phase-Optimization/)** → 03-security-review
+- 需要写文档？ → **[05-Phase-Documentation](05-Phase-Documentation/)** → 01-documentation-generation
 
 ---
 
@@ -103,36 +108,39 @@ ai-prompt/
 ├── 项目完整导航.md                              ← 完整导航和统计
 │
 ├── 📋 01-Phase-Planning/                        ← 阶段1：需求与规划
-│   ├── INDEX.md                                 ← 阶段导航
+│   ├── README.md                                ← 阶段导航
 │   ├── 01-requirement-clarification/            ← T01: 需求澄清
 │   └── 02-architecture-decision/                ← T08: 架构决策
 │
 ├── 💻 02-Phase-Development/                     ← 阶段2：设计与开发
-│   ├── INDEX.md                                 ← 阶段导航
+│   ├── README.md                                ← 阶段导航
 │   ├── 01-api-design/                           ← T09: API设计
 │   ├── 02-feature-implementation/               ← T02: 功能实现
 │   └── 03-refactoring-safely/                   ← T04: 安全重构
 │
 ├── 🐛 03-Phase-Quality/                         ← 阶段3：测试与质量
-│   ├── INDEX.md                                 ← 阶段导航
+│   ├── README.md                                ← 阶段导航
 │   ├── 01-unit-testing/                         ← T05: 单元测试
 │   ├── 02-integration-testing/                  ← T06: 集成测试
 │   ├── 03-code-review/                          ← T07: 代码审查
 │   └── 04-bug-diagnosis/                        ← T03: Bug诊断
 │
 ├── 🚀 04-Phase-Optimization/                    ← 阶段4：优化与维护
-│   ├── INDEX.md                                 ← 阶段导航
+│   ├── README.md                                ← 阶段导航
 │   ├── 01-query-optimization/                   ← T10: 查询优化
 │   ├── 02-performance-optimization/             ← T12: 性能优化
 │   ├── 03-security-review/                      ← T11: 安全审查
 │   └── 04-legacy-code/                          ← T13: 遗留代码
 │
 └── 📚 05-Phase-Documentation/                   ← 阶段5：文档与交付
-    ├── INDEX.md                                 ← 阶段导航
+    ├── README.md                                ← 阶段导航
     └── 01-documentation-generation/             ← T14: 文档生成
+        ├── README.md                            ← 文档生成核心指南
+        ├── programmer_prompt_engineering_guide.md ← 中高级程序员Prompt工程完全指南
+        └── prompt_examples.md                   ← 14个真实场景的Prompt实践库
 ```
 
-**项目完成度：** ✅ 14个任务的核心指南已完成 | 📝 部分任务补充examples和checklist中
+**项目完成度：** ✅ 14个任务的核心指南已完成 | ✨ 新增: Prompt工程完全指南 + 14个实践场景库
 
 **快速导航：** 👉 [打开项目完整导航.md](项目完整导航.md) 查看详细统计和学习路径
 
@@ -160,8 +168,10 @@ ai-prompt/
 ### ✅ 建议1: 不用全部读完
 
 这不是一本书，而是**问题导向的工具书**：
-- 遇到具体问题时，找对应的T0X
-- 查看该任务的Prompt示例
+- 遇到具体问题时，找对应的Phase和任务
+- 查看该任务的README中的Prompt示例
+- 需要深入学习Prompt工程？查看[Prompt工程完全指南](05-Phase-Documentation/01-documentation-generation/programmer_prompt_engineering_guide.md)
+- 需要找真实场景的例子？查看[Prompt实践库](05-Phase-Documentation/01-documentation-generation/prompt_examples.md)
 - 复制示例，根据你的情况调整
 
 ### ✅ 建议2: 边学边用
@@ -251,7 +261,7 @@ ai-prompt/
 ### 快速开始（5分钟）
 
 1. **打开对应Phase文件夹** - 根据你的工作阶段选择，如`01-Phase-Planning/`
-2. **查看INDEX.md** - 了解该阶段的所有任务
+2. **查看README.md** - 了解该阶段的所有任务
 3. **进入具体任务** - 如`01-requirement-clarification/`
 4. **复制Prompt示例** - 查看README中的Prompt示例，复制到AI工具使用
 
@@ -259,7 +269,7 @@ ai-prompt/
 
 1. **选择学习路径** - 见[使用说明.md](使用说明.md)的学习路径
 2. **按阶段学习** - 从01-Phase-Planning开始，按顺序学习5个阶段
-3. **每个阶段15-30分钟** - 阅读INDEX.md和任务README
+3. **每个阶段15-30分钟** - 阅读README.md和任务README
 4. **实践应用** - 在实际工作中使用学到的Prompt
 
 ---
