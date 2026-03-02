@@ -29,152 +29,204 @@
 
 ## 🎯 14大核心任务一览
 
-| 任务ID | 任务名称 | 难度 | 何时使用 |
-|--------|---------|------|---------|
-| **T01** | **Requirement Clarification** | ⭐ | 项目启动、需求评审 |
-| **T02** | **Feature Implementation** | ⭐⭐ | 日常编码、功能开发 |
-| **T03** | **Bug Reproduction & Root Cause** | ⭐⭐ | 问题排查、性能诊断 |
-| **T04** | **Refactor with Behavior Safety** | ⭐⭐⭐ | 代码改进、技术债处理 |
-| **T05** | **Unit Test Generation** | ⭐⭐ | 测试补充、覆盖率提升 |
-| **T06** | **Integration Test Plan** | ⭐⭐⭐ | 系统验证、上线前检验 |
-| **T07** | **Code Review Assistant** | ⭐⭐ | PR审查、质量把控 |
-| **T08** | **Architecture Decision Draft** | ⭐⭐⭐⭐ | 系统设计、技术选型 |
-| **T09** | **API Contract Design** | ⭐⭐⭐ | 接口定义、模块设计 |
-| **T10** | **SQL/Query Optimization** | ⭐⭐⭐ | 数据库优化、查询性能 |
-| **T11** | **Security Review** | ⭐⭐⭐⭐ | 安全审查、漏洞检查 |
-| **T12** | **Performance Optimization** | ⭐⭐⭐⭐ | 性能调优、资源优化 |
-| **T13** | **Legacy Code Understanding** | ⭐⭐⭐ | 知识转移、技术债清理 |
-| **T14** | **Documentation Generation** | ⭐⭐ | 文档生成、知识沉淀 |
+### 按难度分类
 
----
+#### ⭐ 初级任务（入门级）
+| 任务 | 名称 | 何时使用 |
+|------|------|--------|
+| **T01** | **Requirement Clarification** | 项目启动、需求评审 |
+| **T02** | **Feature Implementation** | 日常编码、功能开发 |
+| **T03** | **Bug Reproduction & Root Cause** | 问题排查、性能诊断 |
+| **T05** | **Unit Test Generation** | 测试补充、覆盖率提升 |
+| **T07** | **Code Review Assistant** | PR审查、质量把控 |
+| **T14** | **Documentation Generation** | 文档生成、知识沉淀 |
 
-## 📚 快速导航
+#### ⭐⭐ 中级任务（需要进阶知识）
+| 任务 | 名称 | 何时使用 |
+|------|------|--------|
+| **T04** | **Refactor with Behavior Safety** | 代码改进、技术债处理 |
+| **T06** | **Integration Test Plan** | 系统验证、上线前检验 |
+| **T09** | **API Contract Design** | 接口定义、模块设计 |
+| **T10** | **SQL/Query Optimization** | 数据库优化、查询性能 |
+| **T13** | **Legacy Code Understanding** | 知识转移、技术债清理 |
 
-### 🔴 我需要快速解决问题
-
-打开对应的**Phase**文件夹，查看该阶段的README.md找到具体任务：
-
-**常见问题快速跳转：**
-- 需求不清楚？ → **[01-Phase-Planning](01-Phase-Planning/)** → 01-requirement-clarification
-- 不知道怎么写代码？ → **[02-Phase-Development](02-Phase-Development/)** → 02-feature-implementation
-- 代码有Bug？ → **[03-Phase-Quality](03-Phase-Quality/)** → 04-bug-diagnosis
-- 代码质量差？ → **[03-Phase-Quality](03-Phase-Quality/)** → 03-code-review
-- 缺少测试？ → **[03-Phase-Quality](03-Phase-Quality/)** → 01-unit-testing + 02-integration-testing
-- 性能瓶颈？ → **[04-Phase-Optimization](04-Phase-Optimization/)** → 01-query-optimization + 02-performance-optimization
-- 需要设计API？ → **[02-Phase-Development](02-Phase-Development/)** → 01-api-design
-- 需要重构代码？ → **[02-Phase-Development](02-Phase-Development/)** → 03-refactoring-safely
-- 代码过时混乱？ → **[04-Phase-Optimization](04-Phase-Optimization/)** → 04-legacy-code
-- 安全隐患？ → **[04-Phase-Optimization](04-Phase-Optimization/)** → 03-security-review
-- 需要写文档？ → **[05-Phase-Documentation](05-Phase-Documentation/)** → 01-documentation-generation
-
----
-
-### 🟡 我想系统学习
-
-选择适合你的学习路径：
-
-**路径1: 快速上手（1-2周）**
-```
-T01 → T02 → T07 → T03 → T05
-需求澄清 → 功能实现 → 代码审查 → Bug排查 → 单元测试
-```
-
-**路径2: 完整开发周期（1-2个月）**
-```
-T01 → T08 → T09 → T02 → T05 → T06 → T07 → T03 → T04 → T14
-需求 → 架构 → API设计 → 实现 → 单测 → 集测 → 审查 → 调试 → 重构 → 文档
-```
-
-**路径3: 质量与优化深化**
-```
-T11 → T12 → T10 → T04 → T13
-安全 → 性能 → 查询 → 重构 → 遗留代码
-```
-
-详见 **[使用说明.md](使用说明.md)** 中的完整学习路径指南。
+#### ⭐⭐⭐ 高级任务（需要专业经验）
+| 任务 | 名称 | 何时使用 |
+|------|------|--------|
+| **T08** | **Architecture Decision Draft** | 系统设计、技术选型 |
+| **T11** | **Security Review** | 安全审查、漏洞检查 |
+| **T12** | **Performance Optimization** | 性能调优、资源优化 |
 
 ---
 
 ## 📁 项目结构
 
-项目按**5个开发阶段**组织，每个阶段包含若干相关任务。
-
 ```
 ai-prompt/
-├── README.md                                    ← 本文件
-├── CATALOG.md                                   ← 详细任务目录
+├── README.md                                    ← 本文件（快速导航）
+├── CATALOG.md                                   ← 完整目录和详细说明
 ├── QUICK-REFERENCE.md                           ← 快速查询模板
-├── 使用说明.md                                  ← 任务导航和学习路径
-├── 项目完整导航.md                              ← 完整导航和统计
+├── 使用说明.md                                  ← 学习路径指南
+├── 项目完整导航.md                              ← 详细统计和资源
 │
-├── 📋 01-Phase-Planning/                        ← 阶段1：需求与规划
-│   ├── README.md                                ← 阶段导航
-│   ├── 01-requirement-clarification/            ← T01: 需求澄清
-│   └── 02-architecture-decision/                ← T08: 架构决策
+├── programmer_prompt_engineering_guide.md       ← 📚 程序员Prompt工程完全指南
+├── developer_prompt_engineering_guide.md        ← 📚 开发者版Prompt工程指南
 │
-├── 💻 02-Phase-Development/                     ← 阶段2：设计与开发
-│   ├── README.md                                ← 阶段导航
-│   ├── 01-api-design/                           ← T09: API设计
-│   ├── 02-feature-implementation/               ← T02: 功能实现
-│   └── 03-refactoring-safely/                   ← T04: 安全重构
-│
-├── 🐛 03-Phase-Quality/                         ← 阶段3：测试与质量
-│   ├── README.md                                ← 阶段导航
-│   ├── 01-unit-testing/                         ← T05: 单元测试
-│   ├── 02-integration-testing/                  ← T06: 集成测试
-│   ├── 03-code-review/                          ← T07: 代码审查
-│   └── 04-bug-diagnosis/                        ← T03: Bug诊断
-│
-├── 🚀 04-Phase-Optimization/                    ← 阶段4：优化与维护
-│   ├── README.md                                ← 阶段导航
-│   ├── 01-query-optimization/                   ← T10: 查询优化
-│   ├── 02-performance-optimization/             ← T12: 性能优化
-│   ├── 03-security-review/                      ← T11: 安全审查
-│   └── 04-legacy-code/                          ← T13: 遗留代码
-│
-└── 📚 05-Phase-Documentation/                   ← 阶段5：文档与交付
-    ├── README.md                                ← 阶段导航
-    └── 01-documentation-generation/             ← T14: 文档生成
-        ├── README.md                            ← 文档生成核心指南
-        ├── programmer_prompt_engineering_guide.md ← 中高级程序员Prompt工程完全指南
-        └── prompt_examples.md                   ← 14个真实场景的Prompt实践库
+├── 01-Requirement-Clarification/                ← T01: 需求澄清 ⭐
+│   └── README.md
+├── 02-Feature-Implementation/                   ← T02: 功能实现 ⭐⭐
+│   └── README.md
+├── 03-Bug-Reproduction-Root-Cause/              ← T03: Bug诊断 ⭐⭐
+│   ├── README.md
+│   ├── checklist.md
+│   └── examples.md
+├── 04-Refactor-With-Behavior-Safety/            ← T04: 安全重构 ⭐⭐⭐
+│   └── README.md
+├── 05-Unit-Test-Generation/                     ← T05: 单元测试 ⭐
+│   └── README.md
+├── 06-Integration-Test-Plan/                    ← T06: 集成测试 ⭐⭐⭐
+│   └── README.md
+├── 07-Code-Review-Assistant/                    ← T07: 代码审查 ⭐
+│   └── README.md
+├── 08-Architecture-Decision-Draft/              ← T08: 架构决策 ⭐⭐⭐⭐
+│   └── README.md
+├── 09-API-Contract-Design/                      ← T09: API设计 ⭐⭐⭐
+│   └── README.md
+├── 10-SQL-Query-Optimization/                   ← T10: 查询优化 ⭐⭐⭐
+│   └── README.md
+├── 11-Security-Review/                          ← T11: 安全审查 ⭐⭐⭐⭐
+│   └── README.md
+├── 12-Performance-Optimization/                 ← T12: 性能优化 ⭐⭐⭐⭐
+│   └── README.md
+├── 13-Legacy-Code-Understanding/                ← T13: 遗留代码 ⭐⭐⭐
+│   └── README.md
+└── 14-Documentation-Generation/                 ← T14: 文档生成 ⭐
+    ├── README.md
+    └── prompt_examples.md
 ```
-
-**项目完成度：** ✅ 14个任务的核心指南已完成 | ✨ 新增: Prompt工程完全指南 + 14个实践场景库
-
-**快速导航：** 👉 [打开项目完整导航.md](项目完整导航.md) 查看详细统计和学习路径
 
 ---
 
-## ✨ 每个任务都包含
+## 🚀 快速开始
 
-- 📖 **核心概念** - 为什么这个任务很重要
-- 🎯 **最佳实践** - 如何高效地完成这个任务
-- 💡 **5-9个Prompt示例** - 真实场景的Prompt，可直接复制使用
-- ❌ **常见误区** - 应该避免的做法
-- 🚀 **高级技巧** - 进阶的优化方法
+### 方式1：按问题找答案（5分钟）
 
-每个示例Prompt都包含：
-- 具体的场景描述
-- 完整的Prompt文本
-- 预期的输出内容
-- 适用场景说明
-- 可改进的方向
+**我遇到什么问题？** → **打开对应的任务目录** → **复制Prompt使用**
+
+| 常见问题 | 对应任务 |
+|--------|--------|
+| 需求不清楚 | → [01-Requirement-Clarification](01-Requirement-Clarification/) |
+| 不知道怎么写代码 | → [02-Feature-Implementation](02-Feature-Implementation/) |
+| 代码有Bug | → [03-Bug-Reproduction-Root-Cause](03-Bug-Reproduction-Root-Cause/) |
+| 需要重构代码 | → [04-Refactor-With-Behavior-Safety](04-Refactor-With-Behavior-Safety/) |
+| 缺少单元测试 | → [05-Unit-Test-Generation](05-Unit-Test-Generation/) |
+| 需要集成测试 | → [06-Integration-Test-Plan](06-Integration-Test-Plan/) |
+| 需要Code Review | → [07-Code-Review-Assistant](07-Code-Review-Assistant/) |
+| 需要系统设计 | → [08-Architecture-Decision-Draft](08-Architecture-Decision-Draft/) |
+| 需要设计API | → [09-API-Contract-Design](09-API-Contract-Design/) |
+| SQL太慢 | → [10-SQL-Query-Optimization](10-SQL-Query-Optimization/) |
+| 有安全隐患 | → [11-Security-Review](11-Security-Review/) |
+| 性能瓶颈 | → [12-Performance-Optimization](12-Performance-Optimization/) |
+| 代码过时混乱 | → [13-Legacy-Code-Understanding](13-Legacy-Code-Understanding/) |
+| 需要写文档 | → [14-Documentation-Generation](14-Documentation-Generation/) |
+
+### 方式2：系统学习（1-2周）
+
+**选择学习路径** → **按顺序学习任务** → **在实际工作中应用**
+
+**路径A: 快速上手（初心者，1周）**
+```
+T01 → T02 → T05 → T07 → T03
+需求 → 实现 → 单测 → 审查 → 调试
+```
+
+**路径B: 完整开发周期（标准流程，2周）**
+```
+T01 → T08 → T09 → T02 → T05 → T06 → T07 → T03 → T04 → T14
+需求 → 架构 → API → 实现 → 单测 → 集测 → 审查 → 调试 → 重构 → 文档
+```
+
+**路径C: 质量与优化深化（进阶，2周）**
+```
+T11 → T12 → T10 → T04 → T13
+安全 → 性能 → 查询 → 重构 → 遗留代码
+```
+
+详见 [使用说明.md](使用说明.md) 的完整学习路径。
+
+---
+
+## 💡 每个任务都包含
+
+✅ **核心概念** - 为什么这个任务很重要
+✅ **最佳实践** - 如何高效地完成这个任务
+✅ **5-9个Prompt示例** - 真实场景的Prompt，可直接复制使用
+✅ **常见误区** - 应该避免的做法
+✅ **高级技巧** - 进阶的优化方法
+✅ **检查清单** - 完成任务前的确认清单
+
+---
+
+## 🌟 项目特色
+
+### 1️⃣ 任务驱动，符合实际工作流
+
+- ✅ 按实际编程工作流组织（不是按主题）
+- ✅ 14个任务覆盖从需求到交付的完整周期
+- ✅ 每个任务都是独立完整的，也可以组合使用
+
+### 2️⃣ 可直接使用的高质量Prompt
+
+- ✅ 每个示例都经过实战验证
+- ✅ 可直接复制到AI工具使用
+- ✅ 预期输出清晰，结果可靠
+- ✅ 包含完整的背景和约束说明
+
+### 3️⃣ 最佳实践与常见误区
+
+- ✅ 每个任务都列出"应该做"和"不应该做"
+- ✅ 帮助你避免常见的低效做法
+- ✅ 理解底层原理，提高工作效率
+
+### 4️⃣ 循序渐进的学习路径
+
+- ✅ 从初级到高级的任务分级
+- ✅ 多条学习路径可选
+- ✅ 既可以快速查阅，也可以系统学习
+
+---
+
+## 📚 额外资源
+
+| 资源 | 说明 |
+|------|------|
+| [programmer_prompt_engineering_guide.md](programmer_prompt_engineering_guide.md) | 📚 程序员Prompt工程**完全指南**（深度学习资料） |
+| [developer_prompt_engineering_guide.md](developer_prompt_engineering_guide.md) | 📚 开发者Prompt工程指南 |
+| [CATALOG.md](CATALOG.md) | 📋 完整目录和详细说明 |
+| [QUICK-REFERENCE.md](QUICK-REFERENCE.md) | ⚡ 快速参考和常用模板 |
+| [使用说明.md](使用说明.md) | 🎓 学习路径和使用指南 |
+| [项目完整导航.md](项目完整导航.md) | 🗺️ 详细统计和资源汇总 |
 
 ---
 
 ## 🎓 学习建议
 
-### ✅ 建议1: 不用全部读完
+### ✅ 建议1: 按问题学习（推荐）
 
-这不是一本书，而是**问题导向的工具书**：
-- 遇到具体问题时，找对应的Phase和任务
-- 查看该任务的README中的Prompt示例
-- 需要深入学习Prompt工程？查看[Prompt工程完全指南](05-Phase-Documentation/01-documentation-generation/programmer_prompt_engineering_guide.md)
-- 需要找真实场景的例子？查看[Prompt实践库](05-Phase-Documentation/01-documentation-generation/prompt_examples.md)
-- 复制示例，根据你的情况调整
+遇到具体问题时：
+1. 在上面的快速导航表中找到对应任务
+2. 打开任务目录的README.md
+3. 查看相关的Prompt示例
+4. 复制、调整、使用
 
-### ✅ 建议2: 边学边用
+### ✅ 建议2: 系统学习（深度）
+
+如果要系统学习Prompt工程：
+1. 打开 [programmer_prompt_engineering_guide.md](programmer_prompt_engineering_guide.md)
+2. 这是一份完整的Prompt工程指南，包含原理、框架、实战例子等
+3. 配合14个任务的示例，可以全面掌握Prompt工程
+
+### ✅ 建议3: 边学边用
 
 最好的学习方式是在实际工作中应用：
 1. 读一个Prompt示例
@@ -182,101 +234,35 @@ ai-prompt/
 3. 复制到AI工具中使用
 4. 观察结果，记录心得
 
-### ✅ 建议3: 积累个人库
-
-找到好用的Prompt时：
-1. 复制到个人笔记或Wiki
-2. 标注适用场景和效果
-3. 逐步积累属于自己的Prompt库
-4. 和团队分享优秀的Prompt
-
-### ✅ 建议4: 针对团队定制
+### ✅ 建议4: 团队协作
 
 推荐做法：
-1. 下载或Fork本项目
-2. 根据你的技术栈调整Prompt
-3. 添加团队特定的约定和规范
-4. 作为新人培训和知识库
+1. Fork本项目或下载代码
+2. 根据你的技术栈和工作流定制
+3. 分享给团队成员
+4. 一起积累团队特定的Prompt库
 
 ---
 
-## 🔥 核心特色
+## 🔥 核心理念
 
-### 1️⃣ 任务导向，而非主题导向
+> **好的Prompt应该像好的代码一样：清晰、具体、易维护。**
 
-- ❌ 不是按"代码生成、代码解释、代码优化"这样的通用主题组织
-- ✅ 而是按"T01需求澄清、T02功能实现、T07代码审查"这样的实际工作任务组织
-
-这样的好处：
-- 更符合实际的编程工作流
-- 容易快速找到你需要的任务
-- 理解每个任务之间的关系
-
-### 2️⃣ 覆盖完整的开发生命周期
-
-从**需求分析** → **架构设计** → **功能实现** → **质量保证** → **性能优化** → **知识沉淀**，全流程覆盖
-
-### 3️⃣ 可直接使用的Prompt
-
-不是讲理论，而是给出真实场景的Prompt：
-- 可以直接复制使用
-- 预期输出清晰
-- 适用场景明确
-- 包含完整示例
-
-### 4️⃣ 最佳实践和常见误区
-
-每个任务都列出：
-- 该怎么做（最佳实践）
-- 不该怎么做（常见误区）
-- 为什么（理解底层原理）
+好的Prompt具有这些特征：
+- ✅ **清晰** - 一眼看明白要做什么
+- ✅ **具体** - 给出具体的上下文和约束
+- ✅ **可复用** - 可以在不同场景中复用和调整
+- ✅ **有效** - 能可靠地得到期望的结果
 
 ---
 
 ## 📊 项目统计
 
 - **核心任务**: 14个
-- **完成任务**: 3个（T01, T02, T07）
-- **Prompt示例**: 40+个
-- **详细说明**: 相当于100+页的技术文档
+- **Prompt示例**: 70+个
+- **详细说明**: 相当于200+页的技术文档
 - **维护状态**: 🟢 主动维护中
-
----
-
-## 🌟 和其他Prompt指南的区别
-
-| 特性 | 本项目 | 通用指南 |
-|-----|--------|--------|
-| **组织方式** | 任务导向 | 主题导向 |
-| **覆盖范围** | 完整开发周期 | 通用编程技巧 |
-| **使用场景** | 实战工作流 | 单点问题解决 |
-| **学习模式** | 按工作流学 | 按兴趣学 |
-| **示例数量** | 40+ | 少 |
-| **深度** | 深（每个任务） | 浅（通用知识） |
-
----
-
-## 🚀 立即开始
-
-### 快速开始（5分钟）
-
-1. **打开对应Phase文件夹** - 根据你的工作阶段选择，如`01-Phase-Planning/`
-2. **查看README.md** - 了解该阶段的所有任务
-3. **进入具体任务** - 如`01-requirement-clarification/`
-4. **复制Prompt示例** - 查看README中的Prompt示例，复制到AI工具使用
-
-### 系统学习（1-2周）
-
-1. **选择学习路径** - 见[使用说明.md](使用说明.md)的学习路径
-2. **按阶段学习** - 从01-Phase-Planning开始，按顺序学习5个阶段
-3. **每个阶段15-30分钟** - 阅读README.md和任务README
-4. **实践应用** - 在实际工作中使用学到的Prompt
-
----
-
-## 📄 许可证
-
-本项目使用 [MIT License](LICENSE) 许可证。
+- **最后更新**: 2026年3月
 
 ---
 
@@ -292,15 +278,9 @@ ai-prompt/
 
 ---
 
-## 📚 相关资源
+## 📄 许可证
 
-### Prompt Engineering最佳实践
-- [Anthropic官方文档](https://docs.anthropic.com)
-- [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)
-
-### 编程最佳实践
-- 各语言官方编码规范
-- 《Clean Code》《Code Complete》等经典著作
+本项目使用 [MIT License](LICENSE) 许可证。
 
 ---
 
@@ -315,23 +295,18 @@ A: 可以。本项目使用MIT许可证，允许商业使用和修改。
 **Q: 有没有Prompt的版本更新？**
 A: 会定期更新，包括新的示例、改进现有Prompt、补充缺失的任务。
 
----
-
-## 🎯 核心理念
-
-> **好的Prompt应该像好的代码一样：清晰、具体、易维护。**
-
-好的Prompt具有这些特征：
-- ✅ **清晰** - 一眼看明白要做什么
-- ✅ **具体** - 给出具体的上下文和约束
-- ✅ **可复用** - 可以在不同场景中复用和调整
-- ✅ **有效** - 能可靠地得到期望的结果
+**Q: 多久更新一次？**
+A: 根据反馈和新的实践经验定期更新，预计每月至少一次。
 
 ---
 
-**准备好了吗？**
+## 🎯 下一步
 
-👉 **打开[项目完整导航.md](项目完整导航.md)** - 查看完整导航和统计
-👉 **打开[01-Phase-Planning](01-Phase-Planning/)** - 从需求规划阶段开始
-👉 **打开[02-Phase-Development](02-Phase-Development/)** - 学习设计与开发阶段
+**👉 [选择你的第一个任务](01-Requirement-Clarification/)** - 从需求澄清开始
+**👉 [查看学习路径](使用说明.md)** - 找到适合你的学习方式
+**👉 [打开完整指南](programmer_prompt_engineering_guide.md)** - 深度学习Prompt工程
+
+---
+
+**准备好提高编码效率了吗？立即选择一个任务开始！** 🚀
 

@@ -1,20 +1,23 @@
-#  程序员 AI Prompt 工程最佳实践
+#  程序员 AI Prompt 最佳实践
 
 > 程序员的系统化 AI 提示词工程实践手册
 
 ---
 
+本文档源码：[https://github.com/microwind/ai-prompt](https://github.com/microwind/ai-prompt)
+
 # 一、为什么程序员必须学习 Prompt Engineering？
 
-你是否觉得 AI 生成的代码有时候"编译不通过"或者"逻辑奇怪"？
+现在程序员已经离不开AI了，无论cursor、windsurf还是claude code、codex，抑或直接把问题扔到大模型对话框里。基本上每个程序员都会用AI来辅助编程。但有时候 AI 生成的代码会"编译不通过"或者"逻辑奇怪"，甚至出现“代码屎山”？这是什么原因？
 
-**本质问题**：这可能不是模型的问题，而是我们的 `System.out.println("提问方式")` 不对。
+**本质问题**：这可能不是模型的问题，而是我们的 "提问方式(提示词)" 不完善。
 
-## 实习生的比喻
+## 你可以把AI当作实力超强的实习生
 
-想象一下，你招聘了一位博学多才（背熟了 GitHub 上所有开源代码）但刚毕业的实习生。
+想象一下，你招聘了一位博学多才（背熟了 GitHub 上所有开源代码）但刚毕业的计算机实习生。
 
 **如果你说**："写个登录功能。"
+
 ```
 ❌ 实习生可能会给你：
 - 没加密、直接拼 SQL 的 UserDao
@@ -23,6 +26,7 @@
 ```
 
 **如果你说**："请基于 Spring Security 6，实现一个基于 JWT 的无状态认证过滤器。要求使用 Lombok，处理好全局异常，并符合 RESTful 规范。"
+
 ```
 ✅ 实习生立马交出：
 - 生产级可用的代码
@@ -61,7 +65,7 @@ Java 代码是**确定性执行**（Deterministic）：
 if (a > b) return true;  // 永远是这个结果
 ```
 
-LLM 本质是一个超级强大的 **"Token 接龙机器"**：
+而LLM 本质是一个超级强大的 **"Token 接龙机器"**：
 - 不理解代码逻辑
 - 只是在计算概率
 - AI 写代码其实是在做高维度的自动补全
@@ -136,6 +140,7 @@ AI 的记忆是**有限的**，这个限制被称为**上下文窗口**（Contex
 ```
 
 **AI 的反应**：
+
 ```java
 public class Crawler {
     public static void main(String[] args) throws Exception {
@@ -587,7 +592,7 @@ public String sanitizeInput(String input) {
 
 # 十、程序员 Prompt 最佳实践
 
-### 10.1 永远写清楚技术栈
+### 1. 永远写清楚技术栈
 
 **核心原则**：不要让 AI 猜你的技术栈。
 
@@ -614,7 +619,7 @@ public String sanitizeInput(String input) {
 
 ---
 
-### 10.2 永远限制输出格式
+### 2. 永远限制输出格式
 
 **核心原则**：明确告诉 AI 输出什么、不输出什么。
 
@@ -648,7 +653,7 @@ public String sanitizeInput(String input) {
 
 ---
 
-### 10.3 给示例
+### 3. 给示例
 
 **核心原则**：示例胜过千言万语。
 
@@ -678,7 +683,7 @@ public String sanitizeInput(String input) {
 
 ---
 
-### 10.4 要求解释思路
+### 4. 要求解释思路
 
 **核心原则**：了解 AI 的推理过程，发现逻辑错误。
 
@@ -979,11 +984,8 @@ Prompt Engineering 是程序员在 AI 时代的必修课。
 
 ---
 
-## 更多资源
-
-- GitHub: [microwind/ai-prompt](https://github.com/microwind/ai-prompt)
-- Spring AI 官方文档: [spring.io/projects/spring-ai](https://spring.io/projects/spring-ai)
-- Claude 官方文档: [claude.ai](https://claude.ai)
+## 更多文档
+- 更多提示词源码：[https://github.com/microwind/ai-prompt](https://github.com/microwind/ai-prompt)
 
 ---
 

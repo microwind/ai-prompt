@@ -40,7 +40,7 @@
 
 #### T01: Requirement Clarification（需求澄清）⭐
 
-**文件位置**: `01-Phase-Planning/01-requirement-clarification/`
+**文件位置**: `01-Requirement-Clarification/`
 **难度**: ⭐ 初级
 **关键能力**: 需求分析、边界确认、范围管理
 **何时使用**: 项目启动、需求评审
@@ -63,7 +63,7 @@
 
 #### T08: Architecture Decision Draft（架构决策）⭐⭐⭐⭐
 
-**文件位置**: `01-Phase-Planning/02-architecture-decision/`
+**文件位置**: `08-Architecture-Decision-Draft/`
 **难度**: ⭐⭐⭐⭐ 中高级
 **关键能力**: 架构设计、权衡分析、决策记录
 **何时使用**: 系统设计、技术栈选择
@@ -80,7 +80,7 @@
 
 #### T09: API Contract Design（API设计）⭐⭐⭐
 
-**文件位置**: `02-Phase-Development/01-api-design/`
+**文件位置**: `09-API-Contract-Design/`
 **难度**: ⭐⭐⭐ 中级
 **关键能力**: 接口设计、规范制定、文档生成
 **何时使用**: 模块接口设计、API定义
@@ -95,7 +95,7 @@
 
 #### T02: Feature Implementation（功能实现）⭐⭐
 
-**文件位置**: `02-Phase-Development/02-feature-implementation/`
+**文件位置**: `02-Feature-Implementation/`
 **难度**: ⭐⭐ 初中级
 **关键能力**: 代码生成、算法设计、框架应用
 **何时使用**: 日常编码、功能开发
@@ -120,7 +120,7 @@
 
 #### T04: Refactor with Behavior Safety（安全重构）⭐⭐⭐
 
-**文件位置**: `02-Phase-Development/03-refactoring-safely/`
+**文件位置**: `04-Refactor-With-Behavior-Safety/`
 **难度**: ⭐⭐⭐ 中级
 **关键能力**: 代码改进、重构策略、风险控制
 **何时使用**: 代码改进、技术债处理
@@ -137,7 +137,7 @@
 
 #### T05: Unit Test Generation（单元测试）⭐⭐
 
-**文件位置**: `03-Phase-Quality/01-unit-testing/`
+**文件位置**: `05-Unit-Test-Generation/`
 **难度**: ⭐⭐ 初中级
 **关键能力**: 测试设计、边界覆盖、Mock使用
 **何时使用**: 测试补充、覆盖率提升
@@ -152,7 +152,7 @@
 
 #### T06: Integration Test Plan（集成测试）⭐⭐⭐
 
-**文件位置**: `03-Phase-Quality/02-integration-testing/`
+**文件位置**: `06-Integration-Test-Plan/`
 **难度**: ⭐⭐⭐ 中级
 **关键能力**: 测试场景设计、系统交互验证
 **何时使用**: 系统验证、上线前检验
@@ -167,7 +167,7 @@
 
 #### T07: Code Review Assistant（代码审查）⭐⭐
 
-**文件位置**: `03-Phase-Quality/03-code-review/`
+**文件位置**: `07-Code-Review-Assistant/`
 **难度**: ⭐⭐ 初中级
 **关键能力**: 质量评估、最佳实践识别、建设性反馈
 **何时使用**: PR审查、质量把控
@@ -192,7 +192,7 @@
 
 #### T03: Bug Reproduction and Root Cause（Bug诊断）⭐⭐
 
-**文件位置**: `03-Phase-Quality/04-bug-diagnosis/`
+**文件位置**: `03-Bug-Reproduction-Root-Cause/`
 **难度**: ⭐⭐ 初中级
 **关键能力**: 问题诊断、日志分析、根因追踪
 **何时使用**: 问题排查、性能诊断
@@ -220,7 +220,7 @@
 
 #### T10: SQL/Query Optimization（查询优化）⭐⭐⭐
 
-**文件位置**: `04-Phase-Optimization/01-query-optimization/`
+**文件位置**: `10-SQL-Query-Optimization/`
 **难度**: ⭐⭐⭐ 中级
 **关键能力**: 查询分析、索引设计、性能基准测试
 **何时使用**: 数据库调优、性能瓶颈分析
@@ -235,7 +235,7 @@
 
 #### T12: Performance Optimization（性能优化）⭐⭐⭐⭐
 
-**文件位置**: `04-Phase-Optimization/02-performance-optimization/`
+**文件位置**: `12-Performance-Optimization/`
 **难度**: ⭐⭐⭐⭐ 中高级
 **关键能力**: 性能分析、瓶颈识别、优化实施
 **何时使用**: 性能调优、资源优化
@@ -250,7 +250,7 @@
 
 #### T11: Security Review（安全审查）⭐⭐⭐⭐
 
-**文件位置**: `04-Phase-Optimization/03-security-review/`
+**文件位置**: `11-Security-Review/`
 **难度**: ⭐⭐⭐⭐ 中高级
 **关键能力**: 漏洞识别、防护设计、安全加固
 **何时使用**: 安全评估、漏洞检查
@@ -265,7 +265,7 @@
 
 #### T13: Legacy Code Understanding（遗留代码）⭐⭐⭐
 
-**文件位置**: `04-Phase-Optimization/04-legacy-code/`
+**文件位置**: `13-Legacy-Code-Understanding/`
 **难度**: ⭐⭐⭐ 中级
 **关键能力**: 代码理解、知识转移、重构规划
 **何时使用**: 知识转移、技术债清理
@@ -282,7 +282,7 @@
 
 #### T14: Documentation Generation（文档生成）⭐⭐
 
-**文件位置**: `05-Phase-Documentation/01-documentation-generation/`
+**文件位置**: `14-Documentation-Generation/`
 **难度**: ⭐⭐ 初中级
 **关键能力**: 文档组织、清晰表达、自动化生成
 **何时使用**: 文档生成、知识沉淀
