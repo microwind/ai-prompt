@@ -8,15 +8,15 @@
 
 # 一、为什么程序员必须学习 Prompt Engineering？
 
-现在程序员已经离不开AI了，无论cursor、windsurf还是claude code、codex，抑或直接把问题扔到大模型对话框里。基本上每个程序员都会用AI来辅助编程。但有时候 AI 生成的代码会"编译不通过"或者"逻辑奇怪"，甚至出现“代码屎山”？这是什么原因？
+现在程序员已经离不开AI了，无论Cursor、Windsurf还是Claude Code、Codex、OpenClaw，抑或直接把问题扔到大模型对话框里。基本上每个程序员都会用AI来辅助编程。但有时候 AI 生成的代码会"编译不通过"或者"逻辑奇怪"，甚至出现“代码屎山”，这是什么原因？
 
-**本质问题**：这可能不是模型的问题，而是我们的 "提问方式(提示词)" 不够准确。
+**本质问题**：这可能不是模型的问题，而是我们的 **"提问方式(提示词)" **不够准确。
 
 ## 你可以把AI当作实力超强的实习生
 
 想象一下，你招聘了一位博学多才（背熟了 GitHub 上所有开源代码）但刚毕业的计算机实习生。
 
-**如果你说**："写个登录功能。"
+**如果你说**："请写个登录功能。"
 
 ```
 ❌ 实习生可能会给你：
@@ -45,7 +45,7 @@ Prompt Engineering 本质：**自然语言编程**。
 很多人遇到的问题：
 
 - AI 写的代码编译不通过
-- 用了过时 API
+- 用了过时 API或框架老旧
 - 逻辑不符合项目架构
 - 单元测试缺失
 
@@ -239,6 +239,71 @@ public class VirtualThreadCrawler {
 
 ---
 
+# 四、CRISPE Prompt 框架
+
+除了 BROKE 框架，**CRISPE 框架** 是另一个优秀的 Prompt 结构化方法。它更加细致地考虑用户体验和个性化。
+
+| 要素 | 英文 | 说明 | 例子 |
+|------|------|------|------|
+| 能力和角色 | Capacity and Role | 定义 AI 的职能边界 | "你是一个精通 Java 并发编程的架构师，但不涉及前端技术" |
+| 洞察 | Insight | 提供背景信息和上下文 | "我们的系统在高并发场景下出现死锁" |
+| 声明 | Statement | 明确的任务描述 | "请分析死锁原因并提供解决方案" |
+| 个性化 | Personalization | 针对用户的特定需求 | "使用我们已有的 ReentrantReadWriteLock 机制" |
+| 实验 | Experiment | 验证和反复迭代 | "请先给出分析步骤，我会基于反馈继续优化" |
+
+## CRISPE vs BROKE 对比
+
+| 维度 | BROKE | CRISPE |
+|------|-------|--------|
+| 框架复杂度 | 简洁（5 个要素） | 细致（5 个要素，但更灵活） |
+| 角色定义 | 明确且单一 | 包含职能边界（能做什么、不能做什么） |
+| 背景信息 | 平铺直叙 | 强调"洞察"（为什么这样做） |
+| 个性化支持 | 通过 Examples | 独立的 Personalization 要素 |
+| 迭代能力 | 隐含 | 显式的 Experiment 环节 |
+| 适用场景 | 代码生成、架构设计 | 复杂问题分析、创意输出 |
+
+## CRISPE 示例：调试生产环境 Bug
+
+```text
+[Capacity and Role]
+你是一名资深的 Java 性能优化专家。
+你精通：线程、JVM、Linux 系统级性能分析
+你不涉及：数据库 DBA、前端优化
+
+[Insight]
+我们的在线支付系统在晚高峰（20:00-22:00）出现响应延迟：
+- 通常 P99 延迟 100ms，峰值期间升至 5s
+- JVM heap 没有明显上升（垃圾回收正常）
+- CPU 使用率保持在 60%（还有余量）
+- 数据库查询时间正常
+- 日志显示大量 "lock contention" 警告
+
+[Statement]
+请分析可能的根本原因，并给出优化方案。
+
+[Personalization]
+我们使用的是：
+- Java 17，ZGC 垃圾回收器
+- Spring Boot 3.2 with Project Reactor (WebFlux)
+- 已有线程池大小 200，队列长度 1000
+- 使用 Caffeine 本地缓存（10000 条）
+
+[Experiment]
+请按以下顺序回答：
+1. 列出最可能的 3 个原因（按概率排序）
+2. 每个原因对应的排查方法
+3. 针对我们的技术栈，推荐的解决方案
+4. 预期的性能提升
+```
+
+**AI 的响应会包含**：
+1. 分析思路（而不是直接给答案）
+2. 针对性的排查命令
+3. 调优参数建议
+4. 验证方法
+
+---
+
 ## 3.1 标准 Prompt 模板
 
 ```text
@@ -267,7 +332,222 @@ public class VirtualThreadCrawler {
 
 ---
 
-# 四、Prompt 构造流程图
+# 五、ROBOTIC Prompt 框架
+
+**ROBOTIC 框架** 是一个更加系统性的 Prompt 设计方法，特别适合**需要持续迭代和反馈**的场景。
+
+| 要素 | 英文 | 说明 | 例子 |
+|------|------|------|------|
+| 角色 | Role | AI 的身份和专业背景 | "Java 资深架构师，10 年微服务经验" |
+| 目标 | Objective | 要完成的任务 | "设计订单服务的 DDD 聚合根" |
+| 背景 | Background | 项目和业务背景 | "电商平台，日均 100 万订单，使用微服务架构" |
+| 输出 | Output | 期望的输出格式和质量 | "Mermaid 类图 + Java 代码 + 业务规则说明" |
+| 时间/类型 | Type | 任务的性质 | "架构设计任务（设计，而非编码）" |
+| 迭代 | Iterate | 反馈和改进机制 | "先给出初稿，基于反馈迭代 3 轮" |
+| 澄清 | Clarify | 消除歧义的问题 | "订单是否需要支持部分退款？" |
+
+## ROBOTIC vs BROKE vs CRISPE 对比
+
+| 框架 | 要素数 | 适用场景 | 强项 | 弱项 |
+|------|-------|---------|------|------|
+| **BROKE** | 5 | 代码生成、快速需求 | 简洁、易记、高效 | 缺乏迭代机制、灵活性低 |
+| **CRISPE** | 5 | 复杂分析、创意输出 | 个性化强、强调洞察 | 迭代不清晰、不适合快速编码 |
+| **ROBOTIC** | 7 | 架构设计、长期项目 | 迭代明确、反馈机制完整 | 结构较复杂、前期准备多 |
+
+## 何时选择哪个框架？
+
+```
+┌─────────────────────────────────────────────────┐
+│  问题分类决策树                                   │
+└─────────────────────────────────────────────────┘
+
+1. 任务是否需要迭代？
+   ├─ 否 → BROKE（快速代码生成）
+   └─ 是 → 继续问 2
+
+2. 是否需要详细的个性化定制？
+   ├─ 否 → ROBOTIC（架构、设计类）
+   └─ 是 → CRISPE（复杂分析、创意）
+
+3. 是否涉及团队协作和评审？
+   ├─ 是 → ROBOTIC（清晰的反馈链路）
+   └─ 否 → 根据 1 选择
+```
+
+## ROBOTIC 示例：电商订单领域建模
+
+### 问题：使用 DDD 设计 Order 聚合根
+
+```text
+[Role]
+你是一名资深的 Java 架构师，精通 DDD（Domain-Driven Design）和微服务架构。
+曾主导多个百万级日活项目的设计。
+
+[Objective]
+使用 DDD 设计电商订单服务的 Order 聚合根。
+
+[Background]
+业务场景：
+- 日均 100 万订单，需要支持高并发
+- 订单生命周期：创建 → 支付 → 发货 → 收货 → 完成
+- 需要支持：部分支付、分次发货、退款流程
+- 技术栈：Spring Boot 3.2、Java 21、MongoDB（事件溯源）
+
+[Output]
+输出 4 个部分：
+1. 领域对象 UML 类图（Mermaid）
+2. Java Record 或 Class 实现（无 setter）
+3. 领域事件定义（OrderCreated、OrderPaid 等）
+4. 业务规则说明文档
+
+[Type]
+这是一个架构设计任务，需要深度思考而非快速编码。
+
+[Iterate]
+流程：
+- 第 1 轮：给出核心设计（Order、OrderItem、Money 等）
+- 第 2 轮：添加状态管理和事件发布机制
+- 第 3 轮：根据我的反馈优化并发控制和事件一致性
+
+[Clarify]
+在开始前，我有 3 个问题：
+1. 是否需要支持订单拆单（一个逻辑订单拆成多个物流订单）？
+2. 退款是否需要原路返回（支持多种支付方式的混合支付）？
+3. 是否使用事件溯源（Event Sourcing）还是传统快照？
+```
+
+### AI 的响应流程
+
+**第 1 轮 - 核心设计**
+
+```java
+// 聚合根
+public class Order {
+    private OrderId id;
+    private CustomerId customerId;
+    private List<OrderItem> items;
+    private Money totalAmount;
+    private OrderStatus status;
+    private List<DomainEvent> events;
+
+    // 业务方法（而非 setter）
+    public void pay(PaymentId paymentId) {
+        if (status != OrderStatus.CREATED) {
+            throw new OrderException("订单不在创建状态");
+        }
+        this.status = OrderStatus.PAID;
+        this.addEvent(new OrderPaidEvent(...));
+    }
+
+    public void ship(ShipmentId shipmentId) {
+        if (status != OrderStatus.PAID) {
+            throw new OrderException("订单未支付");
+        }
+        this.status = OrderStatus.SHIPPED;
+        this.addEvent(new OrderShippedEvent(...));
+    }
+}
+
+// 值对象
+public record Money(BigDecimal amount, Currency currency) {
+    public Money {
+        if (amount.compareTo(BigDecimal.ZERO) < 0) {
+            throw new IllegalArgumentException("金额不能为负");
+        }
+    }
+}
+```
+
+**第 2 轮 - 添加事件机制**
+
+用户反馈："支持部分支付和分次发货"
+
+```java
+public class Order {
+    private List<Payment> payments;
+    private List<Shipment> shipments;
+
+    public void payPartial(PaymentId id, Money amount) {
+        // 支持多次支付，直到金额足够
+        ...
+    }
+
+    public void shipPartial(List<OrderItem> items) {
+        // 支持分次发货
+        ...
+    }
+}
+```
+
+**第 3 轮 - 并发控制优化**
+
+用户反馈："如何处理并发支付和发货的竞态条件？"
+
+```java
+public class Order {
+    private Long version; // 乐观锁
+
+    public void pay(PaymentId id, Money amount) {
+        // CAS（Compare-And-Swap）
+        validateVersion();
+        // ... 业务逻辑
+        this.version++;
+    }
+}
+```
+
+### ROBOTIC 的收益
+
+1. **第 1 轮** → 快速得到核心方案
+2. **第 2 轮** → 基于反馈添加细节
+3. **第 3 轮** → 优化边界情况
+4. **完整性** → 逐步逼近生产级设计
+
+---
+
+## 框架选择实战指南
+
+### 场景 1：快速生成一个工具类
+
+**选择：BROKE**
+
+```text
+[Role] Java 工具类开发者
+[Background] 项目中缺少日期处理工具
+[Objective] 生成一个 DateUtil 工具类
+[Constraints] 支持 Java 8 LocalDateTime，包含常用操作
+[Examples] parse、format、addDays
+```
+
+### 场景 2：分析性能问题，需要深度思考
+
+**选择：CRISPE**
+
+```text
+[Capacity and Role] JVM 性能专家
+[Insight] 应用在某个时间段出现 GC 暂停
+[Statement] 分析可能原因
+[Personalization] 使用 G1GC，heap 32G
+[Experiment] 先给出分析思路，再给优化方案
+```
+
+### 场景 3：设计一个新的微服务，需要架构评审
+
+**选择：ROBOTIC**
+
+```text
+[Role] 资深架构师
+[Objective] 设计商品服务的架构
+[Background] 电商平台，支持千万级 SKU
+[Output] 架构文档 + 核心代码
+[Type] 架构设计（需要反复评审）
+[Iterate] 先给初稿，基于反馈迭代
+[Clarify] 是否需要分库分表？
+```
+
+---
+
+# 六、Prompt 构造流程图
 
 ```mermaid
 flowchart TD
@@ -281,9 +561,9 @@ flowchart TD
 
 ---
 
-# 五、实战示例
+# 七、实战示例
 
-## 5.1 示例一：生成 Spring Boot 登录模块
+## 7.1 示例一：生成 Spring Boot 登录模块
 
 ```text
 你是一名资深 Java 架构师。
@@ -303,7 +583,7 @@ flowchart TD
 
 ---
 
-## 5.2 示例二：遗留代码重构
+## 7.2 示例二：遗留代码重构
 
 ```text
 将以下 Java 7 嵌套 for 循环改为 Java 8 Stream。
@@ -316,7 +596,7 @@ flowchart TD
 
 ---
 
-## 5.3 示例三：生成单元测试
+## 7.3 示例三：生成单元测试
 
 ```text
 针对 PaymentService 写 JUnit5 + Mockito 测试。
@@ -332,7 +612,7 @@ flowchart TD
 
 ---
 
-## 5.4 示例四：DDD 建模
+## 7.4 示例四：DDD 建模
 
 ```text
 设计电商 Order 聚合根。
@@ -346,7 +626,7 @@ flowchart TD
 
 ---
 
-## 5.5 示例五：SQL 优化
+## 7.5 示例五：SQL 优化
 
 ```text
 分析以下 SQL：
@@ -364,7 +644,7 @@ orders 表千万级。
 
 ---
 
-# 六、进阶：Few-Shot Prompt（少样本）
+# 八、进阶：Few-Shot Prompt（少样本）
 
 **核心原理**：给 AI 一两个"输入-输出"的例子（就像写 Unit Test），它能迅速理解你的意图。
 
@@ -407,7 +687,7 @@ is_deleted -> ?
 
 ---
 
-# 七、进阶：思维链 Prompt（Chain of Thought, CoT）
+# 九、进阶：思维链 Prompt（Chain of Thought, CoT）
 
 **核心原理**：对于复杂的算法或 Debug 问题，告诉 AI "请一步步思考（Think step-by-step）"。这就像在代码里打断点调试一样，能显著提高准确率。
 
@@ -455,7 +735,7 @@ for (String item : items) {
 
 ---
 
-# 八、RAG：检索增强生成
+# 十、RAG：检索增强生成
 
 **核心概念**：单纯的 Prompt 受限于模型训练数据（比如它不知道你公司内部的 API 定义）。RAG（Retrieval-Augmented Generation）就像是给 AI 装了一个 **Hibernate 持久化层**。
 
@@ -511,7 +791,7 @@ public interface UserService {
 
 ---
 
-# 九、Prompt 安全：防注入
+# 十一、Prompt 安全：防注入
 
 就像我们防御 **SQL 注入** 一样，我们需要防御 **Prompt 注入**。
 
@@ -590,7 +870,7 @@ public String sanitizeInput(String input) {
 
 ---
 
-# 十、程序员 Prompt 最佳实践
+# 十二、程序员 Prompt 最佳实践
 
 ### 1. 永远写清楚技术栈
 
@@ -722,7 +1002,7 @@ WHERE o.status = 'PAID';
 
 ---
 
-### 10.5 分步骤提问
+### 12.5 分步骤提问
 
 **核心原则**：复杂问题分解成多个简单问题。
 
@@ -785,7 +1065,7 @@ WHERE o.status = 'PAID';
 
 ---
 
-# 十一、Spring AI：Java 生态的 AI 集成
+# 十三、Spring AI：Java 生态的 AI 集成
 
 作为 Java 开发者，你不需要非得去学 Python 才能玩转 AI。Spring 官方推出了 **Spring AI** 项目。
 
@@ -874,7 +1154,7 @@ public class CodeGenService {
 
 ---
 
-# 十二、团队级 Prompt 规范模板
+# 十四、团队级 Prompt 规范模板
 
 ```text
 [Role]
@@ -899,7 +1179,7 @@ public class CodeGenService {
 
 ---
 
-# 十三、总结
+# 十五、总结
 
 ## 核心认识
 
@@ -970,7 +1250,7 @@ AI 就会成为你的高效 Pair Programmer。
 | 一次问完所有问题 | 分步骤提问，逐步迭代优化 |
 | 只问不验证 | 要求 AI 解释思路，验证逻辑 |
 
-## 最后的话
+## 最后
 
 从今天开始，当你面对 IDE 里的 AI 助手时，试着：
 
@@ -981,6 +1261,51 @@ AI 就会成为你的高效 Pair Programmer。
 像写单元测试一样验证它的输出。
 
 Prompt Engineering 是程序员在 AI 时代的必修课。
+
+AI时代已经来临，必须改变自己成为优秀的提示词工程师。
+
+---
+
+## 三框架速查表
+
+```
+任务类型          最佳框架    原因
+─────────────────────────────────────────────
+快速代码生成      BROKE       简洁高效，适合快速迭代
+性能优化分析      CRISPE      强调洞察和个性化
+架构设计评审      ROBOTIC     迭代和反馈机制完整
+DDD 领域建模      ROBOTIC     需要多轮对话和持续优化
+Bug 调试          CRISPE      需要深度思考和洞察
+工具类开发        BROKE       需求明确，直接编码
+实验性代码        CRISPE      强调创意和探索
+生产系统重构      ROBOTIC     需要反复评审和优化
+```
+
+### 新手建议
+
+1. **第 1 个月**：掌握 BROKE 框架，用于 80% 的日常编码任务
+2. **第 2 个月**：学习 CRISPE 框架，处理复杂的问题分析
+3. **第 3 个月+**：深入 ROBOTIC 框架，参与团队级架构设计
+
+### 框架组合使用
+
+在实际工作中，三个框架经常组合使用：
+
+```
+场景：设计一个新的微服务
+
+阶段 1 - 架构设计（ROBOTIC）
+→ 基于业务需求迭代架构方案
+
+阶段 2 - 核心代码生成（BROKE）
+→ 快速生成聚合根、Value Object
+
+阶段 3 - 性能优化分析（CRISPE）
+→ 分析瓶颈、给出优化建议
+
+阶段 4 - 最终评审（ROBOTIC）
+→ 基于团队反馈进行最终调整
+```
 
 ---
 
