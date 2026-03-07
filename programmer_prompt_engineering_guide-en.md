@@ -8,24 +8,6 @@ Source repository for this document: [https://github.com/microwind/ai-prompt](ht
 
 ---
 
-## 📚 Prompt Framework Quick Navigation
-
-This guide details multiple Prompt frameworks. Click the links below to jump to the corresponding framework:
-
-| Framework | Use Case | Documentation |
-|-----------|----------|----------------|
-| **BROKE** | Fast code generation, standard requirements | [📖 Full Documentation](frameworks/BROKE.md) |
-| **CRISPE** | Complex problem analysis, creative output | [📖 Full Documentation](frameworks/CRISPE.md) |
-| **ROBOTIC** | Architecture design, iterative feedback | [📖 Full Documentation](frameworks/ROBOTIC.md) |
-| **Chain-of-Thought** | Algorithm design, logical reasoning | [📖 Full Documentation](frameworks/Chain-of-Thought.md) |
-| **CO-STAR** | Content creation, marketing copy | [📖 Full Documentation](frameworks/CO-STAR.md) |
-| **ICIO** | Iterative problem solving | [📖 Full Documentation](frameworks/ICIO.md) |
-| **RTF** | Role playing, scenario simulation | [📖 Full Documentation](frameworks/RTF.md) |
-
-**Quick Framework Selection**: Choose the best framework for your current task 👆
-
----
-
 # 1. Why Must Programmers Learn Prompt Engineering?
 
 Today, programmers already rely on AI heavily, whether in Cursor, Windsurf, Claude Code, Codex, or by directly asking an LLM chat box. Almost every developer now uses AI for coding assistance. But sometimes AI-generated code does not compile, behaves strangely, or even turns into spaghetti code. Why?
@@ -1001,6 +983,25 @@ Control it as precisely as configuring a Spring Bean.
 Validate its output as rigorously as writing unit tests.
 
 Prompt Engineering is a core skill for programmers in the AI era.
+
+---
+
+
+## Prompt Framework Quick Navigation
+
+This guide details multiple Prompt frameworks. Click the links below to jump to the corresponding framework:
+
+| Framework | Use Case | Documentation |
+|-----------|----------|----------------|
+| **BROKE** | Fast code generation, standard requirements | [📖 Full Documentation](frameworks/BROKE.md) |
+| **CRISPE** | Complex problem analysis, creative output | [📖 Full Documentation](frameworks/CRISPE.md) |
+| **ROBOTIC** | Architecture design, iterative feedback | [📖 Full Documentation](frameworks/ROBOTIC.md) |
+| **Chain-of-Thought** | Algorithm design, logical reasoning | [📖 Full Documentation](frameworks/Chain-of-Thought.md) |
+| **CO-STAR** | Content creation, marketing copy | [📖 Full Documentation](frameworks/CO-STAR.md) |
+| **ICIO** | Iterative problem solving | [📖 Full Documentation](frameworks/ICIO.md) |
+| **RTF** | Role playing, scenario simulation | [📖 Full Documentation](frameworks/RTF.md) |
+
+**Quick Framework Selection**: Choose the best framework for your current task 👆
 
 ---
 

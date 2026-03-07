@@ -1,4 +1,4 @@
-# 软件开发Prompt Engineering 指南
+# Vibe Coding 提示词工程指南
 
 > Vibe coding已经势不可挡，程序员需要从一个编码工程师转为提示词工程师。
 >

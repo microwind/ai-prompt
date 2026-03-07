@@ -6,6 +6,9 @@ target/
 *.pyc
 .idea
 
+# MAC
+.DS_Store
+
 # Log file
 *.log
 *.log.lck

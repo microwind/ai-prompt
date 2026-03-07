@@ -8,24 +8,6 @@
 
 ---
 
-## 📚 Prompt 框架快速导航
-
-本指南详细讲解了多个 Prompt 框架。点击下面的链接快速跳转到相应框架：
-
-| 框架 | 适用场景 | 文档 |
-|------|---------|------|
-| **BROKE** | 快速代码生成、标准需求 | [📖 详细文档](frameworks/BROKE.md) |
-| **CRISPE** | 复杂问题分析、创意输出 | [📖 详细文档](frameworks/CRISPE.md) |
-| **ROBOTIC** | 架构设计、多轮迭代 | [📖 详细文档](frameworks/ROBOTIC.md) |
-| **Chain-of-Thought** | 算法设计、逻辑推理 | [📖 详细文档](frameworks/Chain-of-Thought.md) |
-| **CO-STAR** | 内容创作、营销文案 | [📖 详细文档](frameworks/CO-STAR.md) |
-| **ICIO** | 迭代式问题解决 | [📖 详细文档](frameworks/ICIO.md) |
-| **RTF** | 角色扮演、场景模拟 | [📖 详细文档](frameworks/RTF.md) |
-
-**快速选择框架**：选择最适合你当前任务的框架 👆
-
----
-
 # 一、为什么程序员必须学习 Prompt Engineering？
 
 现在程序员已经离不开AI了，无论Cursor、Windsurf还是Claude Code、Codex、OpenClaw，抑或直接把问题扔到大模型对话框里。基本上每个程序员都会用AI来辅助编程。但有时候 AI 生成的代码会"编译不通过"或者"逻辑奇怪"，甚至出现“代码屎山”，这是什么原因？
@@ -1329,8 +1311,28 @@ Bug 调试          CRISPE      需要深度思考和洞察
 
 ---
 
+## Prompt 框架快速导航
+
+本指南详细讲解了多个 Prompt 框架。点击下面的链接快速跳转到相应框架：
+
+| 框架 | 适用场景 | 文档 |
+|------|---------|------|
+| **BROKE** | 快速代码生成、标准需求 | [📖 详细文档](frameworks/BROKE.md) |
+| **CRISPE** | 复杂问题分析、创意输出 | [📖 详细文档](frameworks/CRISPE.md) |
+| **ROBOTIC** | 架构设计、多轮迭代 | [📖 详细文档](frameworks/ROBOTIC.md) |
+| **Chain-of-Thought** | 算法设计、逻辑推理 | [📖 详细文档](frameworks/Chain-of-Thought.md) |
+| **CO-STAR** | 内容创作、营销文案 | [📖 详细文档](frameworks/CO-STAR.md) |
+| **ICIO** | 迭代式问题解决 | [📖 详细文档](frameworks/ICIO.md) |
+| **RTF** | 角色扮演、场景模拟 | [📖 详细文档](frameworks/RTF.md) |
+
+**快速选择框架**：选择最适合你当前任务的框架 👆
+
+---
+
 ## 更多实践
 - 更多提示词源码：[https://github.com/microwind/ai-prompt](https://github.com/microwind/ai-prompt)
+
+
 
 ---
 
