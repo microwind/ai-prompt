@@ -11,9 +11,10 @@
 
 ## 📖 项目介绍
 
-这是一份**实用的Prompt Engineering指南**，围绕14个核心编程任务组织，帮助你在日常工作中更高效地与AI（Claude、GPT等）协作。
+这是一份**实用的Prompt Engineering指南**，围绕14个核心编程任务组织，提供提供100+实际的提示词例子，帮助你在日常工作中更高效地与AI（Claude、GPT等）协作。
 
 **不同于以往的Prompt指南：**
+
 - 🎯 **任务驱动** - 围绕实际的编程工作流组织
 - 💼 **实战导向** - 每个任务都源于真实的编程场景
 - 📋 **完整覆盖** - 从需求分析到项目交付的全链路
@@ -196,19 +197,14 @@ T11 → T12 → T10 → T04 → T13
 
 ---
 
-## 📚 额外资源
+## 📚 文档资源
 
 | 资源 | 说明 |
 |------|------|
 | **[Prompt-Examples](./Prompt-Examples/)** | 💡 **70+ 个真实场景的Prompt实践库**（内容生成、系统设计、数据处理、代码生成） |
 | **[Prompt-Frameworks](./Prompt-Frameworks)** | 💡 **7个常见提示词工程框架**(BROKE、CRISPE、ROBOTIC等) |
-
 | [programmer_prompt_engineering_guide.md](programmer_prompt_engineering_guide.md) | 📚 程序员Prompt工程**完全指南**（深度学习资料） |
 | [developer_prompt_engineering_guide.md](developer_prompt_engineering_guide.md) | 📚 开发者Prompt工程指南 |
-| [CATALOG.md](CATALOG.md) | 📋 完整目录和详细说明 |
-| [QUICK-REFERENCE.md](QUICK-REFERENCE.md) | ⚡ 快速参考和常用模板 |
-| [使用说明.md](使用说明.md) | 🎓 学习路径和使用指南 |
-| [项目完整导航.md](项目完整导航.md) | 🗺️ 详细统计和资源汇总 |
 
 ---
 
@@ -306,24 +302,6 @@ T11 → T12 → T10 → T04 → T13
 - **详细说明**: 相当于200+页的技术文档
 - **维护状态**: 🟢 主动维护中
 - **最后更新**: 2026年3月
-
----
-
-## 🤝 贡献
-
-欢迎以下形式的贡献：
-- 🐛 报告问题或Prompt不有效的情况
-- 💡 建议新的Prompt或改进现有Prompt
-- 📝 补充缺失的任务指南
-- 🌍 翻译成其他语言
-
-请直接提交Issue或Pull Request。
-
----
-
-## 📄 许可证
-
-本项目使用 [MIT License](LICENSE) 许可证。
 
 ---
 
