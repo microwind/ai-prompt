@@ -1317,13 +1317,13 @@ Bug 调试          CRISPE      需要深度思考和洞察
 
 | 框架 | 适用场景 | 文档 |
 |------|---------|------|
-| **BROKE** | 快速代码生成、标准需求 | [📖 详细文档](frameworks/BROKE.md) |
-| **CRISPE** | 复杂问题分析、创意输出 | [📖 详细文档](frameworks/CRISPE.md) |
-| **ROBOTIC** | 架构设计、多轮迭代 | [📖 详细文档](frameworks/ROBOTIC.md) |
-| **Chain-of-Thought** | 算法设计、逻辑推理 | [📖 详细文档](frameworks/Chain-of-Thought.md) |
-| **CO-STAR** | 内容创作、营销文案 | [📖 详细文档](frameworks/CO-STAR.md) |
-| **ICIO** | 迭代式问题解决 | [📖 详细文档](frameworks/ICIO.md) |
-| **RTF** | 角色扮演、场景模拟 | [📖 详细文档](frameworks/RTF.md) |
+| **BROKE** | 快速代码生成、标准需求 | [📖 详细文档](./Prompt-Frameworks/BROKE.md) |
+| **CRISPE** | 复杂问题分析、创意输出 | [📖 详细文档](./Prompt-Frameworks/CRISPE.md) |
+| **ROBOTIC** | 架构设计、多轮迭代 | [📖 详细文档](./Prompt-Frameworks/ROBOTIC.md) |
+| **Chain-of-Thought** | 算法设计、逻辑推理 | [📖 详细文档](Prompt-Frameworks/Chain-of-Thought.md) |
+| **CO-STAR** | 内容创作、营销文案 | [📖 详细文档](./Prompt-Frameworks/CO-STAR.md) |
+| **ICIO** | 迭代式问题解决 | [📖 详细文档](./Prompt-Frameworks/ICIO.md) |
+| **RTF** | 角色扮演、场景模拟 | [📖 详细文档](./Prompt-Frameworks/RTF.md) |
 
 **快速选择框架**：选择最适合你当前任务的框架 👆
 
