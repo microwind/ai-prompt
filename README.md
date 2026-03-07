@@ -200,7 +200,9 @@ T11 → T12 → T10 → T04 → T13
 
 | 资源 | 说明 |
 |------|------|
-| **[00-Prompt-Examples-Library](00-Prompt-Examples-Library/)** | 💡 **70+ 个真实场景的Prompt实践库**（内容生成、系统设计、数据处理、代码生成） |
+| **[Prompt-Examples](./Prompt-Examples/)** | 💡 **70+ 个真实场景的Prompt实践库**（内容生成、系统设计、数据处理、代码生成） |
+| **[Prompt-Frameworks](./Prompt-Frameworks)** | 💡 **7个常见提示词工程框架**(BROKE、CRISPE、ROBOTIC等) |
+
 | [programmer_prompt_engineering_guide.md](programmer_prompt_engineering_guide.md) | 📚 程序员Prompt工程**完全指南**（深度学习资料） |
 | [developer_prompt_engineering_guide.md](developer_prompt_engineering_guide.md) | 📚 开发者Prompt工程指南 |
 | [CATALOG.md](CATALOG.md) | 📋 完整目录和详细说明 |
