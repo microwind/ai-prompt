@@ -1,125 +1,125 @@
-# 深度对比分析AI编程提示词框架
+# In-Depth Comparative Analysis of AI Prompt Frameworks
 
-## 目录
-1. [AI提示词的作用](#ai提示词的作用)
-2. [AI提示常见框架概述](#ai提示常见框架概述)
-3. [AI提示常见框架分析](#ai提示常见框架分析)
-4. [全部框架比较](#全部框架比较)
-5. [应用实践](#应用实践)
-6. [源码链接](#源码链接)
-
----
-
-## AI提示词的作用
-
-### 核心价值
-
-AI时代提示词（Prompt）是人与大型语言模型（LLM）进行沟通的关键。人们通过提示词与大模型对话，大模型按照提示词进行工作。只有掌握AI提示词方法的人才能更好地驾驭人工智能。
-
-好的提示词能够：
-
-1. **明确需求** - 减少 AI 的歧义理解，提高输出质量
-2. **引导思路** - 让 AI 按照你的思维方式进行推理
-3. **控制风格** - 确保输出符合你的期望格式和风格
-4. **提高效率** - 一次得到接近完美的结果，减少迭代次数
-5. **降低成本** - 减少 API 调用次数和降低 token 消耗
-
-### 为什么需要结构化提示词框架
-
-随意的提示词往往导致：
-- ❌ **结果不一致** - 同样的问题得到不同质量的回答
-- ❌ **需要多轮迭代** - 花费多余时间和成本
-- ❌ **容易遗漏重要信息** - 导致输出偏离需求
-- ❌ **难以复用** - 每次都要重新思考如何表达
-
-结构化框架通过标准化的要素组合，确保你每次都能：
-- ✅ 系统化地思考需求
-- ✅ 完整清晰地表达信息
-- ✅ 稳定地获得高质量输出
-- ✅ 便捷地复用和迭代
+## Table of Contents
+1. [The Role of AI Prompts](#the-role-of-ai-prompts)
+2. [Overview of Common AI Prompt Frameworks](#overview-of-common-ai-prompt-frameworks)
+3. [Analysis of Common AI Prompt Frameworks](#analysis-of-common-ai-prompt-frameworks)
+4. [Comparison of All Frameworks](#comparison-of-all-frameworks)
+5. [Practical Applications](#practical-applications)
+6. [Source Links](#source-links)
 
 ---
 
-## AI提示常见框架概述
+## The Role of AI Prompts
 
-目前流行的 AI 提示框架有很多种，这里列举常见的 7 种，分别适用于不同的场景：
+### Core Value
 
-| 框架 | 核心理念 | 适用场景 | 复杂度 | 学习成本 |
-|------|--------|--------|-------|---------|
-| **BROKE** | 快速直接 | 代码生成、快速需求 | ⭐ 极简 | 5分钟 |
-| **CRISPE** | 深度分析 | 问题诊断、架构分析 | ⭐⭐ 中等 | 20分钟 |
-| **ROBOTIC** | 完整规划 | 系统设计、长期项目 | ⭐⭐⭐ 复杂 | 30分钟 |
-| **Chain-of-Thought** | 逐步推理 | 算法设计、逻辑验证 | ⭐ 极简 | 2分钟 |
-| **CO-STAR** | 创意输出 | 内容创作、营销文案 | ⭐⭐ 中等 | 15分钟 |
-| **ICIO** | 灵活迭代 | 模糊问题、逐步优化 | ⭐ 极简 | 10分钟 |
-| **RTF** | 角色扮演 | 场景模拟、教学演示 | ⭐ 极简 | 5分钟 |
+In the AI era, prompts are the key to communication between humans and large language models (LLMs). People interact with AI models through prompts, and the models work according to these prompts. Only those who master AI prompt engineering methods can better harness artificial intelligence.
+
+Good prompts can:
+
+1. **Clarify Requirements** - Reduce AI's ambiguous interpretation and improve output quality
+2. **Guide Reasoning** - Let AI reason according to your way of thinking
+3. **Control Style** - Ensure output matches your expected format and style
+4. **Improve Efficiency** - Get near-perfect results on the first try, reducing iterations
+5. **Lower Costs** - Reduce API calls and token consumption
+
+### Why Structured Prompt Frameworks are Needed
+
+Casual prompts often lead to:
+- ❌ **Inconsistent Results** - Different quality answers to the same question
+- ❌ **Multiple Iterations Needed** - Extra time and costs
+- ❌ **Easy to Miss Important Information** - Output deviates from requirements
+- ❌ **Hard to Reuse** - Need to rethink how to express requirements each time
+
+Structured frameworks ensure consistent results through standardized element combinations, allowing you to:
+- ✅ Systematically think through requirements
+- ✅ Express information completely and clearly
+- ✅ Consistently get high-quality output
+- ✅ Conveniently reuse and iterate
 
 ---
 
-## AI提示常见框架分析
+## Overview of Common AI Prompt Frameworks
 
-### 框架1：BROKE（快速编码框架）
+There are many popular AI prompt frameworks. Here are 7 common ones, each suited for different scenarios:
 
-**BROKE是什么**：
+| Framework | Core Concept | Use Cases | Complexity | Learning Time |
+|-----------|-------------|-----------|-----------|-------------|
+| **BROKE** | Fast and Direct | Code generation, quick requirements | ⭐ Minimal | 5 min |
+| **CRISPE** | Deep Analysis | Problem diagnosis, architecture review | ⭐⭐ Medium | 20 min |
+| **ROBOTIC** | Complete Planning | System design, long-term projects | ⭐⭐⭐ Complex | 30 min |
+| **Chain-of-Thought** | Step-by-Step Reasoning | Algorithm design, logic verification | ⭐ Minimal | 2 min |
+| **CO-STAR** | Creative Output | Content creation, marketing copy | ⭐⭐ Medium | 15 min |
+| **ICIO** | Flexible Iteration | Vague problems, gradual optimization | ⭐ Minimal | 10 min |
+| **RTF** | Role Play | Scenario simulation, teaching demos | ⭐ Minimal | 5 min |
 
-- **B**ackground（背景）- 项目的环境和技术栈信息
-- **R**ole（角色）- 你赋予 AI 的角色和拥有的经验
-- **O**bjective（目标）- 要完成的清晰具体任务
-- **K**ey Constraints（约束）- 实现时的限制条件和功能范围
-- **E**xamples（示例）- 输入输出的具体例子与结构
+---
 
-**BROKE 框架的核心作用**：
+## Analysis of Common AI Prompt Frameworks
 
-1. **最小化歧义** - 通过明确约束和示例消除模糊
-2. **快速出结果** - 适合需求清晰的任务，无需多轮对话
-3. **高效利用 token** - 结构简洁，信息密度高
-4. **结果稳定** - 相同的 BROKE prompt 产出一致的结果
+### Framework 1: BROKE (Fast Coding Framework)
 
-#### 使用范围
+**What is BROKE**:
 
-✅ **最适合**：
-- 代码生成（API、函数、配置）
-- 功能实现（已设计好的需求）
-- 快速答疑（明确的问题）
-- 数据转换（格式转换、提取）
+- **B**ackground - Project environment and technology stack information
+- **R**ole - The role and experience you assign to the AI
+- **O**bjective - A clear and specific task to complete
+- **K**ey Constraints - Limitations and functional scope during implementation
+- **E**xamples - Concrete examples of input/output and structure
 
-❌ **不适合**：
-- 系统架构设计
-- 复杂问题分析
-- 创意输出
-- 需要多轮评审的任务
+**Core Value of BROKE Framework**:
 
-#### 实际正例
+1. **Minimize Ambiguity** - Eliminate confusion through clear constraints and examples
+2. **Quick Results** - Suitable for tasks with clear requirements, no need for multiple rounds
+3. **Efficient Token Usage** - Concise structure with high information density
+4. **Stable Results** - Same BROKE prompt produces consistent output
 
-**场景**：为 Spring Boot 应用生成登录接口
+#### Use Cases
+
+✅ **Best for**:
+- Code generation (APIs, functions, configurations)
+- Feature implementation (well-designed requirements)
+- Quick answers (clear questions)
+- Data transformation (format conversion, extraction)
+
+❌ **Not suitable for**:
+- System architecture design
+- Complex problem analysis
+- Creative output
+- Tasks requiring multiple review rounds
+
+#### Practical Positive Example
+
+**Scenario**: Generate a login endpoint for a Spring Boot application
 
 ```text
 [Role]
-你是一名精通 Spring Boot 3 和 Spring Security 的资深 Java 架构师，有10年的企业级开发经验。
+You are a senior Java architect proficient in Spring Boot 3 and Spring Security, with 10 years of enterprise development experience.
 
 [Background]
-项目环境：
+Project Environment:
 - Spring Boot 3.2 + Java 21
-- MyBatis-Plus 作为 ORM
-- MySQL 8.0 数据库
-- 使用 Lombok 简化代码
+- MyBatis-Plus as ORM
+- MySQL 8.0 database
+- Using Lombok to simplify code
 
 [Objective]
-使用 JWT 实现一个完整的用户认证系统，包括登录接口、token 刷新、权限验证。
+Implement a complete user authentication system using JWT, including login endpoint, token refresh, and permission verification.
 
 [Key Constraints]
-- 密码使用 BCrypt 加密
-- Token 有效期 24 小时，刷新 token 有效期 7 天
-- 返回格式为 Result<T> 统一封装
-- 包含全局异常处理
-- 遵循阿里编码规范
-- 必须使用 @Slf4j 记录关键操作日志
+- Password encryption using BCrypt
+- Token validity: 24 hours, refresh token validity: 7 days
+- Return format: Result<T> unified wrapper
+- Include global exception handling
+- Follow Alibaba coding standards
+- Must use @Slf4j to log critical operations
 
 [Examples]
-输入：POST /auth/login
+Input: POST /auth/login
 { "username": "user1", "password": "123456" }
 
-输出：
+Output:
 {
   "code": 200,
   "data": {
@@ -128,310 +128,306 @@ AI时代提示词（Prompt）是人与大型语言模型（LLM）进行沟通的
     "expiresIn": 86400,
     "user": { "id": 1, "username": "user1", "roles": ["USER"] }
   },
-  "message": "登录成功"
+  "message": "Login successful"
 }
 ```
 
-**预期结果**：完整的 LoginController、AuthService、JWT 工具类、实体类和配置
+**Expected Output**: Complete LoginController, AuthService, JWT utility classes, entities and configuration
 
-#### 反面例子
-
-**不好的 BROKE Prompt**：
+#### Anti-Example (Bad BROKE Prompt)
 
 ```text
 [Role]
-你是一个 Java 专家
+You are a Java expert
 
 [Background]
-我要用 Spring Boot 做一个登录功能
+I need to make a login feature with Spring Boot
 
 [Objective]
-给我生成登录代码
+Generate login code for me
 
 [Key Constraints]
-- 要好用
-- 要安全
+- Must be easy to use
+- Must be secure
 
 [Examples]
-没有示例
+No examples provided
 ```
 
-**问题在于**：
-- ❌ Role 模糊不清（什么样的专家？）
-- ❌ Background 缺少技术栈版本信息
-- ❌ Constraints 过于笼统（"好用"和"安全"如何定义？）
-- ❌ 没有具体的输入输出示例
+**Problems**:
+- ❌ Role is vague (what kind of expert?)
+- ❌ Background lacks technology stack and version info
+- ❌ Constraints too generic ("easy to use" and "secure" are undefined)
+- ❌ No specific input/output examples
 
-**结果**：AI 会做出很多假设，输出可能不符合需求
+**Result**: AI will make many assumptions, output may not meet requirements
 
 ---
 
-### 框架2：CRISPE（深度分析框架）
+### Framework 2: CRISPE (Deep Analysis Framework)
 
-**CRISPE是什么**：
+**What is CRISPE**:
 
-- **C**apacity and Role（能力和角色）- 明确 AI 的专业领域和职责
-- **R**equest（请求）- 清晰的请求语句，明确而具体的主题需求
-- **I**nsight（洞察）- 问题的深层背景，深度描述遇到的困境
-- **S**tatement（声明）- 核心问题陈述，把”为什么“展开说明
-- **P**ersonalization（个性化）- 针对你的特定情况
-- **E**xperiment（实验）- 期望的回答方式
+- **C**apacity and Role - Clarify the AI's professional domain and responsibilities
+- **R**equest - A clear request statement with specific and concrete topic needs
+- **I**nsight - The deeper background of the problem, describing the difficulties encountered
+- **S**tatement - Core problem statement, expanding on the "why"
+- **P**ersonalization - Tailored to your specific situation
+- **E**xperiment - Expected response format
 
-**CRISPE 框架的核心作用**：
-1. **深度理解问题** - 强调问题的"为什么"而非"是什么"
-2. **个性化解决方案** - 针对特定背景给出定制化方案
-3. **思考过程透明** - 看到 AI 的推理过程
-4. **多轮对话友好** - 能够很好地支持迭代优化
+**Core Value of CRISPE Framework**:
+1. **Deep Problem Understanding** - Emphasize "why" rather than "what"
+2. **Personalized Solutions** - Customized solutions for specific contexts
+3. **Transparent Thinking** - See AI's reasoning process
+4. **Multi-turn Friendly** - Excellent support for iterative optimization
 
-#### 使用范围
+#### Use Cases
 
-✅ **最适合**：
-- 性能问题诊断
-- 架构设计评审
-- 复杂问题分析
-- 最佳实践制定
-- 团队规范制定
+✅ **Best for**:
+- Performance problem diagnosis
+- Architecture design review
+- Complex problem analysis
+- Best practice formulation
+- Team standards formulation
 
-❌ **不适合**：
-- 快速代码生成
-- 简单的一次性问题
-- 需要立即行动的场景
+❌ **Not suitable for**:
+- Quick code generation
+- Simple one-off questions
+- Scenarios requiring immediate action
 
-#### 实际正例
+#### Practical Positive Example
 
-**场景**：诊断应用在高并发时响应变慢的原因
+**Scenario**: Diagnose why application response slows down during high concurrency
 
 ```text
 [Capacity and Role]
-你是一名资深的 Java 性能优化专家，拥有15年互联网服务经验。
-你精通：JVM 调优、并发编程、Linux 系统诊断、分布式系统。
-你不涉及：数据库 DBA 工作、前端性能优化。
+You are a senior Java performance optimization expert with 15 years of internet service experience.
+You are proficient in: JVM tuning, concurrent programming, Linux system diagnosis, distributed systems.
+You do not cover: Database DBA work, front-end performance optimization.
 
 [Request]
-请帮我诊断为什么应用在高并发时响应变慢，找出根本原因。
+Please help me diagnose why my application response slows down during high concurrency and find the root cause.
 
 [Insight]
-我们的支付系统晚高峰遇到性能问题：
-- 通常 P99 响应时间 100ms，高峰期升至 5s
-- JVM heap 使用率 60%，没有频繁 GC（MaxGCPauseMillis = 200ms）
-- CPU 使用率 50%，还有充足的 CPU 资源
-- 数据库查询时间正常（平均 10ms），不是数据库问题
-- 日志显示大量 "lock contention" 和 "park" 警告
-- 系统使用 Java 21 + ZGC，部署在 32 核机器
+Our payment system experiences performance issues during evening peak hours:
+- Usually P99 response time is 100ms, during peak rises to 5s
+- JVM heap utilization 60%, no frequent GC (MaxGCPauseMillis = 200ms)
+- CPU utilization 50%, still plenty of CPU resources available
+- Database query time is normal (average 10ms), not a database issue
+- Logs show many "lock contention" and "park" warnings
+- System uses Java 21 + ZGC, deployed on 32-core machine
 
 [Statement]
-在 JVM heap 充足、CPU 充足、数据库正常的情况下，
-为什么应用响应仍然变慢？
-为什么高峰时性能大幅降低？
-最可能的原因是什么？
+With sufficient JVM heap, sufficient CPU, and normal database performance,
+why does application response still slow down?
+Why is performance significantly reduced during peak hours?
+What are the most likely causes?
 
 [Personalization]
-我的技术环境：
-- Spring Boot 3.2 with Project Reactor（响应式编程）
-- Tomcat 线程池：core=200，max=200，queue=1000
-- 本地缓存：Caffeine（10000条），二级缓存：Redis
-- 依赖服务：支付网关（平均 30ms）、库存服务（平均 20ms）
+My technical environment:
+- Spring Boot 3.2 with Project Reactor (reactive programming)
+- Tomcat thread pool: core=200, max=200, queue=1000
+- Local cache: Caffeine (10000 items), secondary cache: Redis
+- Dependent services: Payment gateway (average 30ms), inventory service (average 20ms)
 
 [Experiment]
-请按以下顺序回答：
-1. 列出最可能的 3-5 个原因（按概率排序，包括为什么）
-2. 每个原因的诊断方法（给出具体的 jstack/jstat 命令）
-3. 预期能提升多少性能（百分比）
-4. 推荐的解决方案（包含代码示例）
+Please answer in the following order:
+1. List the 3-5 most likely causes (ranked by probability, explain why)
+2. Diagnostic method for each cause (provide specific jstack/jstat commands)
+3. Expected performance improvement (percentage)
+4. Recommended solution (include code examples)
 ```
 
-**预期结果**：详细的分析、诊断命令、优化代码、性能预期
+**Expected Output**: Detailed analysis, diagnostic commands, optimized code, performance expectations
 
-#### 反面例子
-
-**不好的 CRISPE Prompt**：
+#### Anti-Example (Bad CRISPE Prompt)
 
 ```text
 [Capacity and Role]
-你是一个专家
+You are an expert
 
 [Request]
-帮我分析为什么系统慢
+Help me analyze why the system is slow
 
 [Insight]
-系统慢了
+The system is slow
 
 [Statement]
-怎么优化？
+How to optimize?
 
 [Personalization]
-没有
+None
 
 [Experiment]
-给我建议
+Give me suggestions
 ```
 
-**问题**：
-- ❌ 信息完全不足，AI 无法诊断
-- ❌ 没有性能数据、日志信息、技术栈
-- ❌ 无法确定优化方向
+**Problems**:
+- ❌ Completely insufficient information, AI cannot diagnose
+- ❌ No performance data, logs, or technology stack
+- ❌ Cannot determine optimization direction
 
-**结果**：只能得到泛泛而谈的通用建议
+**Result**: Only generic advice possible
 
 ---
 
-### 框架3：ROBOTIC（完整规划框架）
+### Framework 3: ROBOTIC (Complete Planning Framework)
 
-**ROBOTIC是什么**：
-- **R**ole（角色）- 定位 AI 的专业角色，明确职责
-- **O**bjective（目标）- 明确的最终目标，列举具体项
-- **B**ackground（背景）- 详细的项目背景，包括系统、功能、技术栈等
-- **O**utput（输出）- 具体的交付物，明确需要产出什么
-- **T**ype（类型）- 任务的性质，告诉AI这是什么样的任务
-- **I**terate（迭代）- 多轮反馈的计划，分几次完成这轮回答
-- **C**larify（澄清）- 提前消除歧义的问题，把疑点逻辑说清楚
+**What is ROBOTIC**:
+- **R**ole - Position the AI's professional role and clarify responsibilities
+- **O**bjective - Clear final goal, listing specific items
+- **B**ackground - Detailed project background, including systems, features, technology stack
+- **O**utput - Specific deliverables, clarify what needs to be produced
+- **T**ype - Nature of the task, tell AI what kind of task this is
+- **I**terate - Plan for multi-round feedback, specify how many rounds
+- **C**larify - Questions to eliminate ambiguity beforehand, clarify unclear points
 
-**ROBOTIC 框架的核心作用**：
-1. **完整性** - 从需求到交付物全覆盖
-2. **迭代机制** - 明确的多轮评审反馈流程
-3. **边界清晰** - 提前澄清所有假设
-4. **团队协作** - 便于团队沟通和评审
-5. **长期价值** - 适合需要持续优化的项目
+**Core Value of ROBOTIC Framework**:
+1. **Completeness** - Full coverage from requirements to deliverables
+2. **Iteration Mechanism** - Clear multi-round review and feedback process
+3. **Clear Boundaries** - Clarify all assumptions beforehand
+4. **Team Collaboration** - Facilitates team communication and review
+5. **Long-term Value** - Suitable for projects requiring continuous optimization
 
-#### 使用范围
+#### Use Cases
 
-✅ **最适合**：
-- 系统架构设计
-- 微服务迁移规划
-- 技术选型决策
-- 大型功能设计
-- 团队规范制定
-- 需要多轮评审的任务
+✅ **Best for**:
+- System architecture design
+- Microservice migration planning
+- Technology selection decisions
+- Large feature design
+- Team standards formulation
+- Tasks requiring multiple review rounds
 
-❌ **不适合**：
-- 快速编码任务
-- 简单问题
-- 需要立即答案的场景
+❌ **Not suitable for**:
+- Quick coding tasks
+- Simple problems
+- Scenarios needing immediate answers
 
-#### 实际正例
+#### Practical Positive Example
 
-**场景**：使用 DDD 设计电商订单系统
-
-```text
-[Role]
-你是一名资深的 Java 架构师，拥有15年互联网经验。
-背景：主导过多个百万级日活电商系统的架构设计
-擅长：DDD 领域驱动设计、微服务架构、事件驱动设计
-
-[Objective]
-要完成的任务：使用 DDD 设计电商订单服务的聚合根和核心领域模型
-最终交付物：
-1. 领域模型设计文档（UML 类图 + 文字说明）
-2. Java 实现代码（Order 聚合根、DomainEvent）
-3. 业务规则文档（订单状态机、金额验证规则）
-
-[Background]
-项目背景：
-- 电商平台，日均处理 100 万订单
-- 订单生命周期：创建 → 支付 → 发货 → 收货 → 完成/售后
-- 支持多种支付方式、分次支付、分次发货、退款
-- 技术栈：Spring Boot 3.2、Java 21、MongoDB（事件溯源）
-
-[Output]
-期望的输出包括：
-1. Mermaid 格式的 UML 类图
-2. Java Record/Class 实现（Java 21 特性，无 setter）
-3. 领域事件定义（OrderCreated、OrderPaid、OrderShipped 等）
-4. 业务规则说明文档
-
-[Type]
-这是一个架构设计任务，需要：
-- 深度的领域知识建模
-- 严谨的业务规则定义
-- 考虑并发和一致性问题
-
-[Iterate]
-反馈流程：
-- 第1轮：核心聚合根和基本状态机
-- 第2轮：支付分次、发货分次的完整设计
-- 第3轮：并发控制、事件一致性、性能优化
-
-[Clarify]
-在开始前，需要澄清：
-1. 订单是否需要支持拆单（1个逻辑订单拆成多个物流订单）？
-2. 退款是否只支持原路返回，还是可以退到其他账户？
-3. 是否使用完整事件溯源，还是快照+事件混合方案？
-```
-
-**预期结果**：经过 3 轮迭代的完整架构方案
-
-#### 反面例子
-
-**不好的 ROBOTIC Prompt**：
+**Scenario**: Design an e-commerce order system using DDD
 
 ```text
 [Role]
-你是架构师
+You are a senior Java architect with 15 years of internet experience.
+Background: Led the architecture design of multiple million-level daily active e-commerce systems
+Expertise: DDD domain-driven design, microservice architecture, event-driven design
 
 [Objective]
-设计订单系统
+Task to complete: Use DDD to design aggregate roots and core domain models for e-commerce order services
+Final deliverables:
+1. Domain model design document (UML class diagram + text explanation)
+2. Java implementation code (Order aggregate root, DomainEvent)
+3. Business rules document (order state machine, amount validation rules)
 
 [Background]
-电商系统
+Project background:
+- E-commerce platform, processing 1 million orders daily
+- Order lifecycle: Create → Pay → Ship → Receive → Complete/After-sales
+- Support multiple payment methods, partial payments, partial shipments, refunds
+- Tech stack: Spring Boot 3.2, Java 21, MongoDB (event sourcing)
 
 [Output]
-代码
+Expected output includes:
+1. Mermaid format UML class diagram
+2. Java Record/Class implementation (Java 21 features, no setters)
+3. Domain event definitions (OrderCreated, OrderPaid, OrderShipped, etc.)
+4. Business rules documentation
 
 [Type]
-设计
+This is an architecture design task requiring:
+- Deep domain knowledge modeling
+- Rigorous business rule definition
+- Consideration of concurrency and consistency issues
 
 [Iterate]
-多轮反馈
+Feedback process:
+- Round 1: Core aggregate root and basic state machine
+- Round 2: Complete design for partial payments and partial shipments
+- Round 3: Concurrency control, event consistency, performance optimization
 
 [Clarify]
-没有问题
+Before starting, clarify:
+1. Does the order need to support order splitting (1 logical order split into multiple logistics orders)?
+2. Do refunds only support original path return, or can they go to other accounts?
+3. Use complete event sourcing or hybrid snapshot + event approach?
 ```
 
-**问题**：
-- ❌ 所有信息都太简洁，AI 无法设计
-- ❌ 没有具体的业务需求、技术栈、约束
-- ❌ 没有真正的澄清问题
+**Expected Result**: Complete architecture solution after 3 rounds of iteration
+
+#### Anti-Example
+
+**Bad ROBOTIC Prompt**:
+
+```text
+[Role]
+You are an architect
+
+[Objective]
+Design order system
+
+[Background]
+E-commerce system
+
+[Output]
+Code
+
+[Type]
+Design
+
+[Iterate]
+Multiple rounds of feedback
+
+[Clarify]
+No questions
+```
+
+**Problems**:
+- ❌ All information too concise, AI cannot design
+- ❌ No specific business requirements, tech stack, constraints
+- ❌ No real clarification questions
 
 ---
 
-### 框架4：Chain-of-Thought（逐步推理框架）
+### Framework 4: Chain-of-Thought (Step-by-Step Reasoning Framework)
 
-**Chain-of-Thought（CoT）是什么** ：
+**What is Chain-of-Thought (CoT)**:
 
-要求 AI **一步步展示推理过程**，而不是直接给答案。这是一个增强框架，可以与其他框架组合使用。
+Require the AI to **show the reasoning process step-by-step** rather than giving direct answers. This is an enhancement framework that can be combined with other frameworks.
 
-**Chain-of-Thought 的核心作用**：
+**Core Value of Chain-of-Thought**:
 
-1. **提高准确性** - 研究表明 CoT 能显著提升复杂任务的正确率
-2. **过程透明** - 可以验证每一步的逻辑是否合理
-3. **便于学习** - AI 的思路变成你的学习材料
-4. **易于调试** - 看不懂答案时，可以查看哪一步出错
-5. **强组合性** - 可与任何框架组合使用
+1. **Improve Accuracy** - Research shows CoT significantly improves correctness on complex tasks
+2. **Process Transparency** - Can verify the logic of each step
+3. **Facilitate Learning** - AI's thinking becomes your learning material
+4. **Easy to Debug** - Can see which step went wrong when you don't understand the answer
+5. **Strong Composability** - Can be combined with any framework
 
-#### 使用范围
+#### Use Cases
 
-✅ **最适合**：
-- 算法设计和分析
-- 逻辑推理和论证
-- 数学问题求解
-- 架构决策验证
-- 问题诊断分析
+✅ **Best for**:
+- Algorithm design and analysis
+- Logic reasoning and argumentation
+- Mathematical problem solving
+- Architecture decision verification
+- Problem diagnosis and analysis
 
-❌ **不适合**：
-- 简单问题（反而显得繁琐）
-- 需要快速答案的场景
+❌ **Not suitable for**:
+- Simple problems (becomes unnecessarily verbose)
+- Scenarios requiring quick answers
 
-#### 实际正例
+#### Practical Positive Example
 
-**场景**：分析并优化低效的数据库查询代码
+**Scenario**: Analyze and optimize inefficient database query code
 
 ```text
-你是一名资深的数据库性能优化专家。
+You are a senior database performance optimization expert.
 
-问题：为什么以下代码在处理 100 万条数据时很慢？应该怎么优化？
+Problem: Why is the following code slow when processing 1 million data records? How should it be optimized?
 
-```java
-List<User> users = database.queryAllUsers(); // 100 万条
+Code:
+List<User> users = database.queryAllUsers(); // 1 million records
 List<String> activeEmails = new ArrayList<>();
 for (User user : users) {
     if (user.isActive() && user.getEmail() != null) {
@@ -439,427 +435,427 @@ for (User user : users) {
     }
 }
 
-要求：请按以下步骤一步步分析和回答：
-1. 分析问题：识别代码中的性能瓶颈
-2. 评估成本：计算当前方案的时间复杂度和内存成本
-3. 列举方案：提出 2-3 个不同的优化方案
-4. 对比方案：对比各方案的优缺点
-5. 推荐方案：给出最优方案和实现代码
-6. 性能预期：预测优化后的性能提升（百分比）
+Requirement: Please analyze and answer step-by-step following these steps:
+1. Analyze the problem: Identify performance bottlenecks in the code
+2. Evaluate costs: Calculate time complexity and memory cost of current approach
+3. List options: Propose 2-3 different optimization approaches
+4. Compare approaches: Compare pros and cons of each approach
+5. Recommend approach: Give the optimal approach and implementation code
+6. Performance expectations: Predict performance improvement percentage after optimization
 
-最后给出总结答案。
+Finally, give a summary answer.
 ```
 
-**预期结果**：
+**Expected Result**:
 
-- AI 会逐步分析瓶颈（全量加载 + 应用层过滤）
-- 指出时间和空间成本
-- 提出 SQL 优化、Stream 优化等方案
-- 给出完整代码和性能对比
+- AI will step-by-step analyze bottlenecks (full load + application layer filtering)
+- Point out time and space costs
+- Suggest SQL optimization, Stream optimization, etc.
+- Provide complete code and performance comparison
 
-#### 反面例子
+#### Anti-Example
 
-**不好的 Chain-of-Thought 使用**：
+**Bad Chain-of-Thought usage**:
 
 ```text
-简单问题：什么是 getter 方法？
+Simple question: What is a getter method?
 
-要求：请一步步思考，展示完整的推理过程。
+Requirement: Please think step-by-step and show complete reasoning process.
 ```
 
-**问题**：
-- ❌ 对简单问题过度使用 CoT
-- ❌ 造成不必要的冗长回答
-- ❌ 浪费 token
+**Problems**:
+- ❌ Overusing CoT on simple problems
+- ❌ Creates unnecessary verbose responses
+- ❌ Wastes tokens
 
 ---
 
-### 框架5：CO-STAR（创意内容框架）
+### Framework 5: CO-STAR (Creative Content Framework)
 
-**CO-STAR是什么**：
-- **C**ontext（背景）- 产品/服务的背景信息
-- **O**bjective（目标）- 明确的营销目标
-- **S**tyle（风格）- 创作的视觉和语言风格
-- **T**one（语气）- 整体的基调和情感
-- **A**udience（受众）- 目标人群的描述
-- **R**esponse Format（响应格式）- 输出的形式和长度
+**What is CO-STAR**:
+- **C**ontext (Background) - Background information about product/service
+- **O**bjective (Goal) - Clear marketing objective
+- **S**tyle (Style) - Visual and language style of creation
+- **T**one (Tone) - Overall tone and emotion
+- **A**udience (Target Audience) - Description of target people
+- **R**esponse Format (Response Format) - Output format and length
 
-**CO-STAR 框架的核心作用**：
-1. **风格高度可控** - Style 和 Tone 让输出贴近需求
-2. **受众明确** - 针对特定受众的内容更有效
-3. **易于调整** - 改变风格快速迭代
-4. **结果一致** - 多个版本的风格协调
-5. **非技术领域友好** - 不仅程序员，营销团队也能用
+**Core Value of CO-STAR Framework**:
+1. **Style Highly Controllable** - Style and Tone make output match requirements
+2. **Clear Target Audience** - Content for specific audiences is more effective
+3. **Easy to Adjust** - Change style for rapid iteration
+4. **Consistent Results** - Multiple versions stay stylistically aligned
+5. **Non-technical Friendly** - Not just for programmers, marketing teams can use it too
 
-#### 使用范围
+#### Use Cases
 
-✅ **最适合**：
-- 产品发布文案
-- 营销邮件
-- 品牌故事
-- 广告创意
-- 社交媒体内容
-- 任何需要风格可控的内容创作
+✅ **Best for**:
+- Product launch copy
+- Marketing emails
+- Brand stories
+- Advertising ideas
+- Social media content
+- Any content creation requiring style control
 
-❌ **不适合**：
-- 代码生成
-- 技术文档
-- 纯逻辑推理
+❌ **Not suitable for**:
+- Code generation
+- Technical documentation
+- Pure logic reasoning
 
-#### 实际正例
+#### Practical Positive Example
 
-**场景**：为新产品发布创作社交媒体文案
+**Scenario**: Create social media copy for new product launch
 
 ```text
 [Context]
-我们开发了一款新的开源 Java 框架 "FastAPI"，
-用于快速构建高性能的 REST API。
-核心优势：配置简洁、启动快（500ms）、学习曲线平缓。
-竞争对手：Spring Boot（功能全但配置复杂）。
+We developed a new open-source Java framework "FastAPI"
+for quickly building high-performance REST APIs.
+Core advantages: Simple configuration, fast startup (500ms), gentle learning curve.
+Competitors: Spring Boot (full-featured but complex configuration).
 
 [Objective]
-吸引年轻的 Java 开发者尝试使用，获得 GitHub Star 增长。
-期望效果：推文转赞数 > 50、分享数 > 20。
+Attract young Java developers to try it and gain GitHub Star growth.
+Expected results: Tweet likes > 50, shares > 20.
 
 [Style]
-参考 TensorFlow、Vue.js 等开源项目的文案风格。
-特点：简洁有力、强调优势而不贬低竞争对手、包含代码示例。
+Reference copy style of open-source projects like TensorFlow, Vue.js.
+Characteristics: Concise and powerful, highlight advantages without disparaging competitors, include code examples.
 
 [Tone]
-整体基调：友好、热情、充满信心。
-避免：过度吹嘘、复杂术语、枯燥乏味。
+Overall tone: Friendly, enthusiastic, confident.
+Avoid: Overhyping, complex jargon, boring.
 
 [Audience]
-目标人群：Java 开发者，1-10 年经验。
-他们关心：开发效率、代码简洁度、学习成本。
-痛点：Spring Boot 配置复杂、框架学习时间长。
+Target people: Java developers with 1-10 years of experience.
+They care about: Development efficiency, code conciseness, learning costs.
+Pain points: Spring Boot complex configuration, long framework learning time.
 
 [Response Format]
-输出 3 个版本：
-1. Twitter 文案（280 字以内，包含 #hashtag）
-2. 技术博客摘要（200-300 字，突出核心优势）
-3. GitHub README 的"为什么选择 FastAPI"部分（500 字）
+Output 3 versions:
+1. Twitter copy (within 280 characters, include #hashtags)
+2. Tech blog summary (200-300 characters, highlight core advantages)
+3. GitHub README "Why choose FastAPI" section (500 characters)
 ```
 
-**预期结果**：有吸引力的社交媒体文案、博客摘要、GitHub 文案
+**Expected Result**: Attractive social media copy, blog summary, GitHub copy
 
-#### 反面例子
+#### Anti-Example
 
-**不好的 CO-STAR Prompt**：
+**Bad CO-STAR Prompt**:
 
 ```text
 [Context]
-新产品 FastAPI
+New product FastAPI
 
 [Objective]
-写文案
+Write copy
 
 [Style]
-好看
+Good looking
 
 [Tone]
-好
+Good
 
 [Audience]
-开发者
+Developers
 
 [Response Format]
-文案
+Copy
 ```
 
-**问题**：
-- ❌ Style "好看" 太模糊
-- ❌ Tone "好" 不具体
-- ❌ Audience 太宽泛（什么样的开发者？）
-- ❌ 没有格式要求
+**Problems**:
+- ❌ "Good looking" style too vague
+- ❌ "Good" tone not specific
+- ❌ "Developers" audience too broad (what kind of developers?)
+- ❌ No format requirements
 
 ---
 
-### 框架6：ICIO（灵活迭代框架）
+### Framework 6: ICIO (Flexible Iteration Framework)
 
-**ICIO是什么**：
-- **I**nit（初始化）- 提出初始问题和想法
-- **C**larify（澄清）- 第 1 轮澄清关键信息
-- **I**terate（迭代）- 第 2-N 轮的迭代优化
-- **O**utcome（输出）- 综合多轮的最终方案
+**What is ICIO**:
+- **I**nit (Initialize) - Propose initial problem and idea
+- **C**larify (Clarify) - Round 1 clarification of key information
+- **I**terate (Iterate) - Rounds 2-N iterative optimization
+- **O**utcome (Outcome) - Final solution synthesizing multiple rounds
 
-**ICIO 框架的核心作用**：
+**Core Value of ICIO Framework**:
 
-1. **灵活迭代** - 不固定轮数，根据需要调整
-2. **逐步精化** - 从模糊到明确，从简单到复杂
-3. **高效反馈** - 快速验证想法的可行性
-4. **发散后收敛** - 先探索多个方向，再聚焦最优
-5. **问题适配** - 特别适合初期需求不清的场景
+1. **Flexible Iteration** - Not fixed rounds, adjust based on needs
+2. **Progressive Refinement** - From vague to clear, from simple to complex
+3. **Efficient Feedback** - Quickly validate idea feasibility
+4. **Divergence then Convergence** - First explore multiple directions, then focus on optimal
+5. **Problem Adaptive** - Especially suitable for scenarios with unclear initial requirements
 
-#### 使用范围
+#### Use Cases
 
-✅ **最适合**：
-- 需求不清晰的问题
-- 逐步优化的任务
-- API 设计迭代
-- 架构方案演进
-- 性能优化诊断
+✅ **Best for**:
+- Problems with unclear requirements
+- Gradual optimization tasks
+- API design iteration
+- Architecture solution evolution
+- Performance optimization diagnosis
 
-❌ **不适合**：
-- 需要快速答案的场景
-- 简单明确的问题
-- 实时紧急情况
+❌ **Not suitable for**:
+- Scenarios needing quick answers
+- Simple clear problems
+- Real-time emergency situations
 
-#### 实际正例
+#### Practical Positive Example
 
-**场景**：设计一个用户查询 API，需要逐步优化
+**Scenario**: Design a user query API that requires gradual optimization
 
 ```text
 [Init]
-初始化问题：
-设计一个查询用户列表的 REST API
-初步想法：GET /users 返回所有用户
+Initialize problem:
+Design a REST API for querying user list
+Initial idea: GET /users returns all users
 
-[Clarify - 第1轮]
-我需要澄清以下信息：
-1. 用户量有多大？是否需要分页？
-2. 是否需要筛选功能（按状态、部门、权限等）？
-3. 不同的客户端需要不同的字段吗？
-4. 性能要求是什么（P99 延迟目标）？
-5. 并发量估计是多少（QPS）？
+[Clarify - Round 1]
+I need to clarify the following information:
+1. How many users? Do we need pagination?
+2. Do we need filtering (by status, department, permissions, etc.)?
+3. Do different clients need different fields?
+4. What are the performance requirements (P99 latency target)?
+5. What is the estimated concurrency (QPS)?
 
-基于你的回答，我会给出改进的 API 设计。
+Based on your answer, I will provide an improved API design.
 
 ---
 
-假设你的回答：
-- 用户量 100 万，需要分页
-- 需要按部门、状态筛选
-- 不同客户端需要不同字段
-- 性能要求 P99 < 200ms
+Assume your answer is:
+- 1 million users, pagination needed
+- Need to filter by department and status
+- Different clients need different fields
+- Performance requirement P99 < 200ms
 
-[Iterate - 第2轮]
-基于你的需求，我改进的方案：
-1. 添加分页参数：page, pageSize
-2. 添加筛选参数：department, status
-3. 添加字段选择：fields 参数或使用 GraphQL
+[Iterate - Round 2]
+Based on your requirements, my improved approach:
+1. Add pagination parameters: page, pageSize
+2. Add filtering parameters: department, status
+3. Add field selection: fields parameter or use GraphQL
 
-现在的问题是：
-- 字段选择用 fields 参数还是 GraphQL？为什么？
+Now the question is:
+- Should field selection use fields parameter or GraphQL? Why?
 
-[Iterate - 第3轮]
-基于你的选择，最终方案包括：
-1. 完整的 API 设计（路径、参数、响应）
-2. 缓存策略建议
-3. 数据库索引建议
+[Iterate - Round 3]
+Based on your choice, the final approach includes:
+1. Complete API design (path, parameters, response)
+2. Caching strategy recommendations
+3. Database index recommendations
 ```
 
-**预期结果**：经过多轮迭代的最优 API 设计
+**Expected Result**: Optimal API design after multiple iterations
 
-#### 反面例子
+#### Anti-Example
 
-**不好的 ICIO Prompt**：
+**Bad ICIO Prompt**:
 
 ```text
 [Init]
-帮我设计 API
+Help me design an API
 
 [Clarify]
-（没有具体问题）
+(No specific questions)
 
 [Iterate]
-（不提供反馈）
+(No feedback provided)
 
 [Outcome]
-给我最终方案
+Give me the final solution
 ```
 
-**问题**：
-- ❌ 初始问题太模糊
-- ❌ 澄清阶段没有具体问题
-- ❌ 迭代过程没有反馈
+**Problems**:
+- ❌ Initial problem too vague
+- ❌ Clarify stage has no specific questions
+- ❌ Iterate process has no feedback
 
 ---
 
-### 框架7：RTF（角色扮演框架）
+### Framework 7: RTF (Role-Playing Framework)
 
-**RTF是什么**：
-- **R**ole（角色）- 给 AI 赋予一个具体的角色
-- **T**ask（任务）- 在这个角色下的具体任务
-- **F**ormat（格式）- 期望的输出格式和风格
+**What is RTF**:
+- **R**ole (Role) - Assign the AI a specific role
+- **T**ask (Task) - Specific task under this role
+- **F**ormat (Format) - Expected output format and style
 
-**RTF 框架的核心作用**：
-1. **角色强化** - 明确的 Role 能显著改变 AI 的回答风格和深度
-2. **场景逼真** - 模拟真实场景能得到更贴近实际的回答
-3. **极简高效** - 只需 3 个要素，学习成本最低
-4. **易于组合** - 可与其他框架组合使用
-5. **教学友好** - 可以模拟各种角色进行教学
+**Core Value of RTF Framework**:
+1. **Role Reinforcement** - Clear Role significantly changes AI's response style and depth
+2. **Realistic Scenario** - Simulating real scenarios gets more realistic answers
+3. **Ultra Simple and Efficient** - Only 3 elements, lowest learning cost
+4. **Easy to Combine** - Can be combined with other frameworks
+5. **Teaching Friendly** - Can simulate various roles for teaching
 
-#### 使用范围
+#### Use Cases
 
-✅ **最适合**：
-- 技术面试练习
-- 学生和老师角色扮演
-- 产品经理讨论
-- 角色特定的咨询
-- 场景模拟
+✅ **Best for**:
+- Technical interview practice
+- Student and teacher role-playing
+- Product manager discussions
+- Role-specific consulting
+- Scenario simulation
 
-❌ **不适合**：
-- 代码生成（虽然可以，但 BROKE 更好）
-- 需要明确约束的任务
+❌ **Not suitable for**:
+- Code generation (while possible, BROKE is better)
+- Tasks requiring explicit constraints
 
-#### 实际正例
+#### Practical Positive Example
 
-**场景**：模拟 Google 的技术面试
-
-```text
-[Role]
-你是 Google 的一名资深技术面试官
-背景：10年的面试经验，面试过 500+ 候选人
-特点：友好但严格，会根据回答深层挖掘，启发式提问
-专长：算法能力、系统设计、编程实践
-
-[Task]
-为我进行一场模拟的算法面试
-难度：Medium（LeetCode 难度）
-时长：45 分钟
-期望的考察点：数据结构、时间复杂度分析、代码质量
-
-[Format]
-请按以下流程进行：
-1. 提出一个算法问题，给出完整的问题描述
-2. 听我的思路和实现方案，给出反馈
-3. 如果我卡住，给出提示而不是直接答案
-4. 让我写出代码（伪代码或真实代码都可以）
-5. 审查代码的质量（命名、逻辑、边界情况）
-6. 讨论时间和空间复杂度
-7. 最后给出综合评价和改进建议
-```
-
-**预期结果**：逼真的面试体验
-
-#### 反面例子
-
-**不好的 RTF Prompt**：
+**Scenario**: Simulate Google technical interview
 
 ```text
 [Role]
-面试官
+You are a senior technical interviewer at Google
+Background: 10 years of interview experience, interviewed 500+ candidates
+Characteristics: Friendly but strict, will dig deeper based on answers, ask leading questions
+Expertise: Algorithm ability, system design, programming practices
 
 [Task]
-面试
+Conduct a mock algorithm interview for me
+Difficulty: Medium (LeetCode difficulty)
+Duration: 45 minutes
+Expected evaluation points: Data structures, time complexity analysis, code quality
 
 [Format]
-对话
+Please follow this process:
+1. Present an algorithm problem with complete problem description
+2. Listen to my approach and implementation, give feedback
+3. If I get stuck, give hints rather than direct answers
+4. Let me write code (pseudocode or real code both fine)
+5. Review code quality (naming, logic, edge cases)
+6. Discuss time and space complexity
+7. Finally give comprehensive evaluation and improvement suggestions
 ```
 
-**问题**：
-- ❌ Role 太模糊（什么公司？什么风格？）
-- ❌ Task 不具体（什么难度？多长时间？）
-- ❌ Format 没有具体步骤
+**Expected Result**: Realistic interview experience
+
+#### Anti-Example
+
+**Bad RTF Prompt**:
+
+```text
+[Role]
+Interviewer
+
+[Task]
+Interview
+
+[Format]
+Conversation
+```
+
+**Problems**:
+- ❌ Role too vague (what company? what style?)
+- ❌ Task not specific (what difficulty? how long?)
+- ❌ Format has no specific steps
 
 ---
 
-## AI提示词框架比较
+## AI Prompt Framework Comparison
 
-### 维度对比表
+### Dimension Comparison Table
 
-| 维度 | BROKE | CRISPE | ROBOTIC | CoT | CO-STAR | ICIO | RTF |
-|------|-------|--------|---------|-----|---------|------|-----|
-| **学习成本** | ⭐ | ⭐⭐ | ⭐⭐⭐ | ⭐ | ⭐⭐ | ⭐ | ⭐ |
-| **要素数** | 5 | 6 | 7 | 1 | 6 | 4 | 3 |
-| **适合代码生成** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐ | ⭐⭐⭐ | ⭐⭐⭐ |
-| **适合内容创作** | ❌ | ⭐⭐ | ⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐ |
-| **适合架构设计** | ⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ❌ | ⭐⭐⭐⭐ | ⭐⭐⭐ |
-| **迭代友好度** | ⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐ |
-| **一次成功率** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐ |
-| **完成时间** | 快 | 中 | 慢 | 快 | 中 | 慢 | 快 |
-| **适合团队协作** | 弱 | 中 | 强 | 弱 | 中 | 强 | 中 |
+| Dimension | BROKE | CRISPE | ROBOTIC | CoT | CO-STAR | ICIO | RTF |
+|-----------|-------|--------|---------|-----|---------|------|-----|
+| **Learning Cost** | ⭐ | ⭐⭐ | ⭐⭐⭐ | ⭐ | ⭐⭐ | ⭐ | ⭐ |
+| **Number of Elements** | 5 | 6 | 7 | 1 | 6 | 4 | 3 |
+| **Suitable for Code Generation** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐ | ⭐⭐⭐ | ⭐⭐⭐ |
+| **Suitable for Content Creation** | ❌ | ⭐⭐ | ⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐ |
+| **Suitable for Architecture Design** | ⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ❌ | ⭐⭐⭐⭐ | ⭐⭐⭐ |
+| **Iteration Friendliness** | ⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐ |
+| **First-Time Success Rate** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐ |
+| **Completion Time** | Fast | Medium | Slow | Fast | Medium | Slow | Fast |
+| **Suitable for Team Collaboration** | Weak | Medium | Strong | Weak | Medium | Strong | Medium |
 
-### 框架选择决策树
+### Framework Selection Decision Tree
 
 ```
-问题类型？
-├─ 代码生成
-│  ├─ 需求明确? → BROKE (推荐) / RTF
-│  └─ 需要多轮评审? → ROBOTIC
+What is the problem type?
+├─ Code Generation
+│  ├─ Clear requirements? → BROKE (recommended) / RTF
+│  └─ Multiple review rounds needed? → ROBOTIC
 │
-├─ 内容创作
-│  ├─ 需要风格可控? → CO-STAR (推荐)
-│  └─ 需要逐步优化? → ICIO / CO-STAR
+├─ Content Creation
+│  ├─ Style control needed? → CO-STAR (recommended)
+│  └─ Gradual optimization needed? → ICIO / CO-STAR
 │
-├─ 问题分析
-│  ├─ 需要深度理解? → CRISPE (推荐)
-│  └─ 需要逐步诊断? → ICIO
+├─ Problem Analysis
+│  ├─ Deep understanding needed? → CRISPE (recommended)
+│  └─ Step-by-step diagnosis needed? → ICIO
 │
-├─ 架构设计
-│  ├─ 需要多轮评审? → ROBOTIC (推荐)
-│  ├─ 需要快速迭代? → ICIO
-│  └─ 需要深度分析? → CRISPE + ROBOTIC
+├─ Architecture Design
+│  ├─ Multiple review rounds needed? → ROBOTIC (recommended)
+│  ├─ Quick iteration needed? → ICIO
+│  └─ Deep analysis needed? → CRISPE + ROBOTIC
 │
-├─ 逻辑推理
-│  └─ 需要显示过程? → Chain-of-Thought (推荐)
+├─ Logic Reasoning
+│  └─ Show process? → Chain-of-Thought (recommended)
 │
-└─ 角色扮演
-   └─ RTF (推荐)
+└─ Role-Playing
+   └─ RTF (recommended)
 ```
 
-### 框架组合策略
+### Framework Combination Strategy
 
-不同框架可以组合使用，产生更强大的效果：
+Different frameworks can be combined for stronger effects:
 
 **1. BROKE + Chain-of-Thought**
-- 用于：复杂代码生成，需要显示设计思路
-- 优势：既有代码的直接性，又有推理的透明性
+- Used for: Complex code generation, need to show design thinking
+- Advantages: Has both code directness and reasoning transparency
 
 **2. CRISPE + Chain-of-Thought**
-- 用于：问题诊断，需要完整的推理过程
-- 优势：既有深度分析，又有逐步推理
+- Used for: Problem diagnosis, need complete reasoning process
+- Advantages: Has both deep analysis and step-by-step reasoning
 
 **3. ROBOTIC + ICIO**
-- 用于：长期项目的迭代规划
-- 优势：既有完整规划，又有灵活迭代
+- Used for: Long-term project iterative planning
+- Advantages: Has both complete planning and flexible iteration
 
 **4. CO-STAR + Chain-of-Thought**
-- 用于：创意内容创作，需要显示创意的来源
-- 优势：既有风格可控，又有创意过程透明
+- Used for: Creative content creation, need to show creative sources
+- Advantages: Has both style control and creative process transparency
 
 **5. RTF + BROKE**
-- 用于：角色特定的代码生成
-- 优势：既有角色强化，又有代码的直接性
+- Used for: Role-specific code generation
+- Advantages: Has both role reinforcement and code directness
 
 ---
 
-## 应用实践
+## Practical Applications
 
-### 实践案例 1：快速生成微服务的健康检查接口
+### Practical Case 1: Quickly Generate Microservice Health Check Endpoint
 
-**场景**：正在构建一个微服务架构，需要为所有服务快速实现健康检查端点。
+**Scenario**: Building a microservice architecture and need to quickly implement health check endpoints for all services.
 
-**选择框架**：BROKE
+**Choose Framework**: BROKE
 
-**提示词**：
+**Prompt**:
 
 ```text
 [Role]
-你是一名精通 Spring Boot 3 和微服务架构的资深 Java 架构师，拥有12年企业级开发经验。
+You are a senior Java architect proficient in Spring Boot 3 and microservice architecture, with 12 years of enterprise development experience.
 
 [Background]
-项目环境：
+Project environment:
 - Spring Boot 3.2 + Java 21
-- 使用 Spring Cloud 和 Consul 作为服务注册中心
-- 需要集成 Micrometer 进行性能监控
-- 部署在 Kubernetes 上，容器健康检查依赖此端点
+- Using Spring Cloud and Consul as service registry
+- Need to integrate Micrometer for performance monitoring
+- Deployed on Kubernetes, container health checks depend on this endpoint
 
 [Objective]
-实现一个标准的微服务健康检查接口，支持 Consul 健康检查和 Kubernetes 就绪/存活探针。
+Implement a standard microservice health check interface supporting Consul health check and Kubernetes readiness/liveness probes.
 
 [Key Constraints]
-- 应该实现 Spring 的 HealthIndicator 接口
-- 检查项包括：数据库连接、Redis 连接、依赖服务可用性
-- 响应格式必须符合 Spring Boot 规范
-- 健康检查接口应该轻量级，响应时间 < 100ms
-- 在服务启动时应该将状态设置为 STARTING（30 秒内升为 UP）
-- 详细日志记录每个检查项的结果
+- Should implement Spring's HealthIndicator interface
+- Check items include: database connection, Redis connection, dependent service availability
+- Response format must comply with Spring Boot specification
+- Health check endpoint should be lightweight, response time < 100ms
+- Should set status to STARTING on service startup (upgrade to UP within 30 seconds)
+- Detailed logging of each check item result
 
 [Examples]
-输入：GET /actuator/health
-输出示例：
+Input: GET /actuator/health
+Output example:
 {
   "status": "UP",
   "components": {
@@ -871,206 +867,208 @@ for (User user : users) {
 }
 ```
 
-**预期输出**：完整的 HealthIndicator 实现、配置类、测试用例
+**Expected Output**: Complete HealthIndicator implementation, configuration classes, test cases
 
 ---
 
-### 实践案例 2：诊断分布式系统的数据一致性问题
+### Practical Case 2: Diagnose Data Consistency Issues in Distributed Systems
 
-**场景**：订单系统在并发场景下出现数据不一致，需要诊断根本原因。
+**Scenario**: Order system shows data inconsistency during high concurrency, need to diagnose root cause.
 
-**选择框架**：CRISPE + Chain-of-Thought
+**Choose Framework**: CRISPE + Chain-of-Thought
 
-**提示词**：
+**Prompt**:
 
 ```text
 [Capacity and Role]
-你是一名资深的分布式系统专家，拥有15年互联网服务经验。
-你精通：分布式事务、消息队列、数据一致性模式、并发控制。
+You are a senior distributed systems expert with 15 years of internet service experience.
+You are proficient in: Distributed transactions, message queues, data consistency patterns, concurrency control.
 
 [Request]
-请帮我诊断为什么订单系统在高并发时会出现数据不一致，找出根本原因和解决方案。
+Please help me diagnose why my order system has data inconsistency during high concurrency and find the root cause and solution.
 
 [Insight]
-我们遇到的问题：
-- 用户下单时，订单表显示"已支付"，但库存表仍显示未扣减
-- 这导致同一件商品被多个用户购买，超过库存
-- 问题发生在高峰期（QPS > 1000），日常正常
-- 我们使用了本地事务 @Transactional，但跨服务调用没有使用分布式事务
-- 系统架构：OrderService → PaymentService → InventoryService
-- 目前使用同步 RPC 调用（没有重试机制）
+Problems we encountered:
+- When users place orders, order table shows "paid", but inventory table still shows not deducted
+- This causes the same item to be purchased by multiple users, exceeding inventory
+- Problem occurs during peak hours (QPS > 1000), normal during off-peak
+- We used local @Transactional but no distributed transactions across services
+- System architecture: OrderService → PaymentService → InventoryService
+- Currently using synchronous RPC calls (no retry mechanism)
 
 [Statement]
-核心问题：在什么样的并发场景下会发生这个问题？根本原因是什么？
+Core question: In what concurrency scenario does this problem occur? What is the root cause?
 
 [Personalization]
-我的技术环境：
-- Spring Boot 3.2，MySQL 8.0
-- 支付服务调用时间：50-200ms（不稳定）
-- 库存扣减是同步调用，没有熔断器
-- 未使用消息队列或 Saga 模式
-- 团队有 8 人，微服务经验 2 年
+My technical environment:
+- Spring Boot 3.2, MySQL 8.0
+- Payment service call time: 50-200ms (unstable)
+- Inventory deduction is synchronous call, no circuit breaker
+- Not using message queue or Saga pattern
+- Team has 8 people, 2 years microservice experience
 
 [Experiment]
-请按以下顺序分析：
-1. **第一步**：画出并发场景下的时序图，解释问题是如何发生的
-2. **第二步**：分析当前架构的缺陷（同步调用、缺乏隔离等）
-3. **第三步**：列出 3-5 个可能的解决方案（优先级排序）
-4. **第四步**：针对我的团队规模和经验，推荐最佳方案和实施计划
-5. **第五步**：给出改进后的伪代码，展示如何处理各种失败场景
+Please analyze in the following order:
+1. **Step 1**: Draw a sequence diagram for concurrency scenarios, explain how the problem occurs
+2. **Step 2**: Analyze shortcomings of current architecture (synchronous calls, lack of isolation, etc.)
+3. **Step 3**: List 3-5 possible solutions (ranked by priority)
+4. **Step 4**: Based on my team size and experience, recommend best solution and implementation plan
+5. **Step 5**: Give improved pseudocode showing how to handle various failure scenarios
 
-最后，请用一句话总结根本原因。
+Finally, summarize the root cause in one sentence.
 ```
 
-**预期输出**：时序图、问题分析、3 个解决方案、推荐方案、改进代码
+**Expected Output**: Sequence diagram, problem analysis, 3 solutions, recommended approach, improved code
 
 ---
 
-### 实践案例 3：设计一个完整的微服务系统架构并规划迁移
+### Practical Case 3: Design a Complete Microservice System Architecture and Plan Migration
 
-**场景**：公司从单体应用迁移到微服务架构，需要完整的架构设计和迁移计划。
+**Scenario**: Company migrating from monolithic to microservice architecture, need complete architecture design and migration plan.
 
-**选择框架**：ROBOTIC + ICIO
+**Choose Framework**: ROBOTIC + ICIO
 
-**提示词第一阶段（ROBOTIC 初稿）**：
+**First Phase Prompt (ROBOTIC Draft)**:
 
 ```text
 [Role]
-你是一名资深的技术主管和微服务架构师
-背景：成功主导过 3 个大型系统从单体到微服务的重构
-擅长：微服务拆分策略、分布式事务、团队协调、风险管理
+You are a senior tech lead and microservice architect
+Background: Successfully led 3 major system refactoring from monolith to microservices
+Expertise: Microservice decomposition strategy, distributed transactions, team coordination, risk management
 
 [Objective]
-要完成的任务：为现有单体应用制定完整的微服务架构设计和迁移方案
-最终交付物：
-1. 架构演进路线图（分阶段、时间表）
-2. 微服务拆分设计（服务边界、数据模型、通信方式）
-3. 实施计划和风险评估
+Task to complete: Develop complete microservice architecture design and migration plan for existing monolithic application
+Final deliverables:
+1. Architecture evolution roadmap (phased, timeline)
+2. Microservice decomposition design (service boundaries, data models, communication methods)
+3. Implementation plan and risk assessment
 
 [Background]
-项目背景：
-- 现有单体 Java 应用，代码量 80 万行，运行 8 年
-- 日均处理 5000 万请求，P99 响应时间 300ms
-- 核心模块：订单、支付、库存、物流、售后
-- 技术栈：Java 8 + Spring MVC + MySQL，单机部署
-- 团队规模：30 人（后端 15 人）
-- 迁移预期：6-12 个月，不能停服
+Project background:
+- Existing monolithic Java application, 800,000 lines of code, running for 8 years
+- Process 50 million requests daily, P99 response time 300ms
+- Core modules: Orders, Payments, Inventory, Logistics, After-sales
+- Tech stack: Java 8 + Spring MVC + MySQL, single machine deployment
+- Team size: 30 people (15 backend)
+- Migration expectation: 6-12 months, no service interruption
 
 [Output]
-期望的输出包括：
-1. 微服务拆分方案（包含 Mermaid 架构图）
-2. 服务通信设计（同步/异步、协议选择）
-3. 数据一致性方案（分布式事务、Saga 等）
-4. 阶段性迁移计划（每阶段的交付物和测试计划）
-5. 风险评估和应对措施
+Expected output includes:
+1. Microservice decomposition approach (include Mermaid architecture diagram)
+2. Service communication design (sync/async, protocol selection)
+3. Data consistency approach (distributed transactions, Saga, etc.)
+4. Phased migration plan (deliverables and test plan for each phase)
+5. Risk assessment and mitigation measures
 
 [Type]
-这是一个战略性的架构设计和规划任务，需要平衡：
-- 技术理想 vs 现实约束
-- 一次性迁移 vs 渐进式迁移
-- 团队能力 vs 技术复杂度
+This is a strategic architecture design and planning task, requiring balance between:
+- Technical ideals vs real constraints
+- One-time migration vs gradual migration
+- Team capability vs technical complexity
 
 [Iterate]
-反馈流程：
-- 第1轮：初步的微服务拆分方案和总体时间规划
-- 第2轮：基于团队反馈优化拆分边界和通信方式
-- 第3轮：细化每个阶段的具体实施步骤和风险应对
+Feedback process:
+- Round 1: Initial microservice decomposition and overall timeline
+- Round 2: Optimize decomposition boundaries and communication methods based on team feedback
+- Round 3: Refine specific implementation steps and risk mitigation for each phase
 
 [Clarify]
-在开始前，需要澄清：
-1. 团队中有多少人有微服务经验？是否需要技能升级？
-2. 对新技术（如 Kafka、gRPC）的接受度？
-3. 数据一致性的要求（强一致 vs 最终一致）？
-4. 是否有现成的 DevOps 基础设施（Docker、K8s）？
-5. 迁移中关键的业务约束是什么（SLA、停机窗口等）？
+Before starting, clarify:
+1. How many people on the team have microservice experience? Do they need skills upgrade?
+2. Team acceptance of new technologies (like Kafka, gRPC)?
+3. Data consistency requirements (strong consistency vs eventual consistency)?
+4. Existing DevOps infrastructure (Docker, K8s)?
+5. Critical business constraints during migration (SLA, maintenance windows, etc.)?
 ```
 
-**第一轮输出后的迭代（ICIO 风格）**：
+**Iteration After Round 1 (ICIO Style)**:
 
 ```
-用户反馈："我们的团队主要是单体架构经验，对微服务不太熟。同时，我们已有 K8s 基础设施，但 Kafka 经验不足。数据一致性需要支持最终一致即可。"
+User feedback: "Our team mainly has monolithic experience, microservices not much. We have K8s infrastructure but limited Kafka experience. Data consistency needs to support eventual consistency only."
 
-[Iterate - 第2轮]
-基于你的反馈，我调整的方案：
-1. 优先选择相对简单的服务拆分（先拆 3-4 个核心服务）
-2. 通信方式建议：优先用同步 RPC（Spring Cloud + Feign），阶段 2 再引入消息队列
-3. 分布式事务采用 Saga 模式，但先用编程方式实现，后期再考虑框架
-4. 在第 1 阶段安排 2 周的团队培训（微服务基础、Feign、分布式事务）
+[Iterate - Round 2]
+Based on your feedback, my adjusted approach:
+1. Prioritize simpler service decomposition (split 3-4 core services first)
+2. Communication approach: Prioritize synchronous RPC (Spring Cloud + Feign), introduce message queue in phase 2
+3. Distributed transactions use Saga pattern, but initially implement programmatically, consider frameworks later
+4. Schedule 2 weeks of team training in phase 1 (microservice fundamentals, Feign, distributed transactions)
 
-现在的问题是：
-- 在这个约束下，你认为哪 3-4 个服务应该优先拆分？
+Now the question is:
+- In these constraints, which 3-4 services should we prioritize splitting?
 ```
 
-**预期结果**：经过 2-3 轮迭代的完整迁移方案
+**Expected Result**: Complete migration plan after 2-3 iterations
 
 ---
 
-## 源码链接
+## Source Links
 
-所有框架的详细文档和示例代码可以在以下位置找到：
+All framework detailed documentation and example code can be found at:
 
-### 完整框架文档
-- 📄 [BROKE 框架详解](https://github.com/microwind/ai-prompt/blob/main/Prompt-Frameworks/BROKE.md) - 快速编码框架
-- 📄 [CRISPE 框架详解](https://github.com/microwind/ai-prompt/blob/main/Prompt-Frameworks/CRISPE.md) - 深度分析框架
-- 📄 [ROBOTIC 框架详解](https://github.com/microwind/ai-prompt/blob/main/Prompt-Frameworks/ROBOTIC.md) - 完整规划框架
-- 📄 [Chain-of-Thought 框架详解](https://github.com/microwind/ai-prompt/blob/main/Prompt-Frameworks/Chain-of-Thought.md) - 逐步推理框架
-- 📄 [CO-STAR 框架详解](https://github.com/microwind/ai-prompt/blob/main/Prompt-Frameworks/CO-STAR.md) - 创意内容框架
-- 📄 [ICIO 框架详解](https://github.com/microwind/ai-prompt/blob/main/Prompt-Frameworks/ICIO.md) - 灵活迭代框架
-- 📄 [RTF 框架详解](https://github.com/microwind/ai-prompt/blob/main/Prompt-Frameworks/RTF.md) - 角色扮演框架
+### Complete Framework Documentation
+- 📄 [BROKE Framework Guide](https://github.com/microwind/ai-prompt/blob/main/Prompt-Frameworks/BROKE.md) - Fast Coding Framework
+- 📄 [CRISPE Framework Guide](https://github.com/microwind/ai-prompt/blob/main/Prompt-Frameworks/CRISPE.md) - Deep Analysis Framework
+- 📄 [ROBOTIC Framework Guide](https://github.com/microwind/ai-prompt/blob/main/Prompt-Frameworks/ROBOTIC.md) - Complete Planning Framework
+- 📄 [Chain-of-Thought Framework Guide](https://github.com/microwind/ai-prompt/blob/main/Prompt-Frameworks/Chain-of-Thought.md) - Step-by-Step Reasoning Framework
+- 📄 [CO-STAR Framework Guide](https://github.com/microwind/ai-prompt/blob/main/Prompt-Frameworks/CO-STAR.md) - Creative Content Framework
+- 📄 [ICIO Framework Guide](https://github.com/microwind/ai-prompt/blob/main/Prompt-Frameworks/ICIO.md) - Flexible Iteration Framework
+- 📄 [RTF Framework Guide](https://github.com/microwind/ai-prompt/blob/main/Prompt-Frameworks/RTF.md) - Role-Playing Framework
 
-### 相关资源
-- 📚 [AI 编程Prompt 工程完全指南](https://github.com/microwind/ai-prompt/blob/main/programmer_prompt_engineering_guide.md) - AI编程 Prompt 最佳实践
-- 📚 [Vibe Coding 提示词工程指南](https://github.com/microwind/ai-prompt/blob/main/developer_prompt_engineering_guide.md) - Vibe Coding 提示词最佳实践
-- 🎯 [100+ Prompt 示例](https://github.com/microwind/ai-prompt/blob/main/Prompt-Frameworks) - 各种场景的实际应用示例
-
----
-
-## 总结与最佳实践
-
-### 选择框架的黄金法则
-
-1. **BROKE** - 当你的问题清晰、需求明确、需要代码时
-2. **CRISPE** - 当你需要深度分析、诊断问题、理解原因时
-3. **ROBOTIC** - 当你要设计系统、需要多轮评审、涉及团队协作时
-4. **Chain-of-Thought** - 当你需要看到推理过程、验证逻辑时（可与其他框架组合）
-5. **CO-STAR** - 当你要创作内容、控制风格、明确受众时
-6. **ICIO** - 当问题模糊、需要逐步优化、需要多轮反馈时
-7. **RTF** - 当你要进行角色扮演、模拟场景时
-
-### 提升 Prompt 质量的 5 个要点
-
-1. **具体而非笼统**
-   - ❌ "用 Java 写登录"
-   - ✅ "使用 Spring Boot 3.2、JWT、BCrypt，返回 Result<T> 格式"
-
-2. **完整而非片段**
-   - ❌ 只描述输出格式
-   - ✅ 既描述背景、约束，也给输入输出示例
-
-3. **清晰而非模糊**
-   - ❌ "代码要好"
-   - ✅ "遵循阿里编码规范、包含 Javadoc、异常处理完整"
-
-4. **有示例而非没有**
-   - ❌ 只描述需求
-   - ✅ 给出具体的输入输出例子
-
-5. **可验证而非虚无**
-   - ❌ "优化后会很快"
-   - ✅ "性能提升 50% 以上"
-
-### 何时组合框架
-
-当单一框架无法满足需求时，考虑组合：
-
-- **BROKE + Chain-of-Thought** = 有思路的代码生成
-- **CRISPE + Chain-of-Thought** = 可验证的问题诊断
-- **ROBOTIC + ICIO** = 灵活的长期规划
-- **CO-STAR + Chain-of-Thought** = 有创意的内容生成
+### Related Resources
+- 📚 [AI Programming Prompt Engineering Complete Guide](https://github.com/microwind/ai-prompt/blob/main/programmer_prompt_engineering_guide.md) - AI Programming Prompt Best Practices
+- 📚 [Vibe Coding Prompt Engineering Guide](https://github.com/microwind/ai-prompt/blob/main/developer_prompt_engineering_guide.md) - Vibe Coding Prompt Best Practices
+- 🎯 [100+ Prompt Examples](https://github.com/microwind/ai-prompt/blob/main/Prompt-Frameworks) - Practical Application Examples for Various Scenarios
 
 ---
 
-**最后**：
+## Summary and Best Practices
 
-选择合适的提示词框架，就像选择合适的开发工具。好的工具能大大提升效率。利用AI编程最重要的是把需求描述清楚，把业务需求转换为明确的技术需求，并告知AI**你要什么**——明确表达需求、提供完整信息、清晰的约束条件。掌握这些框架，你就能与 AI 进行更高效的协作。
+### Golden Rules for Framework Selection
 
+1. **BROKE** - When your problem is clear, requirements are explicit, and you need code
+2. **CRISPE** - When you need deep analysis, problem diagnosis, and understanding causes
+3. **ROBOTIC** - When you want to design systems, need multiple review rounds, involve team collaboration
+4. **Chain-of-Thought** - When you need to see reasoning process, verify logic (can combine with other frameworks)
+5. **CO-STAR** - When you want to create content, control style, clarify audience
+6. **ICIO** - When problem is unclear, need gradual optimization, need multiple rounds of feedback
+7. **RTF** - When you want role-playing, simulate scenarios
+
+### 5 Key Points to Improve Prompt Quality
+
+1. **Specific rather than vague**
+   - ❌ "Write login in Java"
+   - ✅ "Use Spring Boot 3.2, JWT, BCrypt, return Result<T> format"
+
+2. **Complete rather than fragmented**
+   - ❌ Only describe output format
+   - ✅ Describe background, constraints, and provide input/output examples
+
+3. **Clear rather than ambiguous**
+   - ❌ "Code should be good"
+   - ✅ "Follow Alibaba coding standards, include Javadoc, complete exception handling"
+
+4. **With examples rather than without**
+   - ❌ Only describe requirements
+   - ✅ Provide concrete input/output examples
+
+5. **Verifiable rather than vague**
+   - ❌ "Performance will be very fast"
+   - ✅ "Performance improvement 50% or more"
+
+### When to Combine Frameworks
+
+When a single framework cannot meet requirements, consider combining:
+
+- **BROKE + Chain-of-Thought** = Code generation with thinking
+- **CRISPE + Chain-of-Thought** = Verifiable problem diagnosis
+- **ROBOTIC + ICIO** = Flexible long-term planning
+- **CO-STAR + Chain-of-Thought** = Creative content generation
+
+---
+
+**Finally**:
+
+Choosing the right prompt framework is like choosing the right development tool. Good tools significantly improve efficiency. The most important thing for leveraging AI programming is expressing requirements clearly, converting business needs into explicit technical requirements, and telling the AI **what you want**—express requirements clearly, provide complete information, and clear constraints. Master these frameworks and you can collaborate with AI more efficiently.
+
+### Source Links
+[https://github.com/microwind/ai-prompt](https://github.com/microwind/ai-prompt)
