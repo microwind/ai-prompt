@@ -11,20 +11,20 @@
 
 ## 📖 项目介绍
 
-这是一份**实用的Prompt Engineering指南**，围绕14个核心编程任务组织，提供提供100+实际的提示词例子，帮助你在日常工作中更高效地与AI（Claude、GPT等）协作。
+这是一份面向软件工程师的**实用Prompt Engineering指南**，围绕14个AI编程核心任务组织，提供提供100+实际的提示词例子，帮助你在日常工作中更高效地与AI Agent（Claude Code、Codex、OpenClaw等）协作。请您阅读[《程序员必读的AI Prompt最佳实践》](.)
 
 **不同于以往的Prompt指南：**
 
-- 🎯 **任务驱动** - 围绕实际的编程工作流组织
-- 💼 **实战导向** - 每个任务都源于真实的编程场景
-- 📋 **完整覆盖** - 从需求分析到项目交付的全链路
-- ✅ **即插即用** - Prompt可直接复制使用，无需修改
+- **任务驱动** - 围绕实际的编程工作流组织
+- **实战导向** - 每个任务都源于真实的编程场景
+- **完整覆盖** - 从需求分析到项目交付的全链路
+- **即插即用** - Prompt可直接复制使用，无需修改
 
 **适合以下开发者:**
-- 🎓 **初学者** - 快速学习标准编程工作流
-- 👨‍💻 **中级开发者** - 提高编码效率和代码质量
-- 🏗️ **架构师** - 优化系统设计和决策过程
-- 🚀 **技术主管** - 指导团队有效使用AI工具
+- **初学者** - 快速学习标准编程工作流
+- **中级开发者** - 提高编码效率和代码质量
+- **架构师** - 优化系统设计和决策过程
+- **技术主管** - 指导团队有效使用AI工具
 
 ---
 
@@ -59,7 +59,7 @@
 | **T12** | **Performance Optimization** | 性能调优、资源优化 |
 
 ---
-
+<!--
 ## 📁 项目结构
 
 ```
@@ -105,8 +105,8 @@ ai-prompt/
     ├── README.md
     └── prompt_examples.md
 ```
-
 ---
+-->
 
 ## 🚀 快速开始
 
@@ -203,8 +203,8 @@ T11 → T12 → T10 → T04 → T13
 |------|------|
 | **[Prompt-Examples](./Prompt-Examples/)** | 💡 **70+ 个真实场景的Prompt实践库**（内容生成、系统设计、数据处理、代码生成） |
 | **[Prompt-Frameworks](./Prompt-Frameworks)** | 💡 **7个常见提示词工程框架**(BROKE、CRISPE、ROBOTIC等) |
-| [programmer_prompt_engineering_guide.md](programmer_prompt_engineering_guide.md) | 📚 程序员Prompt工程**完全指南**（深度学习资料） |
-| [developer_prompt_engineering_guide.md](developer_prompt_engineering_guide.md) | 📚 开发者Prompt工程指南 |
+| [程序员必读的AI Prompt最佳实践](programmer_prompt_engineering_guide.md) | 📚 程序员Prompt工程**完全指南**（深度学习资料） |
+| [Vibe Coding提示词工程实践](developer_prompt_engineering_guide.md) | 📚 Vibe Coding开发者Prompt工程指南 |
 
 ---
 
@@ -329,17 +329,17 @@ A: 根据反馈和新的实践经验定期更新，预计每月至少一次。
 
 ---
 
-## 相关链接：AI时代程序员成长体系
+## 🔥 相关链接：AI时代程序员成长体系
 - [《AI时代，人人都是Agent工程师》](https://github.com/microwind/algorithms/blob/main/start-here/AI-Era-Programmers-as-Agent-Engineers.md)
 - ai-prompt - AI编程提示词库：[https://github.com/microwind/ai-prompt](https://github.com/microwind/ai-prompt)
 - ai-skills - AI编程Skill库：[https://github.com/microwind/ai-skills](https://github.com/microwind/ai-skills)
-- algorithms - 算法思想与数据结构：[https://github.com/microwind/algorithms](https://github.com/microwind/algorithms)
-- design-patterns - 设计模式与编程范式：[https://github.com/microwind/design-patterns](https://github.com/microwind/design-patterns)
+- algorithms - 算法思想与数据结构研究：[https://github.com/microwind/algorithms](https://github.com/microwind/algorithms)
+- design-patterns - 设计模式与架构设计研究：[https://github.com/microwind/design-patterns](https://github.com/microwind/design-patterns)
 
 **准备好提高编码效率了吗？立即选择一个任务开始！** 🚀
 
 **我是Jarry 李春平**
 - 📧 mail: `jarryli@gmail.com`  or `lichunping@buaa.edu.cn`
-- 💬 wechat: `springbuild`
+- 💬 wechat: `springbuild` QQ: `12263539`
 - 🌟 如果这个项目对你有帮助，请给个 Star 支持一下！
 
