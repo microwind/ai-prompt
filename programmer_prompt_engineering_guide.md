@@ -552,13 +552,21 @@ public class Order {
 # 六、Prompt 构造流程图
 
 ```mermaid
-flowchart TD
-    A[明确目标] --> B[定义角色]
+flowchart LR
+    A(明确目标) --> B[定义角色]
     B --> C[注入背景]
     C --> D[添加约束]
     D --> E[提供示例]
     E --> F[设置输出格式]
-    F --> G[执行并验证]
+    F --> G(执行并验证)
+
+    %% 样式定义
+    classDef endNodes fill:#ff6f61,color:#fff,stroke:#c94c4c,stroke-width:2px,rx:8,ry:8;
+		classDef middleNodes fill:#0f3460,color:#fff,stroke:#0a2647,stroke-width:2px,rx:8,ry:8;
+
+    %% 应用样式
+    class A,G endNodes;
+    class B,C,D,E,F middleNodes;
 ```
 
 ---
@@ -745,11 +753,19 @@ for (String item : items) {
 
 ```mermaid
 flowchart LR
-    A[用户问题] --> B[向量检索]
+    A(用户问题) --> B[向量检索]
     B --> C[内部文档库]
     C --> D[拼接上下文]
     D --> E[LLM 生成答案]
-    E --> F[输出结果]
+    E --> F(输出结果)
+    
+    %% 样式定义
+    classDef endNodes fill:#ff6f61,color:#fff,stroke:#c94c4c,stroke-width:2px,rx:8,ry:8;
+		classDef middleNodes fill:#0f3460,color:#fff,stroke:#0a2647,stroke-width:2px,rx:8,ry:8;
+
+    %% 应用样式
+    class A,F endNodes;
+    class B,C,D,E, middleNodes;
 ```
 
 ## 工作原理

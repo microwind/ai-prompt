@@ -11,7 +11,7 @@
 
 ## 📖 项目介绍
 
-这是一份面向软件工程师的**实用Prompt Engineering指南**，围绕14个AI编程核心任务组织，提供提供100+实际的提示词例子，帮助你在日常工作中更高效地与AI Agent（Claude Code、Codex、OpenClaw等）协作。请您阅读[《程序员必读的AI Prompt最佳实践》](.)
+这是一份面向软件工程师的**实用Prompt Engineering指南**，围绕14个AI编程核心任务组织，提供提供100+实际的提示词例子，帮助你在日常工作中更高效地与AI Agent（Claude Code、Codex、OpenClaw等）协作。请您阅读[《程序员必读的AI Prompt最佳实践》](./programmer_prompt_engineering_guide.md)
 
 **不同于以往的Prompt指南：**
 
