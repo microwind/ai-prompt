@@ -1,4 +1,4 @@
-# 程序员必读的 Prompt Engineering 指南系列
+# AI编程：程序员 Prompt Engineering 知识库
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Last Updated](https://img.shields.io/badge/Last%20Updated-2026%2F03-blue)
