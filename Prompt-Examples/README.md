@@ -126,6 +126,42 @@
 
 ---
 
+### 🚀 [项目实战](05-Project-Pratice/) - 4个示例
+
+围绕真实项目目标，记录从需求拆解到 Prompt 文档沉淀的完整实战过程
+
+- **[热门股票 Web 系统](05-Project-Pratice/01-hot-stock-web-system/)** - 1个实战（持续更新中）
+  - ✅ [实战过程说明](05-Project-Pratice/01-hot-stock-web-system/README.md)
+  - ✅ [需求提示词文档](05-Project-Pratice/01-hot-stock-web-system/01-requirement-prompt.md)
+  - ✅ [系统设计提示词文档](05-Project-Pratice/01-hot-stock-web-system/02-system-design-prompt.md)
+  - ✅ [开发计划提示词文档](05-Project-Pratice/01-hot-stock-web-system/03-development-plan-prompt.md)
+
+- **[高考志愿填报系统](05-Project-Pratice/02-gaokao-volunteer-system/)** - 1个实战（持续更新中）
+  - ✅ [实战过程说明](05-Project-Pratice/02-gaokao-volunteer-system/README.md)
+  - ✅ [需求提示词文档](05-Project-Pratice/02-gaokao-volunteer-system/01-requirement-prompt.md)
+  - ✅ [系统设计提示词文档](05-Project-Pratice/02-gaokao-volunteer-system/02-system-design-prompt.md)
+  - ✅ [开发计划提示词文档](05-Project-Pratice/02-gaokao-volunteer-system/03-development-plan-prompt.md)
+
+- **[道德经短内容改写](05-Project-Pratice/03-daodejing-short-content/)** - 1个实战（持续更新中）
+  - ✅ [实战过程说明](05-Project-Pratice/03-daodejing-short-content/README.md)
+  - ✅ [需求提示词文档](05-Project-Pratice/03-daodejing-short-content/01-requirement-prompt.md)
+  - ✅ [内容设计提示词文档](05-Project-Pratice/03-daodejing-short-content/02-system-design-prompt.md)
+  - ✅ [生产计划提示词文档](05-Project-Pratice/03-daodejing-short-content/03-development-plan-prompt.md)
+
+- **[股市点评提示词与 Skill](05-Project-Pratice/04-stock-market-commentary-skill/)** - 1个实战（持续更新中）
+  - ✅ [实战过程说明](05-Project-Pratice/04-stock-market-commentary-skill/README.md)
+  - ✅ [需求提示词文档](05-Project-Pratice/04-stock-market-commentary-skill/01-requirement-prompt.md)
+  - ✅ [内容设计提示词文档](05-Project-Pratice/04-stock-market-commentary-skill/02-system-design-prompt.md)
+  - ✅ [生产计划提示词文档](05-Project-Pratice/04-stock-market-commentary-skill/03-development-plan-prompt.md)
+  - ✅ [Skill 生成文档](05-Project-Pratice/04-stock-market-commentary-skill/04-skill-generation-notes.md)
+  - ✅ [最终可用 Prompt 集](05-Project-Pratice/04-stock-market-commentary-skill/05-final-prompts.md)
+  - ✅ [Skill 模板](05-Project-Pratice/04-stock-market-commentary-skill/06-skill-template.md)
+  - ✅ [真实 Skill 目录](05-Project-Pratice/04-stock-market-commentary-skill/a-share-market-commentary/SKILL.md)
+  - ✅ [每日数据录入模板](05-Project-Pratice/04-stock-market-commentary-skill/07-daily-input-template.md)
+  - ✅ [日更操作手册](05-Project-Pratice/04-stock-market-commentary-skill/08-daily-workflow-manual.md)
+
+---
+
 ## 🎯 如何使用本库
 
 ### 快速查找
@@ -249,4 +285,3 @@
 ---
 
 **提示**: 这个库是不断发展的。欢迎分享你的成功的 Prompt 案例！
-

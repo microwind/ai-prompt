@@ -1,0 +1,33 @@
+{
+  "session_type": "midday_close",
+  "trade_date": "2026-04-01",
+  "weekday": "周三",
+  "index_summary": {
+    "shanghai_composite": "3358.21, +0.42%",
+    "shenzhen_component": "10231.55, +0.68%",
+    "chinext": "2012.43, +1.15%"
+  },
+  "turnover": {
+    "market_total": "7865亿",
+    "estimated_total": "1.31万亿"
+  },
+  "advancers_decliners": {
+    "up_count": 3521,
+    "down_count": 1618,
+    "limit_up_count": 62,
+    "limit_down_count": 4
+  },
+  "hot_sectors": ["算力", "AI应用", "半导体"],
+  "weak_sectors": ["煤炭", "银行", "油气"],
+  "main_themes": ["人工智能", "国产替代"],
+  "divergent_themes": ["高股息", "资源股"],
+  "leading_stocks": ["示例A", "示例B", "示例C"],
+  "weak_stocks": ["示例D", "示例E"],
+  "capital_flow": {
+    "northbound": "半日净流入23.5亿",
+    "main_force": "成长方向获资金关注"
+  },
+  "market_sentiment": "偏强",
+  "special_events": "午间暂无新的重大扰动消息",
+  "extra_notes": "下午需要观察热点是继续扩散还是高位分化。"
+}

@@ -1,0 +1,33 @@
+{
+  "session_type": "morning_open_30m",
+  "trade_date": "2026-04-01",
+  "weekday": "周三",
+  "index_summary": {
+    "shanghai_composite": "3352.18, +0.31%",
+    "shenzhen_component": "10188.42, +0.64%",
+    "chinext": "2005.67, +0.96%"
+  },
+  "turnover": {
+    "market_total": "4286亿",
+    "estimated_total": "1.08万亿"
+  },
+  "advancers_decliners": {
+    "up_count": 3186,
+    "down_count": 1879,
+    "limit_up_count": 39,
+    "limit_down_count": 3
+  },
+  "hot_sectors": ["AI应用", "算力", "半导体设备"],
+  "weak_sectors": ["银行", "煤炭", "公用事业"],
+  "main_themes": ["人工智能", "科技成长"],
+  "divergent_themes": ["高股息"],
+  "leading_stocks": ["示例科技A", "示例算力B", "示例芯片C"],
+  "weak_stocks": ["示例银行D", "示例煤炭E"],
+  "capital_flow": {
+    "northbound": "开盘后净流入12.4亿",
+    "main_force": "资金偏向科技成长方向"
+  },
+  "market_sentiment": "偏强",
+  "special_events": "早间科技产业政策消息催化活跃",
+  "extra_notes": "重点观察AI主线能否在10点后继续扩散。"
+}

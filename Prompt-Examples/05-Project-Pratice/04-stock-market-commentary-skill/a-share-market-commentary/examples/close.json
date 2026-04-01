@@ -1,0 +1,33 @@
+{
+  "session_type": "market_close",
+  "trade_date": "2026-04-01",
+  "weekday": "周三",
+  "index_summary": {
+    "shanghai_composite": "3364.09, +0.58%",
+    "shenzhen_component": "10296.83, +0.93%",
+    "chinext": "2024.16, +1.36%",
+    "star50": "918.62, +1.12%"
+  },
+  "turnover": {
+    "market_total": "1.36万亿"
+  },
+  "advancers_decliners": {
+    "up_count": 3648,
+    "down_count": 1482,
+    "limit_up_count": 81,
+    "limit_down_count": 6
+  },
+  "hot_sectors": ["AI应用", "算力", "半导体", "消费电子"],
+  "weak_sectors": ["银行", "煤炭", "电力"],
+  "main_themes": ["人工智能", "科技成长", "国产替代"],
+  "divergent_themes": ["高股息", "资源"],
+  "leading_stocks": ["示例科技A", "示例芯片B", "示例应用C"],
+  "weak_stocks": ["示例银行D", "示例煤炭E"],
+  "capital_flow": {
+    "northbound": "全天净流入41.8亿",
+    "main_force": "资金整体偏向科技成长和活跃题材"
+  },
+  "market_sentiment": "修复偏强",
+  "special_events": "部分科技板块受政策预期与业绩催化影响表现活跃",
+  "extra_notes": "次日重点观察科技主线持续性及量能是否继续维持高位。"
+}
