@@ -216,13 +216,13 @@ T11 → T12 → T10 → T04 → T13
 
 | 框架 | 适用场景 | 复杂度 | 文档 |
 |------|---------|-------|------|
-| **BROKE** | 快速代码生成、标准需求 | ⭐ 简洁 | [📖 BROKE框架](frameworks/BROKE.md) |
-| **CRISPE** | 复杂问题分析、创意输出 | ⭐⭐ 中等 | [📖 CRISPE框架](frameworks/CRISPE.md) |
-| **ROBOTIC** | 架构设计、多轮迭代 | ⭐⭐⭐ 复杂 | [📖 ROBOTIC框架](frameworks/ROBOTIC.md) |
-| **Chain-of-Thought** | 算法设计、逻辑推理 | ⭐⭐ 中等 | [📖 Chain-of-Thought框架](frameworks/Chain-of-Thought.md) |
-| **CO-STAR** | 内容创作、营销文案 | ⭐⭐⭐ 复杂 | [📖 CO-STAR框架](frameworks/CO-STAR.md) |
-| **ICIO** | 迭代式问题解决 | ⭐⭐ 中等 | [📖 ICIO框架](frameworks/ICIO.md) |
-| **RTF** | 角色扮演、场景模拟 | ⭐ 简洁 | [📖 RTF框架](frameworks/RTF.md) |
+| **BROKE** | 快速代码生成、标准需求 | ⭐ 简洁 | [📖 BROKE框架](Prompt-Frameworks/BROKE.md) |
+| **CRISPE** | 复杂问题分析、创意输出 | ⭐⭐ 中等 | [📖 CRISPE框架](Prompt-Frameworks/CRISPE.md) |
+| **ROBOTIC** | 架构设计、多轮迭代 | ⭐⭐⭐ 复杂 | [📖 ROBOTIC框架](Prompt-Frameworks/ROBOTIC.md) |
+| **Chain-of-Thought** | 算法设计、逻辑推理 | ⭐⭐ 中等 | [📖 Chain-of-Thought框架](Prompt-Frameworks/Chain-of-Thought.md) |
+| **CO-STAR** | 内容创作、营销文案 | ⭐⭐⭐ 复杂 | [📖 CO-STAR框架](Prompt-Frameworks/CO-STAR.md) |
+| **ICIO** | 迭代式问题解决 | ⭐⭐ 中等 | [📖 ICIO框架](Prompt-Frameworks/ICIO.md) |
+| **RTF** | 角色扮演、场景模拟 | ⭐ 简洁 | [📖 RTF框架](Prompt-Frameworks/RTF.md) |
 
 ### 框架选择速查表
 
