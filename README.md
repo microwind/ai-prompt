@@ -1,7 +1,7 @@
 # AI编程：程序员 Prompt Engineering 知识库
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![Last Updated](https://img.shields.io/badge/Last%20Updated-2026%2F03-blue)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-2026%2F04-blue)
 ![Status](https://img.shields.io/badge/Status-Active-success)
 ![Tasks](https://img.shields.io/badge/Tasks-14-blue)
 
@@ -9,9 +9,9 @@
 
 ---
 
-## 📖 项目介绍
+## 项目介绍
 
-这是一份面向软件工程师的**实用Prompt Engineering指南**，围绕14个AI编程核心任务组织，提供提供100+实际的提示词例子，帮助你在日常工作中更高效地与AI Agent（Claude Code、Codex、OpenClaw等）协作。请您阅读[《程序员必读的AI Prompt最佳实践》](./programmer_prompt_engineering_guide.md)
+本仓库是面向程序员的**实用Prompt Engineering指南**，围绕14个AI编程核心场景组织，提供提供100+实际的提示词例子，帮助您在日常工作中更高效地与AI Agent（Claude Code、Codex、Gemini、OpenClaw等）协作。请您阅读[《程序员必读的AI Prompt最佳实践》](./programmer_prompt_engineering_guide.md)
 
 **不同于以往的Prompt指南：**
 
@@ -24,11 +24,11 @@
 - **初学者** - 快速学习标准编程工作流
 - **中级开发者** - 提高编码效率和代码质量
 - **架构师** - 优化系统设计和决策过程
-- **技术主管** - 指导团队有效使用AI工具
+- **技术负责人** - 指导团队有效使用AI工具
 
 ---
 
-## 🎯 14大核心任务一览
+## 14大核心任务一览
 
 ### 按难度分类
 
@@ -60,7 +60,7 @@
 
 ---
 <!--
-## 📁 项目结构
+## 项目结构
 
 ```
 ai-prompt/
@@ -108,7 +108,7 @@ ai-prompt/
 ---
 -->
 
-## 🚀 快速开始
+## 快速开始
 
 ### 方式1：按问题找答案（5分钟）
 
@@ -157,7 +157,7 @@ T11 → T12 → T10 → T04 → T13
 
 ---
 
-## 💡 每个任务都包含
+## 每个任务都包含
 
 **核心概念** - 为什么这个任务很重要
 **最佳实践** - 如何高效地完成这个任务
@@ -168,7 +168,7 @@ T11 → T12 → T10 → T04 → T13
 
 ---
 
-## 🌟 项目特色
+## 项目特色
 
 ### 1️⃣ 任务驱动，符合实际工作流
 
@@ -197,7 +197,7 @@ T11 → T12 → T10 → T04 → T13
 
 ---
 
-## 📚 文档资源
+## 文档资源
 
 | 资源 | 说明 |
 |------|------|
@@ -208,7 +208,7 @@ T11 → T12 → T10 → T04 → T13
 
 ---
 
-## 🎨 Prompt 框架对比与应用
+## Prompt 框架对比与应用
 
 本项目提供 **7种Prompt框架** 的完整指南，帮助你针对不同场景选择最合适的框架。
 
@@ -248,7 +248,7 @@ T11 → T12 → T10 → T04 → T13
 
 ---
 
-## 🎓 学习建议
+## 学习建议
 
 ### 建议1: 按问题学习（推荐）
 
@@ -295,7 +295,7 @@ T11 → T12 → T10 → T04 → T13
 
 ---
 
-## 📊 项目统计
+## 项目统计
 
 - **核心任务**: 14个
 - **Prompt示例**: 70+个
@@ -305,7 +305,7 @@ T11 → T12 → T10 → T04 → T13
 
 ---
 
-## 💬 常见问题
+## 常见问题
 
 **Q: 这些Prompt适用于所有AI模型吗？**
 A: 核心思想通用，但具体Prompt可能需要微调。本指南基于Claude，但也适用于GPT系列。
@@ -321,7 +321,7 @@ A: 根据反馈和新的实践经验定期更新，预计每月至少一次。
 
 ---
 
-## 🎯 下一步
+## 下一步
 
 **👉 [选择你的第一个任务](01-Requirement-Clarification/)** - 从需求澄清开始
 **👉 [查看学习路径](使用说明.md)** - 找到适合你的学习方式
