@@ -8,7 +8,7 @@
 
 **先进入Gemini界面：**
 
-![img](https://pic-out.zhimg.com/v2-0d32c329653accb67bf344baba6ae3f1~resize:1440:q75.png?animatedImageAutoPlay=false&animatedImagePlayCount=1&auth_key=1776083058-0-0-da794e56471363701e02cf86a17fee91&bizSceneCode=article_draft&expiration=1776083058&incremental=false&mid=46a42a228e63bcc9785041c0bd75e024&overTime=60&precoder=false&protocol=v2&retryCount=3&sampling=false&sceneCode=editor_copy_outbound&source=bfcaadb1)
+![img](https://pic2.zhimg.com/80/v2-0d32c329653accb67bf344baba6ae3f1_1440w.webp)
 
 ### **步骤 1：规划与需求定义**
 
@@ -22,11 +22,11 @@
 
 **提示词如下**：
 
-```
+```text
 背景：
 我有一份《理解道德经》的完整解读原稿（每个章节独立成文）。
 我想将其改编为简版解读，适合快节奏阅读，发布在小红书、微头条、知乎、微信公众号等平台。
-格式规范请参考 `原稿/notes/第一章范本.md` 的内容。
+格式规范请参考 `原稿/第一章范本.md` 的内容。
 
 角色：
 你是一个国学研究专家，精通《道德经》以及经子史集。
@@ -50,19 +50,31 @@
 
 几分钟后，Agent 按照我的要求，完成了设计文档、工作计划以及SKILL.md。
 
-![img](https://pic-out.zhimg.com/v2-6732a95b229f7b52427efa2b3b86c62a~resize:1440:q75.png?animatedImageAutoPlay=false&animatedImagePlayCount=1&auth_key=1776083058-0-0-50c6de4eb729f1f9d8e507e0d48a6929&bizSceneCode=article_draft&expiration=1776083058&incremental=false&mid=46a42a228e63bcc9785041c0bd75e024&overTime=60&precoder=false&protocol=v2&retryCount=3&sampling=false&sceneCode=editor_copy_outbound&source=bfcaadb1)![img](https://pic-out.zhimg.com/v2-c52177c9c3845d58ea85e9364ede0364~resize:1440:q75.png?animatedImageAutoPlay=false&animatedImagePlayCount=1&auth_key=1776083058-0-0-ddb53699fb7d2f75bb22bfb3f1109948&bizSceneCode=article_draft&expiration=1776083058&incremental=false&mid=46a42a228e63bcc9785041c0bd75e024&overTime=60&precoder=false&protocol=v2&retryCount=3&sampling=false&sceneCode=editor_copy_outbound&source=bfcaadb1)![img](https://pic-out.zhimg.com/v2-80bd9515d60c90e578493c0646093631~resize:1440:q75.png?animatedImageAutoPlay=false&animatedImagePlayCount=1&auth_key=1776083058-0-0-e836e72be7f4aa083b011f1a04d1f14b&bizSceneCode=article_draft&expiration=1776083058&incremental=false&mid=46a42a228e63bcc9785041c0bd75e024&overTime=60&precoder=false&protocol=v2&retryCount=3&sampling=false&sceneCode=editor_copy_outbound&source=bfcaadb1)
+![img](https://pic1.zhimg.com/80/v2-6732a95b229f7b52427efa2b3b86c62a_1440w.webp)
+
+需求分析
+
+![img](https://pic1.zhimg.com/80/v2-c52177c9c3845d58ea85e9364ede0364_1440w.webp)
+
+工作计划
+
+![img](https://pic2.zhimg.com/80/v2-80bd9515d60c90e578493c0646093631_1440w.webp)
+
+SKILL定义
 
 **步骤 2：保存生成的文档，修改SKILL文件**
 
 为了后续可重复生成 ，也为了能用其他大模型来生成内容，我需要保存技能文档（`SKILL.md`）。同时，为保证输出质量，我还需要手工修改和打磨技能文件。接下来跟AI交互对话。
 
-![img](https://pic-out.zhimg.com/v2-e4d86a77aa1c4622b11d3ac24c156a6d~resize:1440:q75.png?animatedImageAutoPlay=false&animatedImagePlayCount=1&auth_key=1776083058-0-0-b5459f59b4bca0b0c616a48f3a1b18bd&bizSceneCode=article_draft&expiration=1776083058&incremental=false&mid=46a42a228e63bcc9785041c0bd75e024&overTime=60&precoder=false&protocol=v2&retryCount=3&sampling=false&sceneCode=editor_copy_outbound&source=bfcaadb1)![img](https://pic-out.zhimg.com/v2-8c7494eed1bcff26af71b94a52c1664f~resize:1440:q75.png?animatedImageAutoPlay=false&animatedImagePlayCount=1&auth_key=1776083058-0-0-ddcb821eb5e8c11e7cfb74d1e6f8c9e4&bizSceneCode=article_draft&expiration=1776083058&incremental=false&mid=46a42a228e63bcc9785041c0bd75e024&overTime=60&precoder=false&protocol=v2&retryCount=3&sampling=false&sceneCode=editor_copy_outbound&source=bfcaadb1)![img](https://pic-out.zhimg.com/v2-15070e83c81f710a7c3449bb49871f71~resize:1440:q75.png?animatedImageAutoPlay=false&animatedImagePlayCount=1&auth_key=1776083058-0-0-f6e869ab84e81321ed10ab2b82909d93&bizSceneCode=article_draft&expiration=1776083058&incremental=false&mid=46a42a228e63bcc9785041c0bd75e024&overTime=60&precoder=false&protocol=v2&retryCount=3&sampling=false&sceneCode=editor_copy_outbound&source=bfcaadb1)
+![img](https://pic2.zhimg.com/80/v2-e4d86a77aa1c4622b11d3ac24c156a6d_1440w.webp)
 
-需求分析我看了下，可以作为生成SKILL参考。开发计划并不适用，毕竟这不是软件开发，不需要复杂的流程。SKILL生成完成，基本可以使用，我稍微调整了下措辞。
+![img](https://picx.zhimg.com/80/v2-8c7494eed1bcff26af71b94a52c1664f_1440w.webp)
 
-需求分析我看了，可以作为生成 SKILL 的参考。开发计划并不适用，毕竟这不是软件开发，不需要复杂的流程。SKILL 已生成完成，基本可用，我稍微调整了一下措辞。
+![img](https://pic2.zhimg.com/80/v2-15070e83c81f710a7c3449bb49871f71_1440w.webp)
 
-**下面是修改后的完整SKILL内容：**
+需求分析我看了下，可以作为生成SKILL参考。开发计划并不适用，毕竟这不是软件开发，不需要复杂的流程。SKILL生成完成，基本可以使用，我稍微调整了一下措辞。
+
+下面是修改后的完整SKILL内容：
 
 ~~~python
 # SKILL：老子智慧解读器 (Laozi Wisdom Interpreter)
@@ -74,7 +86,7 @@
 
 ## Knowledge & Source:
 - **参考来源：** 本地项目目录 `原稿/notes/` 下的对应章节文件。你必须基于该原始解读进行改编，保留其核心逻辑和深度洞察。
-- **参考范本** 本地项目目录 `原稿/notes/第一章范本.md`。
+- **参考范本** 本地项目目录 `原稿/第一章范本.md`。
 - **项目在线地址：** https://github.com/jarry/daodejing (在输出的“链接”部分引用)。
 
 ## Constraints:
@@ -87,7 +99,7 @@
 
 ## Workflow:
 1. **加载原稿：** 读取 `原稿/notes/[章节号].md`。
-2. **解析与精炼：** 提取原稿中的原文、核心解释和深度分析。去除琐碎身份描述，将深刻的哲学观点升华为普适智慧。
+2. **解析与精练：** 提取原稿中的原文、核心解释和深度分析。去除琐碎身份描述，将深刻的哲学观点升华为普适智慧。
 3. **平台适配优化：**
    - 若未特别指定，默认按标准版本，即完全遵照“第一章范本”格式和风格去解读和分析，不要增加多余内容。
    - 若是指定[小红书]风格：在分析部分增加 Emoji，文末加 3 个 Tag，标题需更具情绪冲击力。
@@ -121,9 +133,15 @@
 
 ### **步骤 3：验证2-3个生成效果**
 
-这是非常关键的一步，决定着最终质量。我按照“第一章范本”的标准，仔细检查了 AI 生成的内容，并给出了一些细微调整，根据AI又进行几轮对话。只有确认符合质量要求之后，才会进行批量输出。
+这是非常关键的一步，决定着最终质量。我按照“第一章范本”的标准，仔细检查了 AI 生成的内容，给出了一些细微调整，并与 AI 进行了多轮对话。只有确认符合质量要求之后，才会进行批量输出。
 
-![img](https://pic-out.zhimg.com/v2-b3d85dbc73ba1df965401b021de427b0~resize:1440:q75.png?animatedImageAutoPlay=false&animatedImagePlayCount=1&auth_key=1776083058-0-0-560f48ed0a02f4a2153946aaa2ff1a56&bizSceneCode=article_draft&expiration=1776083058&incremental=false&mid=46a42a228e63bcc9785041c0bd75e024&overTime=60&precoder=false&protocol=v2&retryCount=3&sampling=false&sceneCode=editor_copy_outbound&source=bfcaadb1)![img](https://pic-out.zhimg.com/v2-e2587bb651f9d4f36f1b6126db021275~resize:1440:q75.png?animatedImageAutoPlay=false&animatedImagePlayCount=1&auth_key=1776083058-0-0-6d6101be2f0281ed74ba776854b9b9a0&bizSceneCode=article_draft&expiration=1776083058&incremental=false&mid=46a42a228e63bcc9785041c0bd75e024&overTime=60&precoder=false&protocol=v2&retryCount=3&sampling=false&sceneCode=editor_copy_outbound&source=bfcaadb1)![img](https://pic-out.zhimg.com/v2-4892ae93ea6cf5bbf31d395ddc437632~resize:1440:q75.png?animatedImageAutoPlay=false&animatedImagePlayCount=1&auth_key=1776083058-0-0-130551dd28043cf1e6ebe60a48bb9900&bizSceneCode=article_draft&expiration=1776083058&incremental=false&mid=46a42a228e63bcc9785041c0bd75e024&overTime=60&precoder=false&protocol=v2&retryCount=3&sampling=false&sceneCode=editor_copy_outbound&source=bfcaadb1)![img](https://pic-out.zhimg.com/v2-aa90982750bab79f09f39254ec265463~resize:1440:q75.png?animatedImageAutoPlay=false&animatedImagePlayCount=1&auth_key=1776083058-0-0-1d1b132aa092e97b8f79616cfa554ab0&bizSceneCode=article_draft&expiration=1776083058&incremental=false&mid=46a42a228e63bcc9785041c0bd75e024&overTime=60&precoder=false&protocol=v2&retryCount=3&sampling=false&sceneCode=editor_copy_outbound&source=bfcaadb1)
+![img](https://pic1.zhimg.com/80/v2-b3d85dbc73ba1df965401b021de427b0_1440w.webp)
+
+![img](https://picx.zhimg.com/80/v2-e2587bb651f9d4f36f1b6126db021275_1440w.webp)
+
+![img](https://pic1.zhimg.com/80/v2-4892ae93ea6cf5bbf31d395ddc437632_1440w.webp)
+
+![img](https://pic4.zhimg.com/80/v2-aa90982750bab79f09f39254ec265463_1440w.webp)
 
 经过几轮对话，AI Agent终于生成了让我满意的版本。
 
@@ -131,19 +149,37 @@
 
 我将之前写的解读笔记目录挂载给 Agent。如果还有其他资料，也会一并告诉它。
 
-![img](https://pic-out.zhimg.com/v2-830e6c8d551462de149e7c23ec15ba06~resize:1440:q75.png?animatedImageAutoPlay=false&animatedImagePlayCount=1&auth_key=1776083058-0-0-213c31f686e537d8939a9dfac649bfc0&bizSceneCode=article_draft&expiration=1776083058&incremental=false&mid=46a42a228e63bcc9785041c0bd75e024&overTime=60&precoder=false&protocol=v2&retryCount=3&sampling=false&sceneCode=editor_copy_outbound&source=bfcaadb1)![img](https://pic-out.zhimg.com/v2-eb7f10055b4b419af4a5f30ce7d0126c~resize:1440:q75.png?animatedImageAutoPlay=false&animatedImagePlayCount=1&auth_key=1776083058-0-0-fdc250ab1d9c24c0772709424c810772&bizSceneCode=article_draft&expiration=1776083058&incremental=false&mid=46a42a228e63bcc9785041c0bd75e024&overTime=60&precoder=false&protocol=v2&retryCount=3&sampling=false&sceneCode=editor_copy_outbound&source=bfcaadb1)
+![img](https://pic3.zhimg.com/80/v2-830e6c8d551462de149e7c23ec15ba06_1440w.webp)
 
-### 步骤 5：**批量生产与验证** 
+![img](https://pic1.zhimg.com/80/v2-eb7f10055b4b419af4a5f30ce7d0126c_1440w.webp)
+
+### 步骤 5：**批量生产与验证**
 
 现在需求文档、计划以及SKILL都整理完毕了，可以按计划批量生成结果了。生成过程是分批进行的，每一批我都要检查和确认下质量。
 
-![img](https://pic-out.zhimg.com/v2-c88282127ff0e80bb9e2372634df40d9~resize:1440:q75.png?animatedImageAutoPlay=false&animatedImagePlayCount=1&auth_key=1776083058-0-0-795bf7243792babca510c1eaf6e90b77&bizSceneCode=article_draft&expiration=1776083058&incremental=false&mid=46a42a228e63bcc9785041c0bd75e024&overTime=60&precoder=false&protocol=v2&retryCount=3&sampling=false&sceneCode=editor_copy_outbound&source=bfcaadb1)![img](https://pic-out.zhimg.com/v2-6cdabbfda5a9c901cec22eb02dd5c043~resize:1440:q75.png?animatedImageAutoPlay=false&animatedImagePlayCount=1&auth_key=1776083058-0-0-0bf9e19413495a4fc801bd00aa9d97f9&bizSceneCode=article_draft&expiration=1776083058&incremental=false&mid=46a42a228e63bcc9785041c0bd75e024&overTime=60&precoder=false&protocol=v2&retryCount=3&sampling=false&sceneCode=editor_copy_outbound&source=bfcaadb1)![img](https://pic-out.zhimg.com/v2-dca81fbcb4cab287e6187bf7564d93cc~resize:1440:q75.png?animatedImageAutoPlay=false&animatedImagePlayCount=1&auth_key=1776083058-0-0-2f6f5082293db42c0fbe2de09b6f5c1f&bizSceneCode=article_draft&expiration=1776083058&incremental=false&mid=46a42a228e63bcc9785041c0bd75e024&overTime=60&precoder=false&protocol=v2&retryCount=3&sampling=false&sceneCode=editor_copy_outbound&source=bfcaadb1)![img](https://pic-out.zhimg.com/v2-121ee7b6086492dac251e92f0726825c~resize:1440:q75.png?animatedImageAutoPlay=false&animatedImagePlayCount=1&auth_key=1776083058-0-0-a53cbe531eebd3c7ccf6394ced1008c6&bizSceneCode=article_draft&expiration=1776083058&incremental=false&mid=46a42a228e63bcc9785041c0bd75e024&overTime=60&precoder=false&protocol=v2&retryCount=3&sampling=false&sceneCode=editor_copy_outbound&source=bfcaadb1)![img](https://pic-out.zhimg.com/v2-716e7289d7ea6dbe0e33ebe1d7405de0~resize:1440:q75.png?animatedImageAutoPlay=false&animatedImagePlayCount=1&auth_key=1776083058-0-0-67087dabb4fb7569459a06f98238d37e&bizSceneCode=article_draft&expiration=1776083058&incremental=false&mid=46a42a228e63bcc9785041c0bd75e024&overTime=60&precoder=false&protocol=v2&retryCount=3&sampling=false&sceneCode=editor_copy_outbound&source=bfcaadb1)![img](https://pic-out.zhimg.com/v2-a2b7ce5224d44000fff6a5c3ce9826a4~resize:1440:q75.png?animatedImageAutoPlay=false&animatedImagePlayCount=1&auth_key=1776083058-0-0-676e22aa5e3ee10173ff903a9845618c&bizSceneCode=article_draft&expiration=1776083058&incremental=false&mid=46a42a228e63bcc9785041c0bd75e024&overTime=60&precoder=false&protocol=v2&retryCount=3&sampling=false&sceneCode=editor_copy_outbound&source=bfcaadb1)![img](https://pic-out.zhimg.com/v2-6455d6df097cbafdb8e67dcbdaeca365~resize:1440:q75.png?animatedImageAutoPlay=false&animatedImagePlayCount=1&auth_key=1776083058-0-0-bead5ac0386644bfd02b120d573b4456&bizSceneCode=article_draft&expiration=1776083058&incremental=false&mid=46a42a228e63bcc9785041c0bd75e024&overTime=60&precoder=false&protocol=v2&retryCount=3&sampling=false&sceneCode=editor_copy_outbound&source=bfcaadb1)![img](https://pic-out.zhimg.com/v2-5f6480a5cb6e0c4b600c80ff509c7482~resize:1440:q75.png?animatedImageAutoPlay=false&animatedImagePlayCount=1&auth_key=1776083058-0-0-3eca7d984f133f7ed98d0480e2aeaaaa&bizSceneCode=article_draft&expiration=1776083058&incremental=false&mid=46a42a228e63bcc9785041c0bd75e024&overTime=60&precoder=false&protocol=v2&retryCount=3&sampling=false&sceneCode=editor_copy_outbound&source=bfcaadb1)
+![img](https://picx.zhimg.com/80/v2-c88282127ff0e80bb9e2372634df40d9_1440w.webp)
+
+![img](https://pic4.zhimg.com/80/v2-6cdabbfda5a9c901cec22eb02dd5c043_1440w.webp)
+
+![img](https://pica.zhimg.com/80/v2-dca81fbcb4cab287e6187bf7564d93cc_1440w.webp)
+
+![img](https://pic1.zhimg.com/80/v2-121ee7b6086492dac251e92f0726825c_1440w.webp)
+
+![img](https://pic3.zhimg.com/80/v2-716e7289d7ea6dbe0e33ebe1d7405de0_1440w.webp)
+
+![img](https://pic1.zhimg.com/80/v2-a2b7ce5224d44000fff6a5c3ce9826a4_1440w.webp)
+
+![img](https://pic4.zhimg.com/80/v2-6455d6df097cbafdb8e67dcbdaeca365_1440w.webp)
+
+丢失了一点内容，让补齐了
+
+![img](https://pic1.zhimg.com/80/v2-5f6480a5cb6e0c4b600c80ff509c7482_1440w.webp)
 
 经过几轮对话，终于完成了我想要的效果。AI Agent还是不错的。
 
 ### **总结**
 
-通过这种`Plan → SKILL → 指定范本 → 挂载资源 → 执行任务`的五步法，我终于将之前的《理解道德经》整理成了几套适合不同自媒体平台的简版文章。
+通过这种『Plan → SKILL → 指定范本 → 挂载资源 → 执行任务』的五步法，我终于将之前的《理解道德经》整理成了几套适合不同自媒体平台的简版文章。
 
 虽然每一章内容在发布前我还是得审稿和修改，并不能直接发布，但有了 AI 的帮忙，确实节省了很多时间。关键是有了SKILL，以后还可以用不同的大模型来生成。
 
