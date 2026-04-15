@@ -1,1 +1,873 @@
-这是首页
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI编程提示词库 | MicroWind · AI 技能</title>
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/67299763?s=200&v=4" type="image/png">
+    <style>
+        :root {
+            --primary-green: #1f883d;
+            --light-green: #4ade80;
+            --accent-orange: #FF6600;
+            --bg-light: #f0fdf4;
+            --bg-dark: #ffffff;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --border-color: #e5e7eb;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --gradient-primary: linear-gradient(135deg, #1f883d 0%, #4ade80 100%);
+            --gradient-bg: linear-gradient(135deg, #f0fdf4 0%, #ffffff 50%, #f8fafc 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--gradient-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(31, 136, 61, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(74, 222, 128, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(255, 102, 0, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            margin-top: 5px;
+            margin-right: 1rem;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--primary-green);
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a.active {
+            color: var(--primary-green);
+        }
+
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 3rem 0;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(31, 136, 61, 0.08) 0%, rgba(74, 222, 128, 0.08) 100%);
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(31, 136, 61, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
+            50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.1; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            text-shadow: 0 2px 4px rgba(31, 136, 61, 0.1);
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .hero-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        .hero-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            border: 2px solid #21883e;
+            border-radius: 50px;
+            color: #21883e;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .hero-links a:hover {
+            color: var(--primary-green);
+            border-color: var(--primary-green);
+            background: rgba(33, 136, 62, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 1.5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 2rem 0;
+        }
+
+        .content-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-green);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .content-section h3 {
+            font-size: 1.4rem;
+            color: var(--text-primary);
+            margin: 2rem 0 1rem;
+        }
+
+        .content-section p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .content-section ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .content-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background: rgba(31, 136, 61, 0.05);
+            font-weight: 600;
+            color: var(--primary-green);
+        }
+
+        tr:hover {
+            background: rgba(31, 136, 61, 0.03);
+        }
+
+        table a {
+            color: var(--primary-green);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        table a:hover {
+            text-decoration: underline;
+        }
+
+        /* Card Styles */
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px -5px rgba(31, 136, 61, 0.15);
+            border-color: var(--primary-green);
+        }
+
+        .card h3 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        /* Feature Grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px -5px rgba(31, 136, 61, 0.15);
+            border-color: var(--primary-green);
+        }
+
+        .feature-card h4 {
+            color: var(--primary-green);
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Link Styles */
+        a {
+            color: var(--primary-green);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-orange);
+        }
+
+        /* Inline Icons */
+        .icon-github {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            position: relative;
+        }
+        
+        .icon-github::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: currentColor;
+            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z'/%3E%3C/svg%3E") no-repeat center;
+            -webkit-mask-size: contain;
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z'/%3E%3C/svg%3E") no-repeat center;
+            mask-size: contain;
+        }
+        
+        .github-link {
+            color: var(--primary-green);
+            text-decoration: none;
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .github-link:hover {
+            color: #21883e;
+            background: rgba(31, 136, 61, 0.1);
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background: white;
+            border-top: 1px solid var(--border-color);
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-green);
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--primary-green);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .hero {
+                padding: 2rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero-badge {
+                font-size: 0.8rem;
+                padding: 0.4rem 1rem;
+            }
+
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transform: translateY(-100%);
+                transition: transform 0.3s ease;
+                z-index: 99;
+            }
+            
+            .nav-links.active {
+                display: flex;
+                transform: translateY(0);
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 0.75rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo-section">
+                <a href="https://microwind.github.io"><img class="logo" src="https://avatars.githubusercontent.com/u/67299763?s=200&v=4" alt="MicroWind Logo" /></a>
+                <div class="brand-name"><a href="https://microwind.github.io">MicroWind</a> · <a href="https://microwind.github.io/ai-prompt">AI Prompt</a></div>
+            </div>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span>☰</span>
+            </button>
+            <div class="nav-links">
+                <a href="https://microwind.github.io">首页</a>
+                <a href="#why-learn">为什么学习</a>
+                <a href="#quick-start">快速开始</a>
+                <a href="#tasks-map">内容地图</a>
+                <a href="https://github.com/microwind/ai-prompt" rel="noopener noreferrer" class="github-link" title="GitHub">
+                    <span class="icon-github"></span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">AI时代提示词核心库</div>
+                    <h1>AI编程提示词库</h1>
+                    <div class="hero-subtitle">
+                        掌握驱动AI的方法，就会事半功倍
+                    </div>
+                    <div class="hero-links">
+                        <a href="#why-learn">为什么学习</a>
+                        <a href="#quick-start">快速开始</a>
+                        <a href="#tasks-map">内容地图</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-learn" class="section" style="padding-top: 3rem;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">为什么学习这个库？</h2>
+                    <p class="section-subtitle">在AI时代，掌握Prompt Engineering是程序员的必备技能。<br>这个知识库围绕14个AI编程核心场景组织，提供100+实际的提示词例子，帮助您在日常工作中更高效地与AI Agent协作。</p>
+                </div>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>14个核心任务</h4>
+                        <p>覆盖从需求澄清到文档生成的完整软件开发生命周期</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>70+ Prompt示例</h4>
+                        <p>真实场景的Prompt，可直接复制使用</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>任务驱动</h4>
+                        <p>围绕实际的编程工作流组织，符合实际需求</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>实战导向</h4>
+                        <p>每个任务都源于真实的编程场景</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>7种Prompt框架</h4>
+                        <p>BROKE、CRISPE、ROBOTIC等框架，针对不同场景选择</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>学习路径</h4>
+                        <p>从初级到高级，循序渐进的学习路线</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quick-start" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">快速开始（3分钟上手）</h2>
+                    <p class="section-subtitle">3条学习路径，帮助你系统地掌握Prompt Engineering</p>
+                </div>
+
+                <div class="card">
+                    <h3>学习路径</h3>
+                    <div style="display: flex; flex-direction: row; gap: 1rem; overflow-x: auto; padding-bottom: 1rem;">
+                        <div class="step-card" style="text-align: center; padding: 1.5rem; background: rgba(31, 136, 61, 0.05); border-radius: 12px; border: 1px solid rgba(31, 136, 61, 0.1); min-width: 250px; flex: 1; transition: all 0.3s ease;">
+                            <strong>路径A：快速上手</strong><br>
+                            <a href="https://github.com/microwind/ai-prompt" style="display: inline-block; padding: 0.5rem 1.5rem; background: var(--primary-green); color: white; border-radius: 50px; text-decoration: none; margin: 0.5rem 0; font-size: 0.9rem; transition: all 0.3s ease;">初心者</a>
+                            <p style="margin: 0.5rem 0; font-size: 0.9rem;">T01 → T02 → T05 → T07 → T03<br>需求 → 实现 → 单测 → 审查 → 调试</p>
+                        </div>
+                        
+                        <div class="step-card" style="text-align: center; padding: 1.5rem; background: rgba(31, 136, 61, 0.05); border-radius: 12px; border: 1px solid rgba(31, 136, 61, 0.1); min-width: 250px; flex: 1; transition: all 0.3s ease;">
+                            <strong>路径B：完整周期</strong><br>
+                            <a href="https://github.com/microwind/ai-prompt/blob/main/使用说明.md" style="display: inline-block; padding: 0.5rem 1.5rem; background: var(--primary-green); color: white; border-radius: 50px; text-decoration: none; margin: 0.5rem 0; font-size: 0.9rem; transition: all 0.3s ease;">标准流程</a>
+                            <p style="margin: 0.5rem 0; font-size: 0.9rem;">T01 → T08 → T09 → T02 → T05 → T06 → T07 → T03 → T04 → T14<br>完整开发周期</p>
+                        </div>
+                        
+                        <div class="step-card" style="text-align: center; padding: 1.5rem; background: rgba(31, 136, 61, 0.05); border-radius: 12px; border: 1px solid rgba(31, 136, 61, 0.1); min-width: 250px; flex: 1; transition: all 0.3s ease;">
+                            <strong>路径C：质量优化</strong><br>
+                            <a href="https://github.com/microwind/ai-prompt/tree/main/11-Security-Review" style="display: inline-block; padding: 0.5rem 1.5rem; background: var(--primary-green); color: white; border-radius: 50px; text-decoration: none; margin: 0.5rem 0; font-size: 0.9rem; transition: all 0.3s ease;">进阶</a>
+                            <p style="margin: 0.5rem 0; font-size: 0.9rem;">T11 → T12 → T10 → T04 → T13<br>安全 → 性能 → 查询 → 重构 → 遗留代码</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tasks-map" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">学习内容地图</h2>
+                    <p class="section-subtitle">从基础到进阶，系统化学习Prompt Engineering</p>
+                </div>
+
+                <div class="card">
+                    <h3>初级任务（6个）⭐</h3>
+                    <p>快速入门，掌握基础编程工作流：</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>任务</th>
+                                <th>名称</th>
+                                <th>何时使用</th>
+                                <th>详情</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>T01</strong></td><td>需求澄清</td><td>项目启动、需求评审</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/01-Requirement-Clarification/" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                            <tr><td><strong>T02</strong></td><td>功能实现</td><td>日常编码、功能开发</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/02-Feature-Implementation/" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                            <tr><td><strong>T03</strong></td><td>Bug诊断</td><td>问题排查、性能诊断</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/03-Bug-Reproduction-Root-Cause/" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                            <tr><td><strong>T05</strong></td><td>单元测试</td><td>测试补充、覆盖率提升</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/05-Unit-Test-Generation/" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                            <tr><td><strong>T07</strong></td><td>代码审查</td><td>PR审查、质量把控</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/07-Code-Review-Assistant/" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                            <tr><td><strong>T14</strong></td><td>文档生成</td><td>文档生成、知识沉淀</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/14-Documentation-Generation/" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>中级任务（5个）⭐⭐</h3>
+                    <p>需要进阶知识，提升开发质量：</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>任务</th>
+                                <th>名称</th>
+                                <th>何时使用</th>
+                                <th>详情</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>T04</strong></td><td>安全重构</td><td>代码改进、技术债处理</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/04-Refactor-With-Behavior-Safety/" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                            <tr><td><strong>T06</strong></td><td>集成测试</td><td>系统验证、上线前检验</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/06-Integration-Test-Plan/" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                            <tr><td><strong>T09</strong></td><td>API设计</td><td>接口定义、模块设计</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/09-API-Contract-Design/" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                            <tr><td><strong>T10</strong></td><td>查询优化</td><td>数据库优化、查询性能</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/10-SQL-Query-Optimization/" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                            <tr><td><strong>T13</strong></td><td>遗留代码</td><td>知识转移、技术债清理</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/13-Legacy-Code-Understanding/" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>高级任务（3个）⭐⭐⭐</h3>
+                    <p>需要专业经验，系统级设计：</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>任务</th>
+                                <th>名称</th>
+                                <th>何时使用</th>
+                                <th>详情</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>T08</strong></td><td>架构决策</td><td>系统设计、技术选型</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/08-Architecture-Decision-Draft/" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                            <tr><td><strong>T11</strong></td><td>安全审查</td><td>安全审查、漏洞检查</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/11-Security-Review/" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                            <tr><td><strong>T12</strong></td><td>性能优化</td><td>性能调优、资源优化</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/12-Performance-Optimization/" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>7种Prompt框架</h3>
+                    <p>针对不同场景选择最合适的框架：</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>框架</th>
+                                <th>适用场景</th>
+                                <th>复杂度</th>
+                                <th>详情</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>BROKE</strong></td><td>快速代码生成、标准需求</td><td>⭐ 简洁</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/Prompt-Frameworks/BROKE.md" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                            <tr><td><strong>CRISPE</strong></td><td>复杂问题分析、创意输出</td><td>⭐⭐ 中等</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/Prompt-Frameworks/CRISPE.md" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                            <tr><td><strong>ROBOTIC</strong></td><td>架构设计、多轮迭代</td><td>⭐⭐⭐ 复杂</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/Prompt-Frameworks/ROBOTIC.md" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                            <tr><td><strong>Chain-of-Thought</strong></td><td>算法设计、逻辑推理</td><td>⭐⭐ 中等</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/Prompt-Frameworks/Chain-of-Thought.md" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                            <tr><td><strong>CO-STAR</strong></td><td>内容创作、营销文案</td><td>⭐⭐⭐ 复杂</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/Prompt-Frameworks/CO-STAR.md" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                            <tr><td><strong>ICIO</strong></td><td>迭代式问题解决</td><td>⭐⭐ 中等</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/Prompt-Frameworks/ICIO.md" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                            <tr><td><strong>RTF</strong></td><td>角色扮演、场景模拟</td><td>⭐ 简洁</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/Prompt-Frameworks/RTF.md" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>Prompt Examples</h3>
+                    <p>丰富的Prompt示例，涵盖多个应用场景：</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>类别</th>
+                                <th>示例</th>
+                                <th>详情</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>内容生成</strong></td><td>娱乐、书籍、产品、文章</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/Prompt-Examples/01-Content-Generation" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                            <tr><td><strong>系统设计</strong></td><td>推荐系统、分类系统、搜索系统</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/Prompt-Examples/02-System-Design" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                            <tr><td><strong>数据处理</strong></td><td>文本分析、数据提取、数据转换</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/Prompt-Examples/03-Data-Processing" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                            <tr><td><strong>代码生成</strong></td><td>API开发、数据库、前端</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/Prompt-Examples/04-Code-Generation" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>Prompt Practice</h3>
+                    <p>实战项目练习，将Prompt应用于真实场景：</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>项目</th>
+                                <th>描述</th>
+                                <th>详情</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>热门股票Web系统</strong></td><td>股票信息展示系统的完整开发流程</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/Prompt-Practice/01-hot-stock-web-system" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                            <tr><td><strong>高考志愿系统</strong></td><td>高考志愿填报系统的设计与实现</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/Prompt-Practice/02-gaokao-volunteer-system" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                            <tr><td><strong>道德经短内容</strong></td><td>基于AI Agent的内容生成实践</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/Prompt-Practice/03-daodejing-short-content" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                            <tr><td><strong>股市评论技能</strong></td><td>A股市场评论生成技能</td><td><a href="https://github.com/microwind/ai-prompt/tree/main/Prompt-Practice/04-stock-market-commentary-skill" style="color: var(--primary-green); font-weight: 600;">查看</a></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="related" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">相关资源</h2>
+                    <p class="section-subtitle">这个项目是《AI时代程序员成长体系》的一部分</p>
+                </div>
+
+                <div class="feature-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="feature-card">
+                        <h4><a href="https://github.com/microwind/algorithms">algorithms</a></h4>
+                        <p>算法思想与数据结构</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><a href="https://github.com/microwind/design-patterns">design-patterns</a></h4>
+                        <p>设计模式与编程思想</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><a href="https://github.com/microwind/ai-skills">ai-skills</a></h4>
+                        <p>AI编程Skill库</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><a href="https://github.com/microwind/ai-prompt">ai-prompt</a></h4>
+                        <p>AI编程提示词库（本项目）</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>用Prompt驾驭AI，在AI时代闪闪发光</p>
+            <p><em>Prompt Engineering for everyone, in the Age of AI</em></p>
+            <div class="footer-links">
+                <a href="https://github.com/microwind/ai-prompt">GitHub</a>
+                <a href="https://github.com/microwind/ai-prompt/blob/main/使用说明.md">学习路线</a>
+                <a href="https://github.com/microwind/ai-prompt/issues">反馈问题</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
