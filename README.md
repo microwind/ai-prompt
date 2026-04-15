@@ -204,8 +204,8 @@ T11 → T12 → T10 → T04 → T13
 | 资源 | 说明 |
 |------|------|
 | **[Prompt-Examples](./Prompt-Examples/)** | 💡 **70+ 个真实场景的Prompt实践库**（内容生成、系统设计、数据处理、代码生成） |
-| **[Prompt-Pratice](./Prompt-Pratice/)** | 💡 **提示词项目实践**（需求描述、系统设计、SKILL生成、代码生成） |
 | **[Prompt-Frameworks](./Prompt-Frameworks)** | 💡 **7个常见提示词工程框架**(BROKE、CRISPE、ROBOTIC等) |
+| **[Prompt-Practice](./Prompt-Practice/)** | 💡 **提示词项目实践，来源真实案例**（需求描述、系统设计、SKILL生成、代码生成） |
 | [程序员必读的AI Prompt最佳实践](programmer_prompt_engineering_guide.md) | 📚 程序员Prompt工程**完全指南**（深度学习资料） |
 | [Vibe Coding提示词工程实践](developer_prompt_engineering_guide.md) | 📚 Vibe Coding开发者Prompt工程指南 |
 
