@@ -30,6 +30,17 @@
 
 ---
 
+## 如何使用AI-Prompt库？
+
+**场景一：按任务场景查提示词（推荐）**  
+直接浏览仓库，根据你的问题找到对应的任务目录（如 `01-Requirement-Clarification`），打开其中的提示词文件即可直接复制使用，无需修改。
+
+**场景二：按问题快速定位**  
+在仓库首页的“快速开始”表格中，根据你遇到的问题（如需求不清楚、代码有 Bug、需要重构等）找到对应的任务目录，复制提示词直接与 AI 对话。
+
+**场景三：学习 Prompt 设计思路**  
+阅读仓库中的 [《程序员必读的 AI Prompt 最佳实践》](https://github.com/microwind/ai-prompt/blob/main/programmer_prompt_engineering_guide.md)，了解如何构建高质量提示词，提升与 AI 协作的效率。
+
 ## 14大核心任务一览
 
 ### 按难度分类
