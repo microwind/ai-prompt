@@ -320,6 +320,6 @@ A: BROKE 用于"实现已设计好的功能"，ROBOTIC 用于"设计本身"。
 
 ## 进一步阅读
 
-- 📚 [ROBOTIC 框架完全指南](../programmer_prompt_engineering_guide.md#五robotic-prompt-框架)
-- 🎯 [三框架深度对比](../programmer_prompt_engineering_guide.md#robotic-vs-broke-vs-crispe-对比)
-- 💡 [Prompt 工程完全指南](../programmer_prompt_engineering_guide.md)
+- 📚 [ROBOTIC 框架完全指南](../docs/articles/programmer_prompt_engineering_guide.md#五robotic-prompt-框架)
+- 🎯 [三框架深度对比](../docs/articles/programmer_prompt_engineering_guide.md#robotic-vs-broke-vs-crispe-对比)
+- 💡 [Prompt 工程完全指南](../docs/articles/programmer_prompt_engineering_guide.md)

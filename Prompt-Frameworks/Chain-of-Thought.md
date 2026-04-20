@@ -211,5 +211,5 @@ for (User user : users) {
 ## 进一步阅读
 
 - 📚 [Chain-of-Thought 研究论文](https://arxiv.org/abs/2201.11903)
-- 🎯 [在 BROKE 框架中结合 CoT](../programmer_prompt_engineering_guide.md#七进阶思维链-prompt)
-- 💡 [Prompt 工程完全指南](../programmer_prompt_engineering_guide.md)
+- 🎯 [在 BROKE 框架中结合 CoT](../docs/articles/programmer_prompt_engineering_guide.md#七进阶思维链-prompt)
+- 💡 [Prompt 工程完全指南](../docs/articles/programmer_prompt_engineering_guide.md)

@@ -260,6 +260,6 @@ A: 检查 Background 和 Constraints 是否足够具体。大多数情况是上�
 
 ## 进一步阅读
 
-- 📚 [深入理解 BROKE 框架原理](../programmer_prompt_engineering_guide.md#三broke-prompt-结构)
-- 🎯 [BROKE vs CRISPE vs ROBOTIC](../programmer_prompt_engineering_guide.md#robotic-vs-broke-vs-crispe-对比)
-- 💡 [Prompt 工程完全指南](../programmer_prompt_engineering_guide.md)
+- 📚 [深入理解 BROKE 框架原理](../docs/articles/programmer_prompt_engineering_guide.md#三broke-prompt-结构)
+- 🎯 [BROKE vs CRISPE vs ROBOTIC](../docs/articles/programmer_prompt_engineering_guide.md#robotic-vs-broke-vs-crispe-对比)
+- 💡 [Prompt 工程完全指南](../docs/articles/programmer_prompt_engineering_guide.md)

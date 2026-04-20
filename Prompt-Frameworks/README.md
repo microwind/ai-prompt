@@ -434,7 +434,7 @@
 - 📚 [AI 提示词框架深度对比分析](./AI-Prompt-Frameworks-Deep-Analysis.md) - 综合对标分析
 
 ### 相关资源
-- 📚 [AI 编程 Prompt 工程完全指南](../programmer_prompt_engineering_guide.md)
+- 📚 [AI 编程 Prompt 工程完全指南](../docs/articles/programmer_prompt_engineering_guide.md)
 - 🎯 [100+ Prompt 示例库](../Prompt-Examples/)
 
 ---

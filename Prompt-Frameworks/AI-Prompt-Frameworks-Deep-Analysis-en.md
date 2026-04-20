@@ -1015,8 +1015,8 @@ All framework detailed documentation and example code can be found at:
 - 📄 [RTF Framework Guide](https://github.com/microwind/ai-prompt/blob/main/Prompt-Frameworks/RTF.md) - Role-Playing Framework
 
 ### Related Resources
-- 📚 [AI Programming Prompt Engineering Complete Guide](https://github.com/microwind/ai-prompt/blob/main/programmer_prompt_engineering_guide.md) - AI Programming Prompt Best Practices
-- 📚 [Vibe Coding Prompt Engineering Guide](https://github.com/microwind/ai-prompt/blob/main/developer_prompt_engineering_guide.md) - Vibe Coding Prompt Best Practices
+- 📚 [AI Programming Prompt Engineering Complete Guide](https://github.com/microwind/ai-prompt/blob/main/docs/articles/programmer_prompt_engineering_guide.md) - AI Programming Prompt Best Practices
+- 📚 [Vibe Coding Prompt Engineering Guide](https://github.com/microwind/ai-prompt/blob/main/docs/articles/developer_prompt_engineering_guide.md) - Vibe Coding Prompt Best Practices
 - 🎯 [100+ Prompt Examples](https://github.com/microwind/ai-prompt/blob/main/Prompt-Frameworks) - Practical Application Examples for Various Scenarios
 
 ---

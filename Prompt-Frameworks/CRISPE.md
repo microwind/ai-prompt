@@ -286,6 +286,6 @@ A: 要求 AI 给出推理过程，自己评估逻辑是否合理。必要时追�
 
 ## 进一步阅读
 
-- 📚 [CRISPE 框架深度指南](../programmer_prompt_engineering_guide.md#四crispe-prompt-框架)
-- 🎯 [框架对比与选择](../programmer_prompt_engineering_guide.md#何时选择哪个框架)
-- 💡 [Prompt 工程完全指南](../programmer_prompt_engineering_guide.md)
+- 📚 [CRISPE 框架深度指南](../docs/articles/programmer_prompt_engineering_guide.md#四crispe-prompt-框架)
+- 🎯 [框架对比与选择](../docs/articles/programmer_prompt_engineering_guide.md#何时选择哪个框架)
+- 💡 [Prompt 工程完全指南](../docs/articles/programmer_prompt_engineering_guide.md)

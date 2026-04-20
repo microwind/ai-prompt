@@ -258,6 +258,6 @@ A: 可以，但不是最优选择。代码生成用 BROKE 更好。RTF 适合角
 
 ## 进一步阅读
 
-- 📚 [角色扮演在 Prompt 中的应用](../programmer_prompt_engineering_guide.md)
-- 🎯 [RTF 和其他框架的组合](../programmer_prompt_engineering_guide.md)
-- 💡 [Prompt 工程完全指南](../programmer_prompt_engineering_guide.md)
+- 📚 [角色扮演在 Prompt 中的应用](../docs/articles/programmer_prompt_engineering_guide.md)
+- 🎯 [RTF 和其他框架的组合](../docs/articles/programmer_prompt_engineering_guide.md)
+- 💡 [Prompt 工程完全指南](../docs/articles/programmer_prompt_engineering_guide.md)

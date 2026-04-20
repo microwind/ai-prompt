@@ -13,7 +13,7 @@
 
 本仓库是面向程序员的**实用Prompt Engineering指南**，围绕14个AI编程核心场景组织，提供提供100+实际的提示词例子，帮助您在日常工作中更高效地与AI Agent（Claude Code、Codex、Gemini、OpenClaw等）协作。
 
-**掌握驱动AI的方法，就会事半功倍。** 请您阅读[《程序员必读的AI Prompt最佳实践》](./programmer_prompt_engineering_guide.md)
+**掌握驱动AI的方法，就会事半功倍。** 请您阅读[《程序员必读的AI Prompt最佳实践》](./docs/articles/programmer_prompt_engineering_guide.md)
 
 **不同于以往的Prompt指南：**
 
@@ -39,7 +39,7 @@
 在仓库首页的“快速开始”表格中，根据你遇到的问题（如需求不清楚、代码有 Bug、需要重构等）找到对应的任务目录，复制提示词直接与 AI 对话。
 
 **场景三：学习 Prompt 设计思路**  
-阅读仓库中的 [《程序员必读的 AI Prompt 最佳实践》](https://github.com/microwind/ai-prompt/blob/main/programmer_prompt_engineering_guide.md)，了解如何构建高质量提示词，提升与 AI 协作的效率。
+阅读仓库中的 [《程序员必读的 AI Prompt 最佳实践》](https://github.com/microwind/ai-prompt/blob/main/docs/articles/programmer_prompt_engineering_guide.md)，了解如何构建高质量提示词，提升与 AI 协作的效率。
 
 ## 14大核心任务一览
 
@@ -83,8 +83,8 @@ ai-prompt/
 ├── 使用说明.md                                  ← 学习路径指南
 ├── 项目完整导航.md                              ← 详细统计和资源
 │
-├── programmer_prompt_engineering_guide.md       ← 📚 程序员Prompt工程完全指南
-├── developer_prompt_engineering_guide.md        ← 📚 开发者版Prompt工程指南
+├── docs/articles/programmer_prompt_engineering_guide.md       ← 📚 程序员Prompt工程完全指南
+├── docs/articles/developer_prompt_engineering_guide.md        ← 📚 开发者版Prompt工程指南
 │
 ├── 01-Requirement-Clarification/                ← T01: 需求澄清 ⭐
 │   └── README.md
@@ -217,8 +217,8 @@ T11 → T12 → T10 → T04 → T13
 | **[Prompt-Examples](./Prompt-Examples/)** | 💡 **70+ 个真实场景的Prompt实践库**（内容生成、系统设计、数据处理、代码生成） |
 | **[Prompt-Frameworks](./Prompt-Frameworks)** | 💡 **7个常见提示词工程框架**(BROKE、CRISPE、ROBOTIC等) |
 | **[Prompt-Practice](./Prompt-Practice/)** | 💡 **提示词项目实践，来源真实案例**（需求描述、系统设计、SKILL生成、代码生成） |
-| [程序员必读的AI Prompt最佳实践](programmer_prompt_engineering_guide.md) | 📚 程序员Prompt工程**完全指南**（深度学习资料） |
-| [Vibe Coding提示词工程实践](developer_prompt_engineering_guide.md) | 📚 Vibe Coding开发者Prompt工程指南 |
+| [程序员必读的AI Prompt最佳实践](docs/articles/programmer_prompt_engineering_guide.md) | 📚 程序员Prompt工程**完全指南**（深度学习资料） |
+| [Vibe Coding提示词工程实践](docs/articles/developer_prompt_engineering_guide.md) | 📚 Vibe Coding开发者Prompt工程指南 |
 
 ---
 
@@ -256,9 +256,9 @@ T11 → T12 → T10 → T04 → T13
 
 ### 详细学习资源
 
-- 📚 [深度对比：三大核心框架 (BROKE/CRISPE/ROBOTIC)](programmer_prompt_engineering_guide.md#四crispe-prompt-框架)
-- 🎯 [框架选择决策树](programmer_prompt_engineering_guide.md#何时选择哪个框架)
-- 💡 [框架组合使用指南](programmer_prompt_engineering_guide.md#框架组合使用)
+- 📚 [深度对比：三大核心框架 (BROKE/CRISPE/ROBOTIC)](docs/articles/programmer_prompt_engineering_guide.md#四crispe-prompt-框架)
+- 🎯 [框架选择决策树](docs/articles/programmer_prompt_engineering_guide.md#何时选择哪个框架)
+- 💡 [框架组合使用指南](docs/articles/programmer_prompt_engineering_guide.md#框架组合使用)
 
 ---
 
@@ -275,7 +275,7 @@ T11 → T12 → T10 → T04 → T13
 ### 建议2: 系统学习（深度）
 
 如果要系统学习Prompt工程：
-1. 打开 [programmer_prompt_engineering_guide.md](programmer_prompt_engineering_guide.md)
+1. 打开 [programmer_prompt_engineering_guide.md](docs/articles/programmer_prompt_engineering_guide.md)
 2. 这是一份完整的Prompt工程指南，包含原理、框架、实战例子等
 3. 配合14个任务的示例，可以全面掌握Prompt工程
 
@@ -339,7 +339,7 @@ A: 根据反馈和新的实践经验定期更新，预计每月至少一次。
 
 **👉 [选择你的第一个任务](01-Requirement-Clarification/)** - 从需求澄清开始
 **👉 [查看学习路径](使用说明.md)** - 找到适合你的学习方式
-**👉 [打开完整指南](programmer_prompt_engineering_guide.md)** - 深度学习Prompt工程
+**👉 [打开完整指南](docs/articles/programmer_prompt_engineering_guide.md)** - 深度学习Prompt工程
 
 ---
 

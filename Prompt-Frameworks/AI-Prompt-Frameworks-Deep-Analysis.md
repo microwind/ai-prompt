@@ -1019,8 +1019,8 @@ for (User user : users) {
 - 📄 [RTF 框架详解](https://github.com/microwind/ai-prompt/blob/main/Prompt-Frameworks/RTF.md) - 角色扮演框架
 
 ### 相关资源
-- 📚 [AI 编程Prompt 工程完全指南](https://github.com/microwind/ai-prompt/blob/main/programmer_prompt_engineering_guide.md) - AI编程 Prompt 最佳实践
-- 📚 [Vibe Coding 提示词工程指南](https://github.com/microwind/ai-prompt/blob/main/developer_prompt_engineering_guide.md) - Vibe Coding 提示词最佳实践
+- 📚 [AI 编程Prompt 工程完全指南](https://github.com/microwind/ai-prompt/blob/main/docs/articles/programmer_prompt_engineering_guide.md) - AI编程 Prompt 最佳实践
+- 📚 [Vibe Coding 提示词工程指南](https://github.com/microwind/ai-prompt/blob/main/docs/articles/developer_prompt_engineering_guide.md) - Vibe Coding 提示词最佳实践
 - 🎯 [100+ Prompt 示例](https://github.com/microwind/ai-prompt/blob/main/Prompt-Frameworks) - 各种场景的实际应用示例
 
 ---

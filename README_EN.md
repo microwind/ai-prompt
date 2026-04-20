@@ -70,8 +70,8 @@ ai-prompt/
 ├── 使用说明.md                                  ← Learning path guide
 ├── 项目完整导航.md                              ← Detailed statistics
 │
-├── programmer_prompt_engineering_guide.md       ← 📚 Complete Prompt Engineering Guide
-├── developer_prompt_engineering_guide.md        ← 📚 Developer's Prompt Engineering Guide
+├── docs/articles/programmer_prompt_engineering_guide.md       ← 📚 Complete Prompt Engineering Guide
+├── docs/articles/developer_prompt_engineering_guide.md        ← 📚 Developer's Prompt Engineering Guide
 │
 ├── frameworks/                                  ← Prompt Framework Documentation
 │   ├── BROKE.md                                ← BROKE Framework
@@ -245,8 +245,8 @@ Role playing, scenario simulation → RTF
 | Resource | Description |
 |----------|-------------|
 | **[00-Prompt-Examples-Library](00-Prompt-Examples-Library/)** | 💡 **70+ real-world Prompt examples** (content generation, system design, data processing, code generation) |
-| [programmer_prompt_engineering_guide.md](programmer_prompt_engineering_guide.md) | 📚 Complete Prompt Engineering **Complete Guide** (in-depth learning) |
-| [developer_prompt_engineering_guide.md](developer_prompt_engineering_guide.md) | 📚 Developer's Prompt Engineering Guide |
+| [programmer_prompt_engineering_guide.md](docs/articles/programmer_prompt_engineering_guide.md) | 📚 Complete Prompt Engineering **Complete Guide** (in-depth learning) |
+| [developer_prompt_engineering_guide.md](docs/articles/developer_prompt_engineering_guide.md) | 📚 Developer's Prompt Engineering Guide |
 | [CATALOG.md](CATALOG.md) | 📋 Complete directory and detailed descriptions |
 | [QUICK-REFERENCE.md](QUICK-REFERENCE.md) | ⚡ Quick reference and common templates |
 | [使用说明.md](使用说明.md) | 🎓 Learning paths and usage guide |
@@ -267,7 +267,7 @@ When you encounter specific problems:
 ### ✅ Recommendation 2: Systematic Learning (In-Depth)
 
 For comprehensive Prompt engineering study:
-1. Open [programmer_prompt_engineering_guide.md](programmer_prompt_engineering_guide.md)
+1. Open [programmer_prompt_engineering_guide.md](docs/articles/programmer_prompt_engineering_guide.md)
 2. This is a complete Prompt engineering guide with principles, frameworks, practical examples
 3. Combined with 14 task examples, you can master Prompt engineering
 
@@ -354,7 +354,7 @@ A: Updated regularly based on feedback and new practical experiences. Expected a
 
 **👉 [Choose your first task](01-Requirement-Clarification/)** - Start with requirement clarification
 **👉 [View learning path](使用说明.md)** - Find the right approach for you
-**👉 [Open complete guide](programmer_prompt_engineering_guide.md)** - Deep dive into Prompt engineering
+**👉 [Open complete guide](docs/articles/programmer_prompt_engineering_guide.md)** - Deep dive into Prompt engineering
 
 ---
 

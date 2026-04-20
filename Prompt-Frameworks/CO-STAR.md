@@ -292,5 +292,5 @@ A: 看是否击中目标受众、是否达成营销目标、是否符合品牌�
 
 ## 进一步阅读
 
-- 🎯 [内容创作框架对比](../programmer_prompt_engineering_guide.md)
-- 💡 [Prompt 工程完全指南](../programmer_prompt_engineering_guide.md)
+- 🎯 [内容创作框架对比](../docs/articles/programmer_prompt_engineering_guide.md)
+- 💡 [Prompt 工程完全指南](../docs/articles/programmer_prompt_engineering_guide.md)

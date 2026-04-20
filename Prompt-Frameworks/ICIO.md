@@ -238,6 +238,6 @@ A: 通常 2-4 轮。超过 5 轮可能效率变低，应该重新评估。
 
 ## 进一步阅读
 
-- 📚 [迭代式问题求解方法](../programmer_prompt_engineering_guide.md)
-- 🎯 [ROBOTIC 和 ICIO 的对比](../programmer_prompt_engineering_guide.md)
-- 💡 [Prompt 工程完全指南](../programmer_prompt_engineering_guide.md)
+- 📚 [迭代式问题求解方法](../docs/articles/programmer_prompt_engineering_guide.md)
+- 🎯 [ROBOTIC 和 ICIO 的对比](../docs/articles/programmer_prompt_engineering_guide.md)
+- 💡 [Prompt 工程完全指南](../docs/articles/programmer_prompt_engineering_guide.md)

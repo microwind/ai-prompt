@@ -1,7 +1,7 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-- Core guides live in `README.md`, `README_EN.md`, `programmer_prompt_engineering_guide.md`, and `developer_prompt_engineering_guide.md`.
+- Core guides live in `README.md`, `README_EN.md`, `docs/articles/programmer_prompt_engineering_guide.md`, and `docs/articles/developer_prompt_engineering_guide.md`.
 - Fourteen task playbooks sit in `01-Requirement-Clarification` … `14-Documentation-Generation`, each with a `README.md` (and occasional checklists/examples). Keep new task folders numbered with two digits and kebab-case names.
 - Scenario libraries: `Prompt-Examples/` holds domain examples (content, system design, data, code); `Prompt-Frameworks/` stores framework cheat-sheets (CRISPE, RTF, etc.).
 - Quick navigation lives in `QUICK-REFERENCE.md` and `项目完整导航.md`; archive stale material under `_ARCHIVE/` rather than deleting.
